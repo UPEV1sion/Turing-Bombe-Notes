@@ -14,6 +14,8 @@
 \chead{\mychead}
 \ifoot{\myifoot}
 
+\newcommand{\figref}[1]{(siehe Abb.~\ref{#1})}
+
 \newenvironment{myenv}{%
 	\begin{center}
 }{%
@@ -21,7 +23,7 @@
 }
 
 \begin{document}
-	\subject{Ein praktischer Ansatz zur Dechiffrierung von Texten der Enigma-Maschine}
+	\subject{Kryptoanalyse der Enigma-Maschine: Eine Untersuchung des Cyclometers und der Turing-Bombe}
 	\title{Kryptoanalyse der Enigma-Maschine}
 	\author{Emanuel Schäffer}
 	\date{\today}
@@ -35,7 +37,7 @@
 
 	\chapter{Enigma}
 	
-	Die Enigma ist eine Rotor-Chiffriermaschine, welche hauptsächlich im 2. Weltkrieg Einsatz fand. Die von der Wehrmacht modifizierte Enigma verfügte zuerst über drei Walzen mit zusätzlich einem Reflektor. Jeder dieser Walzen führte eine monoalphabetische Substitution durch. Die rechte Walze wurde bei jedem Tastendruck eine Position weiter gerückt. Hat diese Walze eine komplette Rotation geleistet, rückte die Walze links neben ihr eine Position weiter\footnote{Eine Analogie hierfür ist der Kilometerzähler eines mechanischen Tachometers oder das Verhalten von Sekunden, Minuten und Studenzeiger einer Uhr.}. Neuerungen waren das Steckerbrett (siehe Abb.~\ref{fig:enigma_complete}) und gegen Ende des Krieges wurden Enigmen mit bis zu vier Walzen eingesetzt. Ich werde mich des weiteren, wenn nicht ausdrücklich erwähnt auf die Enigma M3 mit drei Walzen beziehen.
+	Die Enigma ist eine Rotor-Chiffriermaschine, die hauptsächlich im Zweiten Weltkrieg Einsatz kam. Die von der Wehrmacht modifizierte Enigma verfügte zunächst über drei Walzen und zusätzlich einen Reflektor. Jede dieser Walzen führte eine monoalphabetische Substitution durch. Die rechte Walze wurde bei jedem Tastendruck um eine Position weitergerückt. Hat diese Walze eine komplette Rotation vollzogen, rückte die Walze links neben ihr um eine Position weiter\footnote{Eine Analogie hierfür ist der Kilometerzähler eines mechanischen Tachometers oder das Verhalten von Sekunden-, Minuten- und Studenzeigern einer Uhr.}. Neuerungen waren das Steckerbrett \figref{fig:enigma_complete} und gegen Ende des Krieges eine zusätzliche, vierte Walze. Ich werde mich, wenn nicht ausdrücklich erwähnt, auf die Enigma M3 mit drei Walzen beschränken.
 	\nopagebreak
 	\begin{figure}[htbp]
 		\centering
@@ -46,7 +48,7 @@
 	
 	\newpage
 	
-	 Bei der Enigma wurde jeden Tag  eine Tagesschlüssel eingestellt, welcher durch ein Code-Buch vorgegeben war. Dieser Tagesschlüssel bestand daraus, welche drei der fünf Walzen der Schlüssler in welcher Reihenfolge einzusetzen hat. Ferner musste er die Walzenstellung einstellen. Sie bestimmt die Ausgangsstellung der Walzen. Diese konnte durch ein Sichtfenster erblickt werden.
+	 Bei der Enigma wurde jeden Tag  eine Tagesschlüssel eingestellt, welcher durch ein Code-Buch vorgegeben war. Dieser Tagesschlüssel bestand darin, welche drei der fünf Walzen der Schlüssler in welcher Reihenfolge einzusetzen hatte. Ferner musste er die Walzenstellung einstellen. Sie bestimmt die Ausgangsstellung der Walzen. Diese konnte durch ein Sichtfenster abgelesen werden.
 	
 	\begin{figure}[htbp]
 		\centering
@@ -55,7 +57,7 @@
 		\label{fig:enigma_rotors}
 	\end{figure}
 	
-	Zusätzlich musste der Schlüssler die Ringstellung des Tages einstellen. Die Ringstellung veränderte die Relation der Buchstaben und der internen Verdrahtung und bewegte die Übertragskerbe. Siehe Abb.~\ref{fig:enigma-rotor-contact}
+	Zusätzlich musste der Schlüssler die Ringstellung des Tages einstellen. Die Ringstellung veränderte die Relation der sichtbaren Buchstaben mit der internen Verdrahtung und bewegte die Übertragskerbe \figref{fig:enigma-rotor-contact}, die festlegte, wann sich die Walze links von der aktuellen bewegt.
 	
 	\begin{figure}[htbp]
 		\centering
@@ -67,6 +69,9 @@
 		\caption{Walzen Frontansicht mit Übertragskerbe}
 		\label{fig:enigma-rotor-contact}
 	\end{figure}
+	
+	\newpage
+	Als letzte Einstellung musste das Steckerbrett verdrahtet werden. Das Steckerbrett vertauschte zwei Buchstaben miteinander. Von 13 möglichen Steckerverbindungen wurden meistens 10 vorgegeben. Nachdem alle Einstellung getroffen waren, überlegte sich der Schlüssler einen "`zufälligen"' Spruchschlüssel, mit dem der Text verschlüsselt wurde.\footnote{In Wahrheit wählten die Schlüssler oft den gleichen Schlüssel, der meist persönliche Informationen wie zum Beispiel den Name der Freundin enthielt.} Dieser Spruchschlüssel gab die Walzenstellung für die folgende Nachricht an. Der "`zufällige"' Spruchschlüssel wurde mit dem Tagesschlüssel verschlüsselt und ergab zusammen mit anderen Zusatzinformationen den "`Spruchkopf"'. Der Schlüssler gab nun den zu verschlüsselnden Text nach bestimmten Regeln ein. Eine Eigenschaft der Enigma ist, dass sie selbstinvers ist. Das bedeutet, dass mit der gleichen Einstellung, mit der ein Text verschlüsselt wurde, dieser auch wieder entschlüsselt werden kann.
 	
 	
 	\chapter{Häufigkeitsanalyse}

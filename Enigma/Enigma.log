@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.19)  11 SEP 2024 12:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.19)  11 SEP 2024 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -601,7 +601,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@dimlist=\toks37
  (E:\MikTeX\tex/latex/geometry\geometry.cfg))
 1: section
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 23
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 25
 .
 (E:\MikTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -613,20 +613,20 @@ File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
 ) (Enigma.aux)
 \openout1 = `Enigma.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 (E:\MikTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -684,44 +684,44 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 3
-0.
+2.
 (E:\MikTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-0.
+2.
  (E:\MikTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-0.
+2.
 
 (E:\MikTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-30.
+32.
  (E:\MikTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-30.
+32.
 
 (E:\MikTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 30.
+(Font)              <14.4> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 30.
+(Font)              <10> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 30.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+(Font)              <7> on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
 
  (E:\MikTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
 
 
 (E:\MikTeX\tex/latex/amsfonts\umsb.fd
@@ -733,15 +733,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {C:/Users/Emanuel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{E:/MikTeX/f
 onts/enc/dvips/lm/lm-ec.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 32.
+(Font)              <10.95> on input line 34.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 32.
+(Font)              <8> on input line 34.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 32.
+(Font)              <6> on input line 34.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 32.
+(Font)              <9> on input line 34.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 32.
+(Font)              <5> on input line 34.
  [2
 
 
@@ -750,7 +750,7 @@ chapter 1.
 <Enigma-komplett.png, id=18, 2607.68042pt x 3750.58948pt>
 File: Enigma-komplett.png Graphic file (type png)
 <use Enigma-komplett.png>
-Package pdftex.def Info: Enigma-komplett.png  used on input line 42.
+Package pdftex.def Info: Enigma-komplett.png  used on input line 44.
 (pdftex.def)             Requested size: 209.12683pt x 300.74004pt.
 [3
 
@@ -758,23 +758,24 @@ Package pdftex.def Info: Enigma-komplett.png  used on input line 42.
 <Enigma-rotor-set.png, id=22, 864.22874pt x 682.55pt>
 File: Enigma-rotor-set.png Graphic file (type png)
 <use Enigma-rotor-set.png>
-Package pdftex.def Info: Enigma-rotor-set.png  used on input line 53.
+Package pdftex.def Info: Enigma-rotor-set.png  used on input line 55.
 (pdftex.def)             Requested size: 167.2989pt x 132.12292pt.
 <Enigma-rotor-flat-contacts.png, id=23, 673.2pt x 702.9pt>
 File: Enigma-rotor-flat-contacts.png Graphic file (type png)
 <use Enigma-rotor-flat-contacts.png>
-Package pdftex.def Info: Enigma-rotor-flat-contacts.png  used on input line 63.
+Package pdftex.def Info: Enigma-rotor-flat-contacts.png  used on input line 65.
 
 (pdftex.def)             Requested size: 125.47737pt x 131.01047pt.
- [4 <./Enigma-rotor-set.png> <./Enigma-rotor-flat-contacts.png (PNG copy)>]
+ [4 <./Enigma-rotor-set.png> <./Enigma-rotor-flat-contacts.png (PNG copy)>] [5]
+
 chapter 2.
-[5
+[6
 
 {E:/MikTeX/fonts/enc/dvips/lm/lm-mathit.enc}{E:/MikTeX/fonts/enc/dvips/lm/lm-rm
 .enc}{E:/MikTeX/fonts/enc/dvips/lm/lm-mathex.enc}{E:/MikTeX/fonts/enc/dvips/lm/
-lm-mathsy.enc}] [6]
+lm-mathsy.enc}] [7]
 chapter 3.
-[7
+[8
 
 ] (Enigma.aux)
  ***********
@@ -783,10 +784,10 @@ L3 programming layer <2024-04-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19285 strings out of 474369
- 414554 string characters out of 5756923
+ 19290 strings out of 474369
+ 414603 string characters out of 5756923
  1934754 words of memory out of 5000000
- 41360 multiletter control sequences out of 15000+600000
+ 41365 multiletter control sequences out of 15000+600000
  629544 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,20n,121p,10937b,701s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -798,9 +799,9 @@ eX/fonts/type1/public/lm/lmr6.pfb><E:/MikTeX/fonts/type1/public/lm/lmr8.pfb><E:
 /MikTeX/fonts/type1/public/lm/lmr9.pfb><E:/MikTeX/fonts/type1/public/lm/lmro10.
 pfb><E:/MikTeX/fonts/type1/public/lm/lmssbx10.pfb><E:/MikTeX/fonts/type1/public
 /lm/lmsy10.pfb>
-Output written on Enigma.pdf (7 pages, 4355535 bytes).
+Output written on Enigma.pdf (8 pages, 4364880 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
+ 112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
