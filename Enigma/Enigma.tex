@@ -1,24 +1,28 @@
-\documentclass[ngerman, a4paper, footsepline, headsepline, numbers=noenddot]{scrreport}
+\documentclass[ngerman, a4paper, footsepline, headsepline]{scrreport}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{babel, lmodern, scrlayer-scrpage, amsmath, amsmath, amsfonts, graphicx, tikz}
-\usepackage[bottom=5cm]{geometry}
+\usepackage[bottom=4cm]{geometry}
 
 \pagestyle{scrheadings}
-\pagenumbering{Roman}
 \newcommand{\myifoot}{\textbf{Emanuel Schäffer}}
-\newcommand{\mychead}{\textbf{RWU--University of Applied Sciences}}
+%\newcommand{\mycfoot}{\textbf{RWU--University of Applied Sciences}}
 \automark{section}
-\ofoot{\headmark}
-\ohead{\today}
-\chead{\mychead}
+%\ofoot{\mycfoot}
+\ohead{\headmark}
+\chead{}
 \ifoot{\myifoot}
 
 \newcommand{\figref}[1]{(siehe Abb.~\ref{#1})}
 
-\newenvironment{myenv}{%
+\newcommand{\aszboxy}[1]{
 	\begin{center}
-}{%
+		\fcolorbox{black}{yellow}
+		{\parbox{0.88\textwidth}
+			{\textcolor{black}
+				{#1}
+			}
+		}
 	\end{center}
 }
 
@@ -31,12 +35,12 @@
 	\maketitle
 	
 	\begin{abstract}
-		Enigma-Nachrichten können dechiffriert werden, wenn die Rotorauswahl\footnote{Hier wird im Allgemeinen nur die Enigma M1 mit 5 Walzen betrachtet.}, die Rotor-~, Ringstellungen und die Steckereinstellungen einzeln wiederhergestellt werden. Die Wiederherstellung der Nachrichtenschlüsseleinstellung ist empfindlich genug, um die korrekte Rotorreihenfolge zu unterscheiden. Die Methode wird an einer 647 Zeichen langen Nachricht demonstriert und ihre Leistung für unterschiedliche Nachrichtenlängen und verwendete Steckeranzahlen geschätzt.
+		Enigma-Nachrichten können dechiffriert werden, wenn die Rotorauswahl, die Rotor-~, Ringstellungen und die Steckereinstellungen einzeln wiederhergestellt werden. Die Wiederherstellung der Nachrichtenschlüsseleinstellung ist empfindlich genug, um die korrekte Rotorreihenfolge zu unterscheiden. 
 	\end{abstract}
 
 
 	\chapter{Enigma}
-	
+	\section{Einführung}
 	Die Enigma ist eine Rotor-Chiffriermaschine, die hauptsächlich im Zweiten Weltkrieg Einsatz kam. Die von der Wehrmacht modifizierte Enigma verfügte zunächst über drei Walzen und zusätzlich einen Reflektor. Jede dieser Walzen führte eine monoalphabetische Substitution durch. Die rechte Walze wurde bei jedem Tastendruck um eine Position weitergerückt. Hat diese Walze eine komplette Rotation vollzogen, rückte die Walze links neben ihr um eine Position weiter\footnote{Eine Analogie hierfür ist der Kilometerzähler eines mechanischen Tachometers oder das Verhalten von Sekunden-, Minuten- und Studenzeigern einer Uhr.}. Neuerungen waren das Steckerbrett \figref{fig:enigma_complete} und gegen Ende des Krieges eine zusätzliche, vierte Walze. Ich werde mich, wenn nicht ausdrücklich erwähnt, auf die Enigma M3 mit drei Walzen beschränken.
 	\nopagebreak
 	\begin{figure}[htbp]
@@ -71,7 +75,30 @@
 	\end{figure}
 	
 	\newpage
-	Als letzte Einstellung musste das Steckerbrett verdrahtet werden. Das Steckerbrett vertauschte zwei Buchstaben miteinander. Von 13 möglichen Steckerverbindungen wurden meistens 10 vorgegeben. Nachdem alle Einstellung getroffen waren, überlegte sich der Schlüssler einen "`zufälligen"' Spruchschlüssel, mit dem der Text verschlüsselt wurde.\footnote{In Wahrheit wählten die Schlüssler oft den gleichen Schlüssel, der meist persönliche Informationen wie zum Beispiel den Name der Freundin enthielt.} Dieser Spruchschlüssel gab die Walzenstellung für die folgende Nachricht an. Der "`zufällige"' Spruchschlüssel wurde mit dem Tagesschlüssel verschlüsselt und ergab zusammen mit anderen Zusatzinformationen den "`Spruchkopf"'. Der Schlüssler gab nun den zu verschlüsselnden Text nach bestimmten Regeln ein. Eine Eigenschaft der Enigma ist, dass sie selbstinvers ist. Das bedeutet, dass mit der gleichen Einstellung, mit der ein Text verschlüsselt wurde, dieser auch wieder entschlüsselt werden kann.
+	Als letzte Einstellung musste das Steckerbrett verdrahtet werden. Das Steckerbrett vertauschte zwei Buchstaben miteinander. Von 13 möglichen Steckerverbindungen wurden meistens 10 vorgegeben. 
+		
+		
+	Wenn der Schlüssler nun eine Taste auf der Tastatur betätigte, floss Strom durch das Steckerbrett, welches eine Substitution durchführt. Danach floss der Strom durch den Walzensatz, in den Reflektor und nochmals in entgegengesetzter Richtung durch den Walzensatz. Jeder dieser Walzen führte eine monoalphabetische Substitution durch. Nach dem der Strom den Walzensatz verlassen hatte, floss der Strom nochmals durch das Steckerbrett und erleuchtete letztendlich eine Lampe.
+	\begin{figure}[htbp]
+		\centering
+		\caption{Verdrahtung Walze I}
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+				\hline	
+				A & B & C & D & E & F & G & H & I & J & K & L & M & N & O & P & Q & R & S & T & U & V & W & X & Y & Z\\
+				\hline
+				E & K & M & F & L & G & D & Q & V & Z & N & T & O & W & Y & H & X & U & S & P & A & I & B & R & C & J\\
+				\hline
+			\end{tabular}
+		}
+		\label{fig:rot1_cabeling}
+	\end{figure}
+	
+	
+	
+	
+	\section{Übertragung der Nachrichten}
+	Nachdem alle Einstellung getroffen waren, überlegte sich der Schlüssler einen "`zufälligen"' Spruchschlüssel, mit dem der Text verschlüsselt wurde.\footnote{In Wahrheit wählten die Schlüssler oft den gleichen Schlüssel, der meist persönliche Informationen wie zum Beispiel den Name der Freundin enthielt.} Dieser Spruchschlüssel gab die Walzenstellung für die folgende Nachricht an. Der "`zufällige"' Spruchschlüssel wurde mit dem Tagesschlüssel verschlüsselt und ergab zusammen mit anderen Zusatzinformationen den "`Spruchkopf"'. Der Schlüssler gab nun den zu verschlüsselnden Text nach bestimmten Regeln ein. Eine Eigenschaft der Enigma ist, dass sie selbstinvers ist. Das bedeutet, dass mit der gleichen Einstellung, mit der ein Text verschlüsselt wurde, dieser auch wieder entschlüsselt werden kann.
 	
 	
 	\chapter{Häufigkeitsanalyse}
