@@ -1,7 +1,7 @@
 \documentclass[ngerman, a4paper, footsepline, headsepline]{scrreport}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{babel, lmodern, scrlayer-scrpage, amsmath, amsmath, amsfonts, graphicx, tikz}
+\usepackage{babel, lmodern, scrlayer-scrpage, amsmath, amsmath, amsfonts, graphicx, tikz, algorithm, algpseudocode}
 \usepackage[bottom=4cm]{geometry}
 
 \pagestyle{scrheadings}
@@ -99,6 +99,34 @@
 	
 	\section{Übertragung der Nachrichten}
 	Nachdem alle Einstellung getroffen waren, überlegte sich der Schlüssler einen "`zufälligen"' Spruchschlüssel, mit dem der Text verschlüsselt wurde.\footnote{In Wahrheit wählten die Schlüssler oft den gleichen Schlüssel, der meist persönliche Informationen wie zum Beispiel den Name der Freundin enthielt.} Dieser Spruchschlüssel gab die Walzenstellung für die folgende Nachricht an. Der "`zufällige"' Spruchschlüssel wurde mit dem Tagesschlüssel verschlüsselt und ergab zusammen mit anderen Zusatzinformationen den "`Spruchkopf"'. Der Schlüssler gab nun den zu verschlüsselnden Text nach bestimmten Regeln ein. Eine Eigenschaft der Enigma ist, dass sie selbstinvers ist. Das bedeutet, dass mit der gleichen Einstellung, mit der ein Text verschlüsselt wurde, dieser auch wieder entschlüsselt werden kann.
+	
+	
+	
+	
+	\chapter {Bombe}
+	
+	\section{Algorithmus Bombe}
+	
+	\begin{algorithm}
+		\caption{Bombe Algorithmus}
+		\begin{algorithmic}[1]
+			\Procedure{Bombe}{$p_0 \dots p_{n-1} :$ [Char], $c_0 \dots c_{n-1} :$ [Char]}
+				\ForAll{\textsl{rotors} $\in$ \textbf{permut(rotor order)}, \textsl{pos} $\in$ \textbf{[AAA $\dots$ ZZZ]}}
+					\State plugs: Char $\rightarrow \{ $Char$\}$
+					\State plugs$(p_0) \cup= \{\textbf{'A'}\}$
+					\While{\textsl{plugs changes}}
+						\ForAll{\textsl{i} $\in$ \textbf{[0\dots n--1]}}
+							\State plugs($c_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(p_i)}$ encrypt(\textsl{rotors, p, pos}+i)
+							\State plugs($p_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(c_i)}$ encrypt(\textsl{rotors, p, pos}+i)
+						\EndFor
+					\EndWhile
+					\If{$\forall$ \textsl{S} $\in$ \textbf{cod(plugs)}: \#S < \#Char}
+						\State report(\textsl{pos, plugs})
+					\EndIf
+				\EndFor
+			\EndProcedure
+		\end{algorithmic}
+	\end{algorithm}
 	
 	
 	\chapter{Häufigkeitsanalyse}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.19)  11 SEP 2024 20:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.19)  15 SEP 2024 20:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -579,7 +579,43 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (E:\MikTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code
 .tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (E:\MikTeX\tex/latex/geometry\geometry.sty
+))) (E:\MikTeX\tex/latex/algorithms\algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(E:\MikTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count300
+\float@exts=\toks37
+\float@box=\box66
+\@float@everytoks=\toks38
+\@floatcapt=\box67
+) (E:\MikTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks39
+\c@algorithm=\count301
+)
+(E:\MikTeX\tex/latex/algorithmicx\algpseudocode.sty
+Package: algpseudocode 
+
+(E:\MikTeX\tex/latex/algorithmicx\algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count302
+\c@ALG@rem=\count303
+\c@ALG@nested=\count304
+\ALG@tlm=\skip68
+\ALG@thistlm=\skip69
+\c@ALG@Lnr=\count305
+\c@ALG@blocknr=\count306
+\c@ALG@storecount=\count307
+\c@ALG@tmpcounter=\count308
+\ALG@tmplength=\skip70
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (E:\MikTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (E:\MikTeX\tex/generic/iftex\ifvtex.sty
@@ -587,9 +623,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (E:\MikTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count300
-\Gm@cntv=\count301
-\c@Gm@tempcnt=\count302
+\Gm@cnth=\count309
+\Gm@cntv=\count310
+\c@Gm@tempcnt=\count311
 \Gm@bindingoffset=\dimen259
 \Gm@wd@mp=\dimen260
 \Gm@odd@mp=\dimen261
@@ -598,7 +634,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutheight=\dimen264
 \Gm@layouthoffset=\dimen265
 \Gm@layoutvoffset=\dimen266
-\Gm@dimlist=\toks37
+\Gm@dimlist=\toks40
  (E:\MikTeX\tex/latex/geometry\geometry.cfg))
 1: section
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 29
@@ -608,8 +644,8 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (E:\MikTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count303
-\l__pdf_internal_box=\box66
+\l__color_backend_stack_int=\count312
+\l__pdf_internal_box=\box68
 ) (Enigma.aux)
 \openout1 = `Enigma.aux'.
 
@@ -630,17 +666,17 @@ LaTeX Font Info:    ... okay on input line 29.
 
 (E:\MikTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count304
+\scratchcounter=\count313
 \scratchdimen=\dimen267
-\scratchbox=\box67
-\nofMPsegments=\count305
-\nofMParguments=\count306
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count307
+\scratchbox=\box69
+\nofMPsegments=\count314
+\nofMParguments=\count315
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count316
 \MPscratchDim=\dimen268
-\MPnumerator=\count308
-\makeMPintoPDFobject=\count309
-\everyMPtoPDFconversion=\toks39
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
+\everyMPtoPDFconversion=\toks42
 ) (E:\MikTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -736,6 +772,21 @@ onts/enc/dvips/lm/lm-ec.enc}] [2
 
 ]
 chapter 1.
+
+Class scrreprt Warning: \float@addtolists detected!
+(scrreprt)              Implementation of \float@addtolist became
+(scrreprt)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrreprt)              has been replaced by several more flexible
+(scrreprt)              features of package `tocbasic`.
+(scrreprt)              Since Version 3.12 support for deprecated
+(scrreprt)              \float@addtolist interface has been
+(scrreprt)              restricted to only some of the KOMA-Script
+(scrreprt)              features and been removed from others.
+(scrreprt)              Loading of package `scrhack' may help to
+(scrreprt)              avoid this warning, if you are using a
+(scrreprt)              a package that still implements the
+(scrreprt)              deprecated \float@addtolist interface.
+
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 44.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -771,10 +822,14 @@ chapter 2.
 [6
 
 {E:/MikTeX/fonts/enc/dvips/lm/lm-mathit.enc}{E:/MikTeX/fonts/enc/dvips/lm/lm-rm
-.enc}{E:/MikTeX/fonts/enc/dvips/lm/lm-mathex.enc}{E:/MikTeX/fonts/enc/dvips/lm/
-lm-mathsy.enc}] [7]
+.enc}{E:/MikTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{E:/MikTeX/fonts/enc/dvips/lm/
+lm-mathex.enc}]
 chapter 3.
-[8
+[7
+
+] [8]
+chapter 4.
+[9
 
 ] (Enigma.aux)
  ***********
@@ -783,24 +838,26 @@ L3 programming layer <2024-04-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19286 strings out of 474369
- 414538 string characters out of 5756923
+ 19984 strings out of 474369
+ 425327 string characters out of 5756923
  1942754 words of memory out of 5000000
- 41361 multiletter control sequences out of 15000+600000
- 629544 words of font info for 92 fonts, out of 8000000 for 9000
+ 42038 multiletter control sequences out of 15000+600000
+ 638325 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,20n,121p,10937b,701s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<E:/MikTeX/fonts/type1/public/lm/lmbx12.pfb><E:/MikTeX/fonts/type1/public/lm/
-lmbxo10.pfb><E:/MikTeX/fonts/type1/public/lm/lmex10.pfb><E:/MikTeX/fonts/type1/
-public/lm/lmmi10.pfb><E:/MikTeX/fonts/type1/public/lm/lmmi8.pfb><E:/MikTeX/font
-s/type1/public/lm/lmr10.pfb><E:/MikTeX/fonts/type1/public/lm/lmr12.pfb><E:/MikT
-eX/fonts/type1/public/lm/lmr6.pfb><E:/MikTeX/fonts/type1/public/lm/lmr8.pfb><E:
-/MikTeX/fonts/type1/public/lm/lmr9.pfb><E:/MikTeX/fonts/type1/public/lm/lmro10.
-pfb><E:/MikTeX/fonts/type1/public/lm/lmssbx10.pfb><E:/MikTeX/fonts/type1/public
-/lm/lmsy10.pfb>
-Output written on Enigma.pdf (8 pages, 4365621 bytes).
+ 122i,20n,121p,10937b,705s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<E:/MikTeX/fonts/type1/public/lm/lmbx10.pfb><E:/MikTeX/fonts/type1/public/lm/
+lmbx12.pfb><E:/MikTeX/fonts/type1/public/lm/lmbxo10.pfb><E:/MikTeX/fonts/type1/
+public/lm/lmcsc10.pfb><E:/MikTeX/fonts/type1/public/lm/lmex10.pfb><E:/MikTeX/fo
+nts/type1/public/lm/lmmi10.pfb><E:/MikTeX/fonts/type1/public/lm/lmmi6.pfb><E:/M
+ikTeX/fonts/type1/public/lm/lmmi8.pfb><E:/MikTeX/fonts/type1/public/lm/lmr10.pf
+b><E:/MikTeX/fonts/type1/public/lm/lmr12.pfb><E:/MikTeX/fonts/type1/public/lm/l
+mr6.pfb><E:/MikTeX/fonts/type1/public/lm/lmr8.pfb><E:/MikTeX/fonts/type1/public
+/lm/lmr9.pfb><E:/MikTeX/fonts/type1/public/lm/lmro10.pfb><E:/MikTeX/fonts/type1
+/public/lm/lmssbx10.pfb><E:/MikTeX/fonts/type1/public/lm/lmsy10.pfb><E:/MikTeX/
+fonts/type1/public/lm/lmsy8.pfb>
+Output written on Enigma.pdf (9 pages, 4436392 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 135 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
