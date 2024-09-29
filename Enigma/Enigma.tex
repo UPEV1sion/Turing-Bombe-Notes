@@ -113,11 +113,11 @@
 			\Procedure{Bombe}{$p_0 \dots p_{n-1} :$ [Char], $c_0 \dots c_{n-1} :$ [Char]}
 				\ForAll{\textsl{rotors} $\in$ \textbf{permut(rotor order)}, \textsl{pos} $\in$ \textbf{[AAA $\dots$ ZZZ]}}
 					\State plugs: Char $\rightarrow \{ $Char$\}$
-					\State plugs$(p_0) \cup= \{\textbf{'A'}\}$
-					\While{\textsl{plugs changes}}
+					\State plugs$(p_0)\ \cup= \{\textbf{'A'}\}$
+					\While{\textsl{plugs} changing}
 						\ForAll{\textsl{i} $\in$ \textbf{[0\dots n--1]}}
-							\State plugs($c_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(p_i)}$ encrypt(\textsl{rotors, p, pos}+i)
-							\State plugs($p_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(c_i)}$ encrypt(\textsl{rotors, p, pos}+i)
+							\State plugs($c_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(p_i)}$ encrypt(\textsl{rotors, p, pos}+\textsl{i})
+							\State plugs($p_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(c_i)}$ encrypt(\textsl{rotors, p, pos}+\textsl{i})
 						\EndFor
 					\EndWhile
 					\If{$\forall$ \textsl{S} $\in$ \textbf{cod(plugs)}: \#S < \#Char}
@@ -127,6 +127,21 @@
 			\EndProcedure
 		\end{algorithmic}
 	\end{algorithm}
+	
+	\section{Cycle Finding Algorithm}
+	\noindent
+	\texttt{typedef struct \{} \\
+	\hspace*{0.5cm} \texttt{char first;} \\
+	\hspace*{0.5cm} \texttt{char second;} \\
+	\texttt{\} Tuple;}
+		\begin{algorithm}
+			\caption{Cycle Finding Algorithm}
+			\begin{algorithmic}[1]
+				\Procedure{is\_cyle}{$start :$ \textbf{char}, $c:$ char, $tuples_0 \dots tuples_{n-1}:$ Tuple, $visited\_mask:$ uint32\_t}
+				\EndProcedure
+			\end{algorithmic}
+		\end{algorithm}
+	
 	
 	
 	\chapter{Häufigkeitsanalyse}

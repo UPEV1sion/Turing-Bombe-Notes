@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.19)  15 SEP 2024 20:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.19)  23 SEP 2024 19:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -819,6 +819,19 @@ Package pdftex.def Info: Enigma-rotor-flat-contacts.png  used on input line 69.
  [4 <./Enigma-rotor-set.png> <./Enigma-rotor-flat-contacts.png (PNG copy)>] [5]
 
 chapter 2.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+33.
+(E:\MikTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Underfull \hbox (badness 1769) in paragraph at lines 140--141
+[]\T1/lmr/bx/n/10.95 pro-ce-du-re \T1/lmr/m/sc/10.95 is_cyle\T1/lmr/m/n/10.95 (
+$\OML/lmm/m/it/10.95 start \OT1/lmr/m/n/10.95 :$ \T1/lmr/bx/n/10.95 char\T1/lmr
+/m/n/10.95 , $\OML/lmm/m/it/10.95 c \OT1/lmr/m/n/10.95 :$ \T1/lmr/m/n/10.95 cha
+r, $\OML/lmm/m/it/10.95 tuples[] [] tuples[] \OT1/lmr/m/n/10.95 :$ \T1/lmr/m/n/
+10.95 Tu-ple,
+ []
+
 [6
 
 {E:/MikTeX/fonts/enc/dvips/lm/lm-mathit.enc}{E:/MikTeX/fonts/enc/dvips/lm/lm-rm
@@ -838,11 +851,11 @@ L3 programming layer <2024-04-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19984 strings out of 474369
- 425327 string characters out of 5756923
+ 20027 strings out of 474369
+ 425977 string characters out of 5756923
  1942754 words of memory out of 5000000
- 42038 multiletter control sequences out of 15000+600000
- 638325 words of font info for 95 fonts, out of 8000000 for 9000
+ 42077 multiletter control sequences out of 15000+600000
+ 638644 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,20n,121p,10937b,705s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <E:/MikTeX/fonts/type1/public/lm/lmbx10.pfb><E:/MikTeX/fonts/type1/public/lm/
@@ -854,10 +867,10 @@ b><E:/MikTeX/fonts/type1/public/lm/lmr12.pfb><E:/MikTeX/fonts/type1/public/lm/l
 mr6.pfb><E:/MikTeX/fonts/type1/public/lm/lmr8.pfb><E:/MikTeX/fonts/type1/public
 /lm/lmr9.pfb><E:/MikTeX/fonts/type1/public/lm/lmro10.pfb><E:/MikTeX/fonts/type1
 /public/lm/lmssbx10.pfb><E:/MikTeX/fonts/type1/public/lm/lmsy10.pfb><E:/MikTeX/
-fonts/type1/public/lm/lmsy8.pfb>
-Output written on Enigma.pdf (9 pages, 4436392 bytes).
+fonts/type1/public/lm/lmsy8.pfb><E:/MikTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Enigma.pdf (9 pages, 4464874 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
+ 140 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
