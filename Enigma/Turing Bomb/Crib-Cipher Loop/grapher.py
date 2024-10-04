@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 with open("data.txt") as file:
     lines = file.read().splitlines()
     fig, ax = plt.subplots()
-    line = lines[0]
+    fig.set_dpi(250)
     
     y_axis_graph = []
     y_axis_force = []
@@ -21,8 +21,9 @@ with open("data.txt") as file:
     ax.plot(x_axis, y_axis_force, label="\"Force\" approach")
     ax.set_xlabel("Crib/Ciphertext length")
     ax.set_ylabel("Runtime (seconds)")
-    ax.set_title("Runtime Graph vs Force (1000 passes per length)")
+    ax.set_title("Runtime Graph vs Force (1000 * 1000 passes per length)")
     ax.legend()
     ax.grid()
     
-    plt.show()
+    plt.savefig("Runtime Graph Graph vs Force.svg", format="svg")
+    plt.savefig("Runtime Graph Graph vs Force.png", format="png")
