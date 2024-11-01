@@ -1,0 +1,27 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Die Enigma-Maschine}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Einführung}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Funktionsweise}{5}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Walzen}{5}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Umkehrwalze}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Steckerbrett}{7}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Übertragung der Nachrichten}{7}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Die Turing-Welchman-Bombe}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Einführung}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Funktionsweise}{10}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Vorbereitungen}{10}{subsection.3.2.1}%
+\contentsline {subsubsection}{\nonumberline Crib}{10}{subsubsection*.3}%
+\contentsline {subsubsection}{\nonumberline Menü}{11}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {3.2.2}Scrambler}{12}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Terminal}{12}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}In und Outs}{12}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Diagonalbrett}{13}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Commons}{13}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Test-Register}{14}{subsection.3.2.7}%
+\contentsline {section}{\numberline {3.3}Algorithmus Bombe}{15}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Implementierung}{15}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Cycle Finding Algorithm}{15}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Glossar}{16}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Quellen}{17}{chapter.5}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
