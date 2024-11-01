@@ -1,8 +1,64 @@
 \documentclass[ngerman, a4paper, footsepline, headsepline]{scrreport}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{babel, lmodern, scrlayer-scrpage, amsmath, amsmath, amsfonts, graphicx, tikz, algorithm, algpseudocode}
-\usepackage[bottom=4cm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath, amsfonts}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[bottom=3.5cm]{geometry}
+\usepackage{varioref}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{scrlayer-scrpage}
+\usepackage{siunitx}
+
+%\setlength{\topmargin}{-40pt} 
+
+\newlength{\ChapterRuleWidth}\setlength{\ChapterRuleWidth}{.5pt}
+\newcommand*{\ChRuleWidth}[1]{\setlength{\ChapterRuleWidth}{\dimexpr #1}}%
+\newcommand*{\ChNameVar}{\setkomafont{chapterprefix}}%
+\newcommand*{\ChTitleVar}{\setkomafont{chapter}}%
+\newcommand*{\ChNumVar}{\setkomafont{chapternumber}}%
+\newcommand*{\ChapterNameCase}[1]{#1}
+\newcommand*{\ChNameUpperCase}{\let\ChapterNameCase\MakeUppercase}
+\newcommand*{\ChNameIs}{\renewcommand*\ChapterNameCase[1]{##1}}
+\newcommand*{\ChNameLowerCase}{\let\ChapterNameCase\MakeLowercase}
+\newcommand*{\ChapterTitleCase}[1]{#1}
+\newcommand*{\ChTitleUpperCase}{\let\ChapterTitleCase\MakeUppercase}
+\newcommand*{\ChTitleIs}{\renewcommand*\ChapterTitleCase[1]{##1}}
+\newcommand*{\ChTitleLowerCase}{\let\ChapterTitleCase\MakeLowercase}
+
+% 2. Einstellungen für den Stil Sonny:
+\KOMAoptions{chapterprefix}% Es ist ein Präfix-Stil
+\ChNameUpperCase
+\newkomafont{chapternumber}{\Huge}
+\let\raggedchapter\raggedleft% Überschriften rechtsbündig
+\RedeclareSectionCommand[%
+beforeskip=-5pt,% Abstand über der Präfixzeile bzw. der Linie
+innerskip=45pt,% Abstand zwischen Präfixzeile und Text
+afterskip=40pt,% Abstand unter dem Text
+font=\normalfont\sffamily\Large,% Schrift des Namens
+prefixfont=\Large,% Schrift der Präfixzeile
+]{chapter}
+\renewcommand*{\chapterformat}{%
+	\mbox{\ChapterNameCase{\chapappifchapterprefix{\nobreakspace}}%
+		{\usekomafont{chapternumber}{%
+				\rule{0pt}{.8\baselineskip}\thechapter\IfUsePrefixLine{}{\enskip}}}%
+	}%
+}
+\renewcommand*{\chapterlineswithprefixformat}[3]{% Ebene, Nummer, Text
+	\IfArgIsEmpty{#2}{}{%
+		% Die Prefix-Zeile aus Argument 2 wird nur gesetzt, wenn sie vorhanden
+		% ist.
+		#2%
+	}%
+	\rule[5pt]{\linewidth}{\ChapterRuleWidth}\\*
+	\ChapterTitleCase{#3}\nobreak
+	\rule[-5pt]{\linewidth}{\ChapterRuleWidth}
+}
 
 \pagestyle{scrheadings}
 \newcommand{\myifoot}{\textbf{Emanuel Schäffer}}
@@ -15,7 +71,7 @@
 
 \newcommand{\figref}[1]{(siehe Abb.~\ref{#1})}
 
-\newcommand{\aszboxy}[1]{
+\newcommand{\fmbox}[1]{
 	\begin{center}
 		\fcolorbox{black}{yellow}
 		{\parbox{0.88\textwidth}
@@ -27,83 +83,27 @@
 }
 
 \begin{document}
-	\subject{Kryptoanalyse der Enigma-Maschine: Eine Untersuchung des Cyclometers und der Turing-Bombe}
-	\title{Kryptoanalyse der Enigma-Maschine}
+	\subject{Kryptoanalyse der Enigma-Maschine durch eine Software-Nachbildung der Turing-Bombe}
+	\title{Turing-Bombe}
 	\author{Emanuel Schäffer}
 	\date{\today}
 	\publishers{RWU--University of Applied Sciences}
 	\maketitle
 	
-	\begin{abstract}
-		Enigma-Nachrichten können dechiffriert werden, wenn die Rotorauswahl, die Rotor-~, Ringstellungen und die Steckereinstellungen einzeln wiederhergestellt werden. Die Wiederherstellung der Nachrichtenschlüsseleinstellung ist empfindlich genug, um die korrekte Rotorreihenfolge zu unterscheiden. 
-	\end{abstract}
+	\tableofcontents
+
+%	
+%	\begin{abstract}
+%		Enigma-Nachrichten können dechiffriert werden, wenn die Rotorauswahl, die Rotor-~, Ringstellungen und die Steckereinstellungen einzeln wiederhergestellt werden. Die Wiederherstellung der Nachrichtenschlüsseleinstellung ist empfindlich genug, um die korrekte Rotorreihenfolge zu unterscheiden. 
+%	\end{abstract}
+
+	\chapter{Einleitung}
+	Diese Projektarbeit beschäftigt sich mit der Kryptoanalyse der Enigma-Maschine. Im speziellen wird hier auf die Kryptoanalyse mit der von Alan Turing und Gordon Welchman entwickelten ``Turing-Bombe'' eingegangen. Die ``Turing-Bombe'' baut auf die Arbeit von Marian Rejewski und seiner ``Bomba'' auf, welcher der ``Turing-Bombe'' ihren Namen gab. Dieses Verfahren zur Kryptoanalyse spielte eine wesentliche Rollte im 2.\@Weltkrieg und trug nach der Meinung vieler Historiker maßgeblich dazu bei, den Krieg zu verkürzen.
 
 
-	\chapter{Enigma}
-	\section{Einführung}
-	Die Enigma ist eine Rotor-Chiffriermaschine, die hauptsächlich im Zweiten Weltkrieg Einsatz kam. Die von der Wehrmacht modifizierte Enigma verfügte zunächst über drei Walzen und zusätzlich einen Reflektor. Jede dieser Walzen führte eine monoalphabetische Substitution durch. Die rechte Walze wurde bei jedem Tastendruck um eine Position weitergerückt. Hat diese Walze eine komplette Rotation vollzogen, rückte die Walze links neben ihr um eine Position weiter\footnote{Eine Analogie hierfür ist der Kilometerzähler eines mechanischen Tachometers oder das Verhalten von Sekunden-, Minuten- und Studenzeigern einer Uhr.}. Neuerungen waren das Steckerbrett \figref{fig:enigma_complete} und gegen Ende des Krieges eine zusätzliche, vierte Walze. Ich werde mich, wenn nicht ausdrücklich erwähnt, auf die Enigma M3 mit drei Walzen beschränken.
-	\nopagebreak
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=.5\linewidth]{Enigma-komplett.png}
-		\caption{Die Enigma Maschine}
-		\label{fig:enigma_complete}
-	\end{figure}
+	\include{Enigma/Enigma.tex}	
 	
-	\newpage
-	
-	 Bei der Enigma wurde jeden Tag  eine Tagesschlüssel eingestellt, welcher durch ein Code-Buch vorgegeben war. Dieser Tagesschlüssel bestand darin, welche drei der fünf Walzen der Schlüssler in welcher Reihenfolge einzusetzen hatte. Ferner musste er die Walzenstellung einstellen. Sie bestimmt die Ausgangsstellung der Walzen. Diese konnte durch ein Sichtfenster abgelesen werden.
-	
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=.4\linewidth]{Enigma-rotor-set.png}
-		\caption{Enigma-Walzen}
-		\label{fig:enigma_rotors}
-	\end{figure}
-	
-	Zusätzlich musste der Schlüssler die Ringstellung des Tages einstellen. Die Ringstellung veränderte die Relation der sichtbaren Buchstaben mit der internen Verdrahtung und bewegte die Übertragskerbe \figref{fig:enigma-rotor-contact}, die festlegte, wann sich die Walze links von der aktuellen bewegt.
-	
-	\begin{figure}[htbp]
-		\centering
-		\begin{tikzpicture}
-			\node at (0,0) {\includegraphics[width=.3\linewidth]{Enigma-rotor-flat-contacts.png}};
-			\draw[red, very thick, ->] (-3,-0.5) -- (-1.5,-0.1) ;
-			\node[red, anchor=west] at (-5,-0.8) {Übertragskerbe};
-		\end{tikzpicture}
-		\caption{Walzen Frontansicht mit Übertragskerbe}
-		\label{fig:enigma-rotor-contact}
-	\end{figure}
-	
-	\newpage
-	Als letzte Einstellung musste das Steckerbrett verdrahtet werden. Das Steckerbrett vertauschte zwei Buchstaben miteinander. Von 13 möglichen Steckerverbindungen wurden meistens 10 vorgegeben. 
-		
-		
-	Wenn der Schlüssler nun eine Taste auf der Tastatur betätigte, floss Strom durch das Steckerbrett, welches eine Substitution durchführt. Danach floss der Strom durch den Walzensatz, in den Reflektor und nochmals in entgegengesetzter Richtung durch den Walzensatz. Jeder dieser Walzen führte eine monoalphabetische Substitution durch. Nach dem der Strom den Walzensatz verlassen hatte, floss der Strom nochmals durch das Steckerbrett und erleuchtete letztendlich eine Lampe.
-	\begin{figure}[htbp]
-		\centering
-		\caption{Verdrahtung Walze I}
-		\resizebox{\textwidth}{!}{%
-			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-				\hline	
-				A & B & C & D & E & F & G & H & I & J & K & L & M & N & O & P & Q & R & S & T & U & V & W & X & Y & Z\\
-				\hline
-				E & K & M & F & L & G & D & Q & V & Z & N & T & O & W & Y & H & X & U & S & P & A & I & B & R & C & J\\
-				\hline
-			\end{tabular}
-		}
-		\label{fig:rot1_cabeling}
-	\end{figure}
-	
-	
-	
-	
-	\section{Übertragung der Nachrichten}
-	Nachdem alle Einstellung getroffen waren, überlegte sich der Schlüssler einen "`zufälligen"' Spruchschlüssel, mit dem der Text verschlüsselt wurde.\footnote{In Wahrheit wählten die Schlüssler oft den gleichen Schlüssel, der meist persönliche Informationen wie zum Beispiel den Name der Freundin enthielt.} Dieser Spruchschlüssel gab die Walzenstellung für die folgende Nachricht an. Der "`zufällige"' Spruchschlüssel wurde mit dem Tagesschlüssel verschlüsselt und ergab zusammen mit anderen Zusatzinformationen den "`Spruchkopf"'. Der Schlüssler gab nun den zu verschlüsselnden Text nach bestimmten Regeln ein. Eine Eigenschaft der Enigma ist, dass sie selbstinvers ist. Das bedeutet, dass mit der gleichen Einstellung, mit der ein Text verschlüsselt wurde, dieser auch wieder entschlüsselt werden kann.
-	
-	
-	
-	
-	\chapter {Bombe}
+	\chapter{Die Turing-Bombe}
 	
 	\section{Algorithmus Bombe}
 	
@@ -150,9 +150,8 @@
 	
 	Zunächst benötigen wir ein geeignetes Maß, um den Grad der Annäherung eines teilweise dechiffrierten Klartextes an authentisches Deutsch abzuschätzen. Dafür verwenden wir den Koinzidenzindex:
 	
-	$$
-	IC = \frac{\sum_{i=A}^{Z}f_i(f_i-1)}{N(N-1)}
-	$$
+	\fmbox{\textbf{Koinzidenzindex}$$IC = \frac{\sum_{i=A}^{Z}f_i(f_i-1)}{N(N-1)}$$}
+
 	
 	Sei $f_i$ die Häufigkeit des Buchstabens in Abhängigkeit von $i$ und $N$ die Gesamtanzahl der Buchstaben. Wir Summieren also die Anzahl der Buchstabenpaare auf, und teilen diese durch die Anzahl der allgemein möglichen Buchstabenpaare. Der Koinzidenzindex ist also ein Maß für die Buchstabenverteilung. Für ein Text bestehend aus zufälligen Buchstaben beträgt der $IC \approx$ 0.038; wobei er für Deutsch $\approx$ 0.076 beträgt.
 	\newpage
