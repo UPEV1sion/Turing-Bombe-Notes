@@ -1,0 +1,80 @@
+\chapter{Implementierung}
+
+%\section{Algorithmus Bombe}\label{sec:algorithmus-bombe}
+%
+%\begin{algorithm}[htbp]
+%	\caption{Bombe Algorithmus}
+%	\begin{algorithmic}
+%		\Procedure{Bombe}{$p_0 \dots p_{n-1} :$ [Char], $c_0 \dots c_{n-1} :$ [Char]}
+%		\ForAll{\textsl{rotors} $\in$ \textbf{permut(rotor order)}, \textsl{pos} $\in$ \textbf{[AAA $\dots$ ZZZ]}}
+%		\State plugs: Char $\rightarrow \{ $Char$\}$
+%		\State plugs$(p_0)\ \cup= \{\textbf{'A'}\}$
+%		\While{\textsl{plugs} changing}
+%		\ForAll{\textsl{i} $\in$ \textbf{[0\dots n--1]}}
+%		\State plugs($c_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(p_i)}$ encrypt(\textsl{rotors, p, pos}+\textsl{i})
+%		\State plugs($p_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(c_i)}$ encrypt(\textsl{rotors, p, pos}+\textsl{i})
+%		\EndFor
+%		\EndWhile
+%		\If{$\forall$ \textsl{S} $\in$ \textbf{cod(plugs)}: \#S < \#Char}
+%		\State report(\textsl{pos, plugs})
+%		\EndIf
+%		\EndFor
+%		\EndProcedure
+%	\end{algorithmic}
+%	\label{alg:algorithm}
+%\end{algorithm}
+%
+
+%\section{Vorbereitungen}\label{sec:impl_vorbereitugen}
+\section{Menü Algorithmus}\label{sec:cycle-finding-algorithm}
+Um eine Turing-Welchman-Bombe in der Programmiersprache C nachzubilden, muss zuerst ein Algorithmus entworfen werden, welcher das Menü durch ein von dem Nutzer vorgegebenes Crib und 
+%TODO
+Geheimtext bildet.
+
+Hierfür werden die Knoten als Struktur dargestellt, welche zum einen den Buchstaben und Zeiger auf anliegende Ausleger beinhaltet. 
+Die Buchstaben-Tupel wurden ebenfalls als Struktur dargestellt, welche zwei Knoten, die Position im Crib und einen Booleschen Wert beinhaltet welcher aussagt, ob dieses Tupel zum Zyklus beiträgt.
+
+
+%\section{Software Implementierung}\label{sec:implementierung_bombe}
+
+\noindent
+\begin{lstlisting}[style=mystyle]
+typedef struct MenuNode MenuNode;
+typedef struct CribCipherTuple CribCipherTuple;
+
+struct MenuNode
+{
+	CribCipherTuple **stubs;
+	uint8_t num_stubs;
+	char letter;
+};
+
+struct CribCipherTuple
+{
+	MenuNode first;
+	MenuNode second;
+	uint8_t position;
+	bool visited;
+};
+\end{lstlisting}
+
+Die Tupel werden nun in einer \glqq Nachschlagetabelle\grqq{} abgelegt.
+Diese Tabelle hat 26 Stellen, repräsentativ für das Alphabet.
+Ein jeweiliges Tupel wird sowohl unter dem erstem als auch unter dem zweiten Buchstabe abgelegt. 
+Ein Tupel wie \texttt{W:S} ist also sowohl unter \texttt{W} als auch unter \texttt{S} abgelegt.
+Ein Tiefensuche Algorithmus, der modifiziert wurde, um weniger \glqq gierig\grqq{} zu agieren, schlägt nun die Tupel in der Tabelle nach und markiert die besuchten Tupel.
+%Bei dem Rücksetzverfahren der Tiefensuche wird die Markierung der Tupel, die nicht zum Zyklus beitragen entfernt.
+Das Ergebnis ist eine gemessene, lineare Laufzeit.\footnote{Es wurden Crib-Längen bis 26 betrachtet, um zu garantieren, dass die lineare Laufzeit bei einer maximalen Länge von 13 Buchstaben gegeben ist.} 
+Das Menü wird als Vektor von \glqq CribCipherTuple\grqq{} in einer Struktur mit der Länge des Menüs abgelegt.
+
+\section{Scrambler}\label{sec:impl_scrambler}
+Wie in~\cref{subsec:vorbereitungen} erklärt, vernachlässigt die Bombe den Übertragzeitpunkt der Walzen.
+%Enigma Software gegeben erwähnen?
+
+\section{Terminal}\label{sec:impl_terminal}
+\section{In und Outs}\label{sec:impl_in_und_outs}
+\section{Diagonalbrett}\label{sec:impl_diagonal_board}
+\section{Commons}\label{sec:impl_commons}
+\section{Test-Register}\label{sec:impl_test-register}
+
+\chapter{Geschwindigkeit der Software-Nachbildung im Kontext}
