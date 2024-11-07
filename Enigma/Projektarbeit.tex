@@ -16,12 +16,33 @@
 \usepackage{siunitx}
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{listings}
+\usepackage[babel]{csquotes}
+\usepackage[backend=biber, style=ieee]{biblatex}
+
+\addbibresource{sources.bib}
 
 \definecolor{DarkGreen}{RGB}{0,100,0}
 
-\usepackage[babel]{csquotes}
-\usepackage[backend=biber, style=ieee]{biblatex}
-\addbibresource{sources.bib}
+\definecolor{main-color}{rgb}{0.6627, 0.7176, 0.7764}
+\definecolor{back-color}{rgb}{0.94,0.94,0.94}
+\definecolor{string-color}{rgb}{0.3333, 0.5254, 0.345}
+\definecolor{key-color}{rgb}{0.13,0.13,1}
+\definecolor{typedef-color}{rgb}{0.8, 0.47, 0.196}
+
+\lstdefinestyle{mystyle}
+{
+	language = C,
+	basicstyle = {\ttfamily\small},
+	backgroundcolor = {\color{back-color}},
+	stringstyle = {\color{string-color}},
+	keywordstyle = {\color{key-color}},
+	keywordstyle = [3]{\color{typedef-color}},
+	keywordstyle = [4]{\color{teal}},
+	morekeywords = [3]{uint8_t, bool},
+}
+
+
 
 %\setlength{\topmargin}{-40pt} 
 
@@ -90,10 +111,16 @@ prefixfont=\Large,
 \begin{document}
 	\subject{Kryptoanalyse der Enigma-Maschine durch eine Software-Nachbildung der Turing-Welchman-Bombe}
 	\title{Turing-Welchman-Bombe}
+%	\titlehead{}
 	\author{Emanuel Schäffer}
 	\date{\today}
-	\publishers{RWU--University of Applied Sciences}
-	\maketitle
+	\publishers{RWU--University of Applied Sciences \\ Prof. Dipl.-Math. Ekkehard Löhmann}
+	
+	\begin{titlepage}
+		\maketitle
+%		\includegraphics[width=.4\linewidth]{Enigma/enigma-logo}
+	\end{titlepage}
+	
 	
 	\tableofcontents
 	
@@ -114,6 +141,7 @@ prefixfont=\Large,
 	
 	\include{Turing Bomb/Turing-Bomb.tex}
 	
+	\include{Implementierung/Implementierung.tex}
 	
 %	\begin{algorithm}
 %		\caption{Cycle Finding Algorithm}

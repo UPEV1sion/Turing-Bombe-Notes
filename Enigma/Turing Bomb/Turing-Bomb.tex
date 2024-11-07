@@ -32,7 +32,7 @@ Ein Crib ist ein Klartextfragment, welches an einer bestimmten Stelle im Geheimt
 Die deutsche Wehrmacht verwendete in den gesendeten Nachrichten häufig Floskeln. 
 Ein Beispiel hierfür ist: \glqq Das Oberkommando der Wehrmacht gibt bekannt\grqq.
 Nun musste das Crib positioniert werden.
-Wie in~\cref{subsec:umkehrwalze} erklärt, ist es nicht möglich, dass ein Buchstabe auf sich selber abgebildet wird.
+Wie in~\cref{subsec:umkehrwalze} erklärt, ist es nicht möglich, dass ein Buchstabe auf sich selbst abgebildet wird.
 Wurde eine mögliche Position gefunden, konnten die Mitarbeiter von Blechley Park anfangen, das sogenannte Menü zu bauen.
 Die~\cref{fig:positioning_crib} zeigt solch eine Positionierung.
 
@@ -148,7 +148,7 @@ Wieder drei mal zwölf In- und Out-Paare, jeweils für die Scramblersätze.
 Nun werden die Terminals mit den In und Outs verbunden.
 Da der gewählte Routen-Startpunkt bei \glqq W\grqq{} liegt, wird der erste Scramblersatz auf das Offset \texttt{AAA} eingestellt.
 Darauf wird das Terminal \emph{W} mit dem ersten In-Kontakt verbunden.
-Der nächste Routen-Punkt \glqq S\grqq{} wird durch einen \glqq Brücken-Konnektor\grqq{} 1 Out mit 2 In und dem Terminal \emph{S} verbunden.
+Der nächste Routen-Punkt \glqq S\grqq{} wird durch einen \glqq Brücken-Konnektor\grqq{} dem ersten Out mit dem zweiten In und dem Terminal \emph{S} verbunden.
 
 \subsection{Diagonalbrett}\label{subsec:diagonalboard}
 Gordon Welchman fiel auf, dass bei frühen Bomben nicht die Kommutativität des Steckerbretts beachtet wurde.
@@ -226,7 +226,7 @@ Somit ist es möglich, den Out-Kontakt des Scramblersatzes, der dem \glqq E\grqq
 \nopagebreak
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.55\linewidth, clip, trim=2cm 25cm 5cm 2cm]{Bletchley_Park_Bombe_Rear}
+	\includegraphics[width=0.5\linewidth, clip, trim=2cm 25cm 5cm 2cm]{Bletchley_Park_Bombe_Rear}
 	\caption{Rückansicht der Bombe\autocite{wiki:bomberear}}
 	\label{fig:bombe_rear}
 \end{figure}
@@ -293,8 +293,9 @@ Es wird vermutet, dass während des Chiffrierungs-Prozesses die Steckerbrett-Ver
 
 In~\cref{fig:diagonal_board_connections_w_scrambler} wird die Hypothese der Steckerbrett-Verbindung $A \Leftrightarrow B$ getestet.
 Unser Test-Register ist \emph{A}.
-Es wurde ein Scramblersatz mit der Grundstellung \texttt{AAA} konfiguriert und Terminal \emph{B} mit 1 In und Terminal \emph{C} mit 1 Out verbunden.
-Ein weiterer Scramblersatz wurde auf die Grundstellung \texttt{AAB} konfiguriert und 2 In mit 1 Out, welcher durch den Brücken-Konnektor auch mit Terminal \emph{C} verbunden ist, verbunden und 2 Out mit Terminal \emph{A} verbunden.
+Es wurde ein Scramblersatz mit der Grundstellung \texttt{AAA} konfiguriert und Terminal \emph{B} mit dem ersten In und Terminal \emph{C} mit dem ersten Out verbunden.
+Ein weiterer Scramblersatz wurde auf die Grundstellung \texttt{AAB} konfiguriert und dem zweiten In mit dem ersten Out, welcher durch den Brücken-Konnektor auch mit Terminal \emph{C} verbunden ist, verbunden.
+Außerdem wurde das zweiten Out mit Terminal \emph{A} verbunden.
 Da das Steckerbrett keinen Einfluss auf den Verlauf des Zyklus hat, spielt es keine Rolle, welche Hypothese getestet wird.
 Der Zyklus-Verlauf für~\cref{fig:diagonal_board_connections_w_scrambler} wäre B $\rightarrow$ C $\rightarrow$ A\textellipsis.
 Nun wird \emph{a} durch den Scramblersatz permutiert.
@@ -313,35 +314,4 @@ Dies ist eine widersprüchliche Aussage, da Buchstaben nur mit einem anderen ver
 
 Die Tupel-Kombinationen 5 und 11 in~\cref{fig:crib_cipher_cycle} sind besonders effektiv, da sich die Anzahl der aktiven Verbindungen rasch \glqq aufschaukelt\grqq.
 
-\newpage
-\section{Algorithmus Bombe}\label{sec:algorithmus-bombe}
 
-\begin{algorithm}[htbp]
-	\caption{Bombe Algorithmus}
-	\begin{algorithmic}[1]
-		\Procedure{Bombe}{$p_0 \dots p_{n-1} :$ [Char], $c_0 \dots c_{n-1} :$ [Char]}
-		\ForAll{\textsl{rotors} $\in$ \textbf{permut(rotor order)}, \textsl{pos} $\in$ \textbf{[AAA $\dots$ ZZZ]}}
-		\State plugs: Char $\rightarrow \{ $Char$\}$
-		\State plugs$(p_0)\ \cup= \{\textbf{'A'}\}$
-		\While{\textsl{plugs} changing}
-		\ForAll{\textsl{i} $\in$ \textbf{[0\dots n--1]}}
-		\State plugs($c_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(p_i)}$ encrypt(\textsl{rotors, p, pos}+\textsl{i})
-		\State plugs($p_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(c_i)}$ encrypt(\textsl{rotors, p, pos}+\textsl{i})
-		\EndFor
-		\EndWhile
-		\If{$\forall$ \textsl{S} $\in$ \textbf{cod(plugs)}: \#S < \#Char}
-		\State report(\textsl{pos, plugs})
-		\EndIf
-		\EndFor
-		\EndProcedure
-	\end{algorithmic}\label{alg:algorithm}
-\end{algorithm}
-
-\section{Implementierung}\label{sec:implementierung_bombe}
-
-\section{Cycle Finding Algorithm}\label{sec:cycle-finding-algorithm}
-\noindent
-\texttt{typedef struct \{} \\
-\hspace*{0.5cm} \texttt{char first;} \\
-\hspace*{0.5cm} \texttt{char second;} \\
-\texttt{\} Tuple;}
