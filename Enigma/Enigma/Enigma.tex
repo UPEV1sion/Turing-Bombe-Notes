@@ -1,7 +1,7 @@
 \chapter{Die Enigma-Maschine}\label{ch:die-enigma}
 \section{Einführung}\label{sec:einfuhrung}
 
-Um die Funktionsweise der Turing-Welchman-Bombe und ihrer Software-Nachbildung zu verstehen, sollte zuerst die Enigma-Maschine verstanden werden.
+Um die Funktionsweise der Turing-Welchman-Bombe und ihrer Software-Nachbildung zu verstehen, muss zuerst die Enigma-Maschine verstanden werden.
 Im Folgenden sei ein Überblick über die Enigma-Maschine gegeben.
 Die Enigma-Maschine ist eine Rotor-Chiffrier-\allowbreak maschine, die 1918 von Arthur Scherbius zum Patent angemeldet wurde und hauptsächlich im Zweiten Weltkrieg zum Einsatz kam.
 Aufgrund der Sicherheitsanforderungen der deutschen Wehrmacht wurde die kommerziell erwerbliche Enigma-Maschine modifiziert.
@@ -13,7 +13,7 @@ Hier wird, wenn nicht ausdrücklich erwähnt, ausschließlich die Enigma M3 mit 
 \nopagebreak
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.42\linewidth]{Enigma-plakat}
+	\includegraphics[width=.42\linewidth]{Enigma/Enigma-plakat}
 	\caption{Die Enigma-Maschine (Foto Deutsches Museum München)}
 	\label{fig:enigma_complete}
 \end{figure}
@@ -53,13 +53,13 @@ Die rechte Walze wird bei jedem Tastendruck um eine Position weitergerückt.
 Hat diese Walze eine komplette Rotation vollzogen, rückt die Walze links neben ihr um eine Position weiter.\footnote{Eine Analogie hierfür ist das Verhalten eines mechanischen Kilometerzählers oder das Verhalten von Sekunden-, Minuten- und Studenzeigern einer Uhr.}
 Die 26 Eingangskontakte der rechten Walze werden durch 26 Kontakte der Enigma-Maschine versorgt, welche mit der Tastatur verbunden sind.
 Die Enigma-Maschinen Kontakte sind starr und bewegen sich nicht.
-Wird nun ein \glqq A\grqq{} betätigt, während sich der Rotor in Stellung \glqq A\grqq{} befindet, wird zuerst der Rotor rotiert und dann durchlaufen.
+Wird nun ein \glqq A\grqq{} betätigt, während sich die Walze in Stellung \glqq A\grqq{} befindet, wird diese zuerst rotiert und dann durchlaufen.
 Der Strom nimmt somit den \glqq B\grqq{} Pfad.
-Das Resultat dieser in Reihe geschalteten Rotoren ist eine polyalphabetische Substitution.
+Das Resultat dieser in Reihe geschalteten Walzen ist eine polyalphabetische Substitution.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.4\linewidth]{Enigma-rotor-set}
+	\includegraphics[width=.4\linewidth]{Enigma/Enigma-rotor-set}
 	\caption{Enigma-Walzen\autocite{enigmarotorset2004}}
 	\label{fig:enigma_rotors}
 \end{figure}
@@ -90,7 +90,7 @@ Das bedeutet ganz allgemein, dass $dec \ne enc$ ist.
 Es wird also zur Dechiffrierung eine andere Funktion, als zur Chiffrierung benötigt.
 Konkret bedeutet das für sehr frühe Enigma-Maschinen, dass diese zur Dechiffrierung einer Nachricht, die zuvor von einer Enigma-Maschine chiffriert wurde, einen speziellen Modus benötigen.
 Um die chiffrierte Nachricht zu dechiffrieren, muss ein Hebel umgelegt werden und die Walzen müssen in Ausgangsstellung gebracht werden.
-Nun wird Strom nicht von rechts nach links, sondern von links nach rechts durch die Rotoren geleitet.
+Nun wird Strom nicht von rechts nach links, sondern von links nach rechts durch die Walzen geleitet.
 
 Da das daraus resultierende Gesamtgewicht von rund 50\si{\kg} unakzeptabel für den Feldeinsatz war und der zusätzlich benötigte Mechanismus fehleranfällig erschien, wurde die Umkehrwalze oder auch der Reflektor von der Wehrmacht adaptiert.
 Die Umkehrwalze sorgt dafür, dass $dec = enc$ ist, sprich mit der gleichen Einstellung ein beliebiger Text sowohl chiffriert als auch dechiffriert werden kann.
@@ -101,7 +101,7 @@ Somit wurde sich die Komplikation und das Gewicht des Dechiffrierungs-Modus gesp
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.5\linewidth]{UKW-D}
+	\includegraphics[width=.5\linewidth]{Enigma/UKW-D}
 	\caption{Umkehrwalze-D Replika\autocite{enigmareflektor}}
 	\label{fig:enigma_reflector}
 \end{figure}
@@ -123,7 +123,7 @@ Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichk
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.4\linewidth]{enigma-steckerbrett}
+	\includegraphics[width=.4\linewidth]{Enigma/enigma-steckerbrett}
 	\caption{Enigma-Steckerbrett\autocite{wiki:enigmasteckerbrett}}
 	\label{fig:enigma_plugboard}
 \end{figure}
@@ -137,7 +137,7 @@ In~\cref{fig:enigma_code_book} ist ein Code-Buch-Auszug für eine Enigma-Maschin
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.7\linewidth]{Enigma-code-book}
+	\includegraphics[width=.7\linewidth]{Enigma/Enigma-code-book}
 	\caption{Code-Buch-Auszug\autocite{wiki:enigmacodebook}}
 	\label{fig:enigma_code_book}
 \end{figure}

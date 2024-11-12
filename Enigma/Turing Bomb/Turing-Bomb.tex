@@ -8,13 +8,13 @@ Alan Turing und Gordon Welchman waren die Hauptverantwortlichen für die Entwick
 Dieses Verfahren basiert ähnlich wie der Zyklometer auf \glqq Zyklen\grqq. 
 Jedoch wurde hier nicht die Verdopplung des Spruchschlüssels im Spruchkopf ausgenutzt, sondern Zyklen zwischen einem an einer bestimmten Stelle im Geheimtext vermuteten Klartext (Crib) und dem Geheimtext bestimmt.
 Die Turing-Welchman-Bombe testet immer eine Hypothese einer Steckerbrett-Verbindung und probierte mit drei von acht möglichen Walzen alle Walzenstellungen durch.
-Auch wenn diese Hypothese sich als nicht korrekt erwies, findet die Turing-Welchman-Bombe bei korrekter Walzenlage durch Reductio ad absurdum\autocite{dewiki:reductioadabsurdum} trotzdem die gültigen Steckerbrett-Verbindungen.
+Auch wenn diese Hypothese sich als nicht korrekt erwies, findet die Turing-Welchman-Bombe bei korrekter Walzenlage durch Reductio ad absurdum trotzdem die gültigen Steckerbrett-Verbindungen.
 Ziel war es die abgefangene Nachricht und ultimativ den Tagesschlüssel zu knacken.
 Aufgrund der Einfachheit wird im Folgenden der Begriff \glqq Bombe\grqq{} anstelle von \glqq Turing-Welchman-Bombe\grqq{} verwendet.
 \nopagebreak
 \begin{figure}
 	\centering
-	\includegraphics[width=0.4\linewidth]{BletchleyParkBombe}
+	\includegraphics[width=0.4\linewidth]{Turing Bomb/BletchleyParkBombe}
 	\caption{Eine Turing-Welchman-Bombe in Blechley Park\autocite{wiki:bombe_picture}}
 	\label{fig:bombe}
 \end{figure}
@@ -89,7 +89,7 @@ Er gibt die Einstellungen der Bombe vor.
 \nopagebreak
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.6\linewidth]{crib_cipher_cycle}
+	\includegraphics[width=.6\linewidth]{Turing Bomb/crib_cipher_cycle}
 	\caption{Crib-Geheimtext Menü}
 	\label{fig:crib_cipher_cycle}
 \end{figure}
@@ -112,7 +112,7 @@ Die Walzen der Bombe werden oft Scrambler genannt.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.4\linewidth]{WireBrushesOnBombeDrum}
+	\includegraphics[width=0.4\linewidth]{Turing Bomb/WireBrushesOnBombeDrum}
 	\caption{Die Kontakte der Scrambler\autocite{wiki:bombescrambler}}
 	\label{fig:scrambler}
 \end{figure} 
@@ -122,11 +122,11 @@ Die meisten Bomben bestanden aus dreimal zwölf Scramblersätzen.
 Zwölf Scramblersätze ergeben eine \glqq Chain\grqq.
 Ein Scramblersatz bestand aus drei Scrambler und simulierte eine Enigma-Maschine.
 Der Grund, warum zwölf \glqq Enigmas\grqq{} parallel verwendet werden ist, da somit eine komplette Ausgangsstellung der Walzen für das jeweilige Crib in einem Arbeitsgang überprüft werden kann.
-Der unterste Scrambler eines Scramblersatzes repräsentiert den rechten, schnellen Rotor einer Enigma-Maschine.
+Der unterste Scrambler eines Scramblersatzes repräsentiert die rechte, schnelle Walze einer Enigma-Maschine.
 Der mittlere und oberste Scrambler ist repräsentativ für die mittlere und linke Walze der Enigma-Maschine.
 Da die Scrambler keine Übertragskerbe besitzen, bewegt sich der nächste Scrambler immer nach eine vollen Rotation des aktuellen Scramblers, unabhängig von der Startposition. 
 
-Wurde nun durch die Mitarbeiter von Blechley-Park ein passendes Menü bestimmt, konnten die Rotoren in ihre Ausgangsstellung gebracht werden. 
+Wurde nun durch die Mitarbeiter von Blechley-Park ein passendes Menü bestimmt, konnten die Scrambler in ihre Ausgangsstellung gebracht werden. 
 Hierfür muss in dem Zyklus eine \glqq Route\grqq{} bestimmt werden.
 Für den Zyklus in~\cref{fig:crib_cipher_cycle} könnte die Route lauten: \texttt{W $\rightarrow$ S $\rightarrow$ A $\rightarrow$ R $\rightarrow$ G $\rightarrow$ E $\rightarrow$ V $\rightarrow$ S}.
 
@@ -226,7 +226,7 @@ Somit ist es möglich, den Out-Kontakt des Scramblersatzes, der dem \glqq E\grqq
 \nopagebreak
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\linewidth, clip, trim=2cm 25cm 5cm 2cm]{Bletchley_Park_Bombe_Rear}
+	\includegraphics[width=0.5\linewidth, clip, trim=2cm 25cm 5cm 2cm]{Turing Bomb/Bletchley_Park_Bombe_Rear}
 	\caption{Rückansicht der Bombe\autocite{wiki:bomberear}}
 	\label{fig:bombe_rear}
 \end{figure}
@@ -310,7 +310,7 @@ Die Bombe hält in zwei Fällen:
 Die anderen Fälle werden von der Bombe ignoriert.
 Angenommen unser erster Scramblersatz permutiert das \emph{a} im \emph{B}-Terminal zu einem \emph{c} und unser zweiter Scramblersatz permutiert dieses \emph{c} zu einem \emph{d} im \emph{A}-Terminal, so erzeugt dies ein Widerspruch.
 Es wurde die Hypothese der Steckerbrett-Verbindung $A \Leftrightarrow B$ aufgestellt, aber damit der dritte Buchstabe im Zyklus bei der aktuellen Walzenlage einem \emph{a} entsprechen kann, muss zusätzlich $A \Leftrightarrow D$ herrschen.
-Dies ist eine widersprüchliche Aussage, da Buchstaben nur mit einem anderen verbunden sein können –- die Rotoren rotieren.
+Dies ist eine widersprüchliche Aussage, da Buchstaben nur mit einem anderen verbunden sein können –- die Walzen rotieren.
 
 Die Tupel-Kombinationen 5 und 11 in~\cref{fig:crib_cipher_cycle} sind besonders effektiv, da sich die Anzahl der aktiven Verbindungen rasch \glqq aufschaukelt\grqq.
 

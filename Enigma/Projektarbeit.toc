@@ -20,13 +20,14 @@
 \contentsline {subsection}{\numberline {3.2.6}Commons}{13}{subsection.3.2.6}%
 \contentsline {subsection}{\numberline {3.2.7}Test-Register}{14}{subsection.3.2.7}%
 \contentsline {chapter}{\numberline {4}Implementierung}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Menü Algorithmus}{15}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Scrambler}{16}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Terminal}{16}{section.4.3}%
-\contentsline {section}{\numberline {4.4}In und Outs}{16}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Diagonalbrett}{16}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Commons}{16}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Test-Register}{16}{section.4.7}%
+\contentsline {section}{\numberline {4.1}Turing-Welchman-Bombe}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Menü Algorithmus}{15}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Scrambler}{16}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Terminal}{16}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}In und Outs}{16}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Diagonalbrett}{16}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Commons}{16}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Test-Register}{16}{subsection.4.1.7}%
 \contentsline {chapter}{\numberline {5}Geschwindigkeit der Software-Nachbildung im Kontext}{17}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Glossar}{18}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Quellen}{19}{chapter.7}%
