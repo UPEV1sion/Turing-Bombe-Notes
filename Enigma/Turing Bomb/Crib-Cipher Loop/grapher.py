@@ -12,16 +12,16 @@ with open("data.txt") as file:
         split_line = line.split(", ")
         graph_num = float(split_line[0])
         force_num = float(split_line[1])
-        y_axis_graph.append(graph_num)
-        y_axis_force.append(force_num)
+        y_axis_graph.append(graph_num * 1000)
+        y_axis_force.append(force_num * 1000)
         
     x_axis = [i + 2 for i in range(len(y_axis_graph))]
     
-    ax.plot(x_axis, y_axis_graph, label="Graph approach")
-    ax.plot(x_axis, y_axis_force, label="\"Force\" approach")
-    ax.set_xlabel("Crib/Ciphertext length")
-    ax.set_ylabel("Runtime (seconds)")
-    ax.set_title("Runtime Graph vs Force (1000 * 1000 passes per length)")
+    ax.plot(x_axis, y_axis_graph, label="\"Graphen\" Ansatz")
+    ax.plot(x_axis, y_axis_force, label="\"Naiver\" Ansatz")
+    ax.set_xlabel("Crib/Geheimtext Länge")
+    ax.set_ylabel("Laufzeit (Sekunden)")
+    ax.set_title("Laufzeit Graph Menü-Algorithmus(1000 * 1000 Durchgänge pro Länge)")
     ax.legend()
     ax.grid()
     

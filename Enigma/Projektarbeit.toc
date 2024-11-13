@@ -29,6 +29,7 @@
 \contentsline {subsection}{\numberline {4.1.6}Commons}{16}{subsection.4.1.6}%
 \contentsline {subsection}{\numberline {4.1.7}Test-Register}{16}{subsection.4.1.7}%
 \contentsline {chapter}{\numberline {5}Geschwindigkeit der Software-Nachbildung im Kontext}{17}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Glossar}{18}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Quellen}{19}{chapter.7}%
+\contentsline {chapter}{\numberline {6}Anhang}{18}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Glossar}{19}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Quellen}{20}{chapter.8}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
