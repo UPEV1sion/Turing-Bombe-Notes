@@ -81,6 +81,8 @@ Eine Möglichkeit das Verhalten mit einer Datenstruktur zu imitieren, ist es, di
 Hierbei Zeigen zum Beispiel der \emph{a}-Kontakt des \emph{B}-Terminals und der \emph{b}-Kontakt des \emph{A}-Terminals auf den gleichen Booleschen Wert.
 Somit ist die Verbindung $A \Leftrightarrow B$ abgebildet.
 Jedoch wäre es hier abermals nötig, den gesamten Vektor zu traversieren, um die aktiven Kontakte herauszufinden.
+Die entsprechenden Kontakte müssten nun wieder einen Bitvektor und einen normalen Vektor besitzen, damit die aktiven Kontakte effektiv bestimmt werden können, was keine wirklichen Ersparnisse bringen würde.
+Durch die Zeiger hätte dieser Ansatz auf einer 64-Bit Maschine mit 5408 Bytes einen recht hohen Speicherbedarf.
 
 Aus diesem Grund wurde die Funktion des Diagonalbrettes in einer Funktion gekapselt:
 

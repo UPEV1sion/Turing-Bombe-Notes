@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.11)  14 NOV 2024 16:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.11)  14 NOV 2024 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1650,15 +1650,14 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 
 Package cleveref Info: loaded `ngerman' language definitions on input line 77.
 [16] (Implementierung/diag_method.c)
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 100.
 
-
-Package cleveref Info: loaded `ngerman' language definitions on input line 120.
-
+Package cleveref Info: loaded `ngerman' language definitions on input line 98.
 [17]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 102.
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 123.
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 125.
 
 [18{C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.e
 nc}]
@@ -1764,7 +1763,7 @@ Package logreq Info: Writing requests to 'Projektarbeit.run.xml'.
 Here is how much of TeX's memory you used:
  43600 strings out of 473682
  919224 string characters out of 5719235
- 1935396 words of memory out of 5000000
+ 1932396 words of memory out of 5000000
  65892 multiletter control sequences out of 15000+600000
  652574 words of font info for 104 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -1790,7 +1789,7 @@ ers/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/
 Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/
 Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/U
 sers/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Projektarbeit.pdf (23 pages, 3283880 bytes).
+Output written on Projektarbeit.pdf (23 pages, 3284193 bytes).
 PDF statistics:
  621 PDF objects out of 1000 (max. 8388607)
  162 named destinations out of 1000 (max. 500000)
