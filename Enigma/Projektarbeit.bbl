@@ -47,6 +47,7 @@
       \verb{url}
       \verb https://commons.wikimedia.org/w/index.php?title=File:Enigma_rotor_set.png&oldid=509553237
       \endverb
+      \keyw{pictures}
     \endentry
     \entry{scherbiuschiffriermaschine1925}{patent}{}{}
       \name{author}{1}{}{%
@@ -82,6 +83,7 @@
       \verb{url}
       \verb https://www.cdvandt.org/Enigma%20DE416219C1.pdf
       \endverb
+      \keyw{sources}
     \endentry
     \entry{enigmareflektor}{misc}{}{}
       \name{author}{1}{}{%
@@ -108,6 +110,7 @@
       \verb{url}
       \verb http://www.enigma.hs-weingarten.de/gallery.htm
       \endverb
+      \keyw{pictures}
     \endentry
     \entry{wiki:enigma}{misc}{}{}
       \name{author}{1}{}{%
@@ -123,6 +126,7 @@
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{1}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -136,6 +140,7 @@
       \verb{url}
       \verb https://de.wikipedia.org/w/index.php?title=Enigma_(Maschine)&oldid=247875362
       \endverb
+      \keyw{sources}
     \endentry
     \entry{wiki:enigmasteckerbrett}{misc}{}{}
       \name{author}{1}{}{%
@@ -165,6 +170,7 @@
       \verb{url}
       \verb https://commons.wikimedia.org/w/index.php?title=File:Macchina_crittografica_elettromeccanica_-_Museo_scienza_tecnologia_Milano_08808_03.jpg&oldid=732612097
       \endverb
+      \keyw{pictures}
     \endentry
     \entry{wiki:enigmacodebook}{misc}{}{}
       \name{author}{1}{}{%
@@ -194,6 +200,7 @@
       \verb{url}
       \verb https://commons.wikimedia.org/w/index.php?title=File:Enigma_keylist_3_rotor.jpg&oldid=864353172
       \endverb
+      \keyw{pictures}
     \endentry
     \entry{schluesselm1940}{misc}{}{}
       \name{author}{1}{}{%
@@ -225,6 +232,7 @@
       \verb{url}
       \verb https://www.cryptomuseum.com/crypto/enigma/files/schluessel_m.pdf
       \endverb
+      \keyw{sources}
     \endentry
     \entry{wiki:bombe_picture}{misc}{}{}
       \name{author}{1}{}{%
@@ -254,6 +262,7 @@
       \verb{url}
       \verb https://commons.wikimedia.org/w/index.php?title=File:Wartime_picture_of_a_Bletchley_Park_Bombe.jpg&oldid=853558909
       \endverb
+      \keyw{pictures}
     \endentry
     \entry{wiki:bombescrambler}{misc}{}{}
       \name{author}{1}{}{%
@@ -283,6 +292,7 @@
       \verb{url}
       \verb https://commons.wikimedia.org/w/index.php?title=File:WireBrushesOnBombeDrum.jpg&oldid=704372169
       \endverb
+      \keyw{pictures}
     \endentry
     \entry{wiki:bomberear}{misc}{}{}
       \name{author}{1}{}{%
@@ -312,6 +322,7 @@
       \verb{url}
       \verb https://commons.wikimedia.org/w/index.php?title=File:Bletchley_Park_Bombe8.jpg&oldid=825628616
       \endverb
+      \keyw{pictures}
     \endentry
     \entry{ertelloemannangewandte2018}{book}{}{}
       \name{author}{2}{}{%
@@ -346,6 +357,38 @@
       \field{title}{Angewandte {Kryptographie}}
       \field{year}{2018}
       \true{nocite}
+      \keyw{sources}
+    \endentry
+    \entry{dewiki:schluesselprozedur}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; Stand 14. November 2024]}
+      \field{title}{Enigma-Schlüsselprozedur --- Wikipedia{,} die freie Enzyklopädie}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/w/index.php?title=Enigma-Schl%C3%BCsselprozedur&oldid=249763718
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/w/index.php?title=Enigma-Schl%C3%BCsselprozedur&oldid=249763718
+      \endverb
+      \keyw{sources}
     \endentry
     \entry{ellsburybomb1998}{misc}{}{}
       \name{author}{1}{}{%
@@ -378,6 +421,7 @@
       \verb{url}
       \verb http://www.ellsbury.com/bombe1.htm
       \endverb
+      \keyw{sources}
     \endentry
     \entry{virtualcolossusbombe}{misc}{}{}
       \name{author}{1}{}{%
@@ -393,8 +437,8 @@
       \strng{authornamehash}{14228e4eb7be9af10ef171aa319a3d43}
       \strng{authorfullhash}{14228e4eb7be9af10ef171aa319a3d43}
       \strng{authorfullhashraw}{14228e4eb7be9af10ef171aa319a3d43}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Bombe Technical Information}
@@ -410,6 +454,7 @@
       \verb{url}
       \verb https://bombe.virtualcolossus.co.uk/technical.html
       \endverb
+      \keyw{sources}
     \endentry
     \entry{turingbomben2014}{misc}{}{}
       \name{author}{1}{}{%
@@ -425,8 +470,8 @@
       \strng{authornamehash}{eda7297ea1c61e1c215c2e810294951c}
       \strng{authorfullhash}{eda7297ea1c61e1c215c2e810294951c}
       \strng{authorfullhashraw}{eda7297ea1c61e1c215c2e810294951c}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Turingbomben}
@@ -442,6 +487,7 @@
       \verb{url}
       \verb https://entropia.de/GPN14:Turingbomben
       \endverb
+      \keyw{sources}
     \endentry
     \entry{enwiki:bombe}{misc}{}{}
       \name{author}{1}{}{%
@@ -457,8 +503,8 @@
       \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://en.wikipedia.org/w/index.php?title=Bombe&oldid=1236749954}}
@@ -466,6 +512,7 @@
       \field{title}{Bombe --- {Wikipedia}{,} The Free Encyclopedia}
       \field{year}{2024}
       \true{nocite}
+      \keyw{sources}
     \endentry
   \enddatalist
 \endrefsection

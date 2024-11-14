@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.11)  13 NOV 2024 07:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.11)  14 NOV 2024 16:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1257,36 +1257,43 @@ Package: xparse 2023-10-10 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
+
+LaTeX Warning: \include should only be used after \begin{document} on input lin
+e 22.
+
+(my_style.sty
 \ChapterRuleWidth=\skip98
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-1.
- (C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 36
+.
+
+(C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (Projektarbeit.aux (Enigma/Enigma.aux) (Turing Bomb/Turing-Bomb.aux)
 (Implementierung/Implementierung.aux))
 \openout1 = `Projektarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
 
 (C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -1347,7 +1354,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 111.
+Package hyperref Info: Link coloring OFF on input line 36.
 (Projektarbeit.out) (Projektarbeit.out)
 \@outlinefile=\write5
 \openout5 = `Projektarbeit.out'.
@@ -1359,7 +1366,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 111.
+(scrreprt)           before \begin{document} on input line 36.
 
 (C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
@@ -1375,9 +1382,9 @@ File: translations-basic-dictionary-german.trsl (german translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `german'. on input line 111.
+or `german'. on input line 36.
 \c@lstlisting=\count500
-Package tocbasic Info: setting babel extension for `lol' on input line 111.
+Package tocbasic Info: setting babel extension for `lol' on input line 36.
 \scr@dte@lstlisting@maxnumwidth=\skip99
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
@@ -1405,52 +1412,52 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Projektarbeit.bbl' found.
  (Projektarbeit.bbl)
-Package biblatex Info: Reference section=0 on input line 111.
-Package biblatex Info: Reference segment=0 on input line 111.
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-22.
+Package biblatex Info: Reference section=0 on input line 36.
+Package biblatex Info: Reference segment=0 on input line 36.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 4
+7.
 
 (C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-22.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
+7.
 
 (C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-22.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+7.
 
 (C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-122.
+47.
 
 (C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-122.
+47.
 
 (C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 122.
+(Font)              <14.4> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 122.
+(Font)              <10> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 122.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 122
-.
+(Font)              <7> on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+
 
 (C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 122
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+
 
 (C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1483,7 +1490,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ]
 chapter 1.
 
-Overfull \hbox (5.05415pt too wide) in paragraph at lines 133--138
+Overfull \hbox (5.05415pt too wide) in paragraph at lines 53--58
 \T1/lmr/m/n/10.95 man ent-wi-ckel-ten ^^RTuring-Welchman-Bombe^^P ein-ge-gan-ge
 n. Die Turing-Welchman-Bombe
  []
@@ -1497,7 +1504,7 @@ n. Die Turing-Welchman-Bombe
 
  (Enigma/Enigma.tex
 chapter 2.
-<Enigma/Enigma-plakat.jpg, id=90, 190.1842pt x 271.96342pt>
+<Enigma/Enigma-plakat.jpg, id=96, 190.1842pt x 271.96342pt>
 File: Enigma/Enigma-plakat.jpg Graphic file (type jpg)
 <use Enigma/Enigma-plakat.jpg>
 Package pdftex.def Info: Enigma/Enigma-plakat.jpg  used on input line 16.
@@ -1512,7 +1519,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 53.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 53.
-<Enigma/Enigma-rotor-set.png, id=98, 864.22874pt x 682.55pt>
+<Enigma/Enigma-rotor-set.png, id=104, 864.22874pt x 682.55pt>
 File: Enigma/Enigma-rotor-set.png Graphic file (type png)
 <use Enigma/Enigma-rotor-set.png>
 Package pdftex.def Info: Enigma/Enigma-rotor-set.png  used on input line 62.
@@ -1521,7 +1528,7 @@ Package pdftex.def Info: Enigma/Enigma-rotor-set.png  used on input line 62.
 
 Package cleveref Info: loaded `ngerman' language definitions on input line 85.
 [5 <./Enigma/Enigma-rotor-set.png>]
-<Enigma/UKW-D.jpg, id=117, 994.71625pt x 744.7825pt>
+<Enigma/UKW-D.jpg, id=123, 994.71625pt x 744.7825pt>
 File: Enigma/UKW-D.jpg Graphic file (type jpg)
 <use Enigma/UKW-D.jpg>
 Package pdftex.def Info: Enigma/UKW-D.jpg  used on input line 104.
@@ -1534,13 +1541,13 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 115.
 c}{C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
 c}{C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <
 ./Enigma/UKW-D.jpg>]
-<Enigma/enigma-steckerbrett.jpg, id=133, 910.40125pt x 508.90125pt>
+<Enigma/enigma-steckerbrett.jpg, id=139, 910.40125pt x 508.90125pt>
 File: Enigma/enigma-steckerbrett.jpg Graphic file (type jpg)
 <use Enigma/enigma-steckerbrett.jpg>
 Package pdftex.def Info: Enigma/enigma-steckerbrett.jpg  used on input line 126
 .
 (pdftex.def)             Requested size: 167.2989pt x 93.51627pt.
-<Enigma/Enigma-code-book.png, id=137, 745.05154pt x 522.28113pt>
+<Enigma/Enigma-code-book.png, id=143, 745.05154pt x 522.28113pt>
 File: Enigma/Enigma-code-book.png Graphic file (type png)
 <use Enigma/Enigma-code-book.png>
 Package pdftex.def Info: Enigma/Enigma-code-book.png  used on input line 140.
@@ -1552,14 +1559,13 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 146.
 [7 <./Enigma/enigma-steckerbrett.jpg> <./Enigma/Enigma-code-book.png (PNG copy)
 >])
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 140.
-
+Package cleveref Info: loaded `ngerman' language definitions on input line 60.
 [8]
 \openout2 = `"Turing Bomb/Turing-Bomb.aux"'.
 
  (Turing Bomb/Turing-Bomb.tex
 chapter 3.
-<Turing Bomb/BletchleyParkBombe.jpg, id=159, 455.7828pt x 404.712pt>
+<Turing Bomb/BletchleyParkBombe.jpg, id=165, 455.7828pt x 404.712pt>
 File: Turing Bomb/BletchleyParkBombe.jpg Graphic file (type jpg)
 <use Turing Bomb/BletchleyParkBombe.jpg>
 Package pdftex.def Info: Turing Bomb/BletchleyParkBombe.jpg  used on input line
@@ -1582,7 +1588,7 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 Package cleveref Info: loaded `ngerman' language definitions on input line 81.
 [10]
-<Turing Bomb/crib_cipher_cycle.png, id=179, 516.0078pt x 375.44266pt>
+<Turing Bomb/crib_cipher_cycle.png, id=185, 516.0078pt x 375.44266pt>
 File: Turing Bomb/crib_cipher_cycle.png Graphic file (type png)
 <use Turing Bomb/crib_cipher_cycle.png>
 Package pdftex.def Info: Turing Bomb/crib_cipher_cycle.png  used on input line 
@@ -1593,7 +1599,7 @@ Package pdftex.def Info: Turing Bomb/crib_cipher_cycle.png  used on input line
 Package cleveref Info: loaded `ngerman' language definitions on input line 106.
 
 [11 <./Turing Bomb/crib_cipher_cycle.png>]
-<Turing Bomb/WireBrushesOnBombeDrum.jpg, id=190, 159.41911pt x 106.27942pt>
+<Turing Bomb/WireBrushesOnBombeDrum.jpg, id=196, 159.41911pt x 106.27942pt>
 File: Turing Bomb/WireBrushesOnBombeDrum.jpg Graphic file (type jpg)
 <use Turing Bomb/WireBrushesOnBombeDrum.jpg>
 Package pdftex.def Info: Turing Bomb/WireBrushesOnBombeDrum.jpg  used on input 
@@ -1609,7 +1615,7 @@ Overfull \hbox (1.69351pt too wide) in paragraph at lines 154--161
  Kom-mu-ta-ti-vi-tät des Stecker-
  []
 
-<Turing Bomb/Bletchley_Park_Bombe_Rear.jpg, id=202, 803.0pt x 1149.29375pt>
+<Turing Bomb/Bletchley_Park_Bombe_Rear.jpg, id=208, 803.0pt x 1149.29375pt>
 File: Turing Bomb/Bletchley_Park_Bombe_Rear.jpg Graphic file (type jpg)
 <use Turing Bomb/Bletchley_Park_Bombe_Rear.jpg>
 Package pdftex.def Info: Turing Bomb/Bletchley_Park_Bombe_Rear.jpg  used on inp
@@ -1619,18 +1625,10 @@ ut line 229.
 
 Package cleveref Info: loaded `ngerman' language definitions on input line 233.
 
-[13 <./Turing Bomb/Bletchley_Park_Bombe_Rear.jpg>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-06.
+[13 <./Turing Bomb/Bletchley_Park_Bombe_Rear.jpg>])
 
-(C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
-
-Package cleveref Info: loaded `ngerman' language definitions on input line 142.
-
-[14{C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}
-]
+Package cleveref Info: loaded `ngerman' language definitions on input line 62.
+[14]
 \openout2 = `Implementierung/Implementierung.aux'.
 
  (Implementierung/Implementierung.tex
@@ -1648,64 +1646,99 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 
 
 
-]
+] (Implementierung/terminal.c)
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 80.
-[16]
+Package cleveref Info: loaded `ngerman' language definitions on input line 77.
+[16] (Implementierung/diag_method.c)
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 100.
+
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+[17]
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 123.
+
+[18{C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.e
+nc}]
 chapter 5.
 )
 
-[17
+[19
 
 ]
 chapter 6.
-<Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force.png, id=261, 462.528
+<Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force.png, id=329, 462.528
 pt x 346.896pt>
 File: Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force.png Graphic fil
 e (type png)
 <use Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force.png>
 Package pdftex.def Info: Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Fo
-rce.png  used on input line 189.
+rce.png  used on input line 84.
 (pdftex.def)             Requested size: 292.77629pt x 219.59367pt.
 
 
-[18
+[20
 
 
 
  <./Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
+3.
+
+(C:\Users\escha\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 105.
+
+[21{C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}
+]
 chapter 7.
 
+Package biblatex Warning: Split bibliography detected.
+(biblatex)                Many simple split bibliography setups with
+(biblatex)                non-overlapping bibliographies benefit from
+(biblatex)                setting 'defernumbers=true'.
+(biblatex)                See the documentation for details.
+(biblatex)                This warning can be suppressed with
+(biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
 
-[19
 
-]
-chapter 8.
-
-Overfull \hbox (2.73329pt too wide) in paragraph at lines 209--209
+Overfull \hbox (2.73329pt too wide) in paragraph at lines 107--107
 []\T1/lmr/m/n/10.95 Wikipedia, \T1/lmr/m/it/10.95 Enig-ma (Ma-schi-ne) --- Wi-k
 i-pe-dia, die freie En-zy-klo-pä-die\T1/lmr/m/n/10.95 , [On-li-ne; Stand
  []
 
 
-Overfull \hbox (58.63081pt too wide) in paragraph at lines 209--209
+Package biblatex Warning: Split bibliography detected.
+(biblatex)                Many simple split bibliography setups with
+(biblatex)                non-overlapping bibliographies benefit from
+(biblatex)                setting 'defernumbers=true'.
+(biblatex)                See the documentation for details.
+(biblatex)                This warning can be suppressed with
+(biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
+
+
+
+[22
+
+]
+Overfull \hbox (58.63081pt too wide) in paragraph at lines 109--109
 \T1/lmtt/m/n/10.95 wikimedia . org / w / index . php ? title = File : Macchina 
 _ crittografica _ elettromeccanica_ -[]
  []
 
 
-Overfull \hbox (46.63335pt too wide) in paragraph at lines 209--209
+Overfull \hbox (46.63335pt too wide) in paragraph at lines 109--109
 []$\T1/lmtt/m/n/10.95 https : / / commons . wikimedia . org / w / index . php ?
  title = File : WireBrushesOnBombeDrum .
  []
 
 
 
-[20
-
-]
-
-[21] (Projektarbeit.aux
+[23] (Projektarbeit.aux
 Package cleveref Info: loaded `ngerman' language definitions on input line 11.
  (Enigma/Enigma.aux) (Turing Bomb/Turing-Bomb.aux)
 (Implementierung/Implementierung.aux))
@@ -1713,39 +1746,53 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 11.
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Projektarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                Projektarbeit
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'Projektarbeit.run.xml'.
 \openout1 = `Projektarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43407 strings out of 473682
- 915434 string characters out of 5719235
- 1883199 words of memory out of 5000000
- 65764 multiletter control sequences out of 15000+600000
- 646588 words of font info for 102 fonts, out of 8000000 for 9000
+ 43600 strings out of 473682
+ 919224 string characters out of 5719235
+ 1935396 words of memory out of 5000000
+ 65892 multiletter control sequences out of 15000+600000
+ 652574 words of font info for 104 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 122i,21n,121p,10944b,2383s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
+ 122i,20n,121p,10944b,2383s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+b><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxo10.p
 fb><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.
+pfb><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.
 pfb><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.
-pfb><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.p
-fb><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pf
-b><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb>
-<C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C
-:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/
-Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/
-Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/
-Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/
-Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/
-Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C
-:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
-:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Projektarbeit.pdf (21 pages, 3215945 bytes).
+pfb><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.p
+fb><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pf
+b><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb
+><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
+<C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C
+:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/
+Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Us
+ers/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Us
+ers/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Us
+ers/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Us
+ers/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Us
+ers/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/
+Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/
+Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/U
+sers/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Projektarbeit.pdf (23 pages, 3283880 bytes).
 PDF statistics:
- 510 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
- 317 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 621 PDF objects out of 1000 (max. 8388607)
+ 162 named destinations out of 1000 (max. 500000)
+ 341 words of extra memory for PDF output out of 10000 (max. 10000000)
 

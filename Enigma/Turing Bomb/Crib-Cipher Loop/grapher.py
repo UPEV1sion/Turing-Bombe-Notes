@@ -21,7 +21,7 @@ with open("data.txt") as file:
     ax.plot(x_axis, y_axis_force, label="\"Naiver\" Ansatz")
     ax.set_xlabel("Crib/Geheimtext Länge")
     ax.set_ylabel("Laufzeit (Sekunden)")
-    ax.set_title("Laufzeit Graph Menü-Algorithmus(1000 * 1000 Durchgänge pro Länge)")
+    ax.set_title("Laufzeit-Graph Menü-Algorithmus(1000 * 1000 Durchgänge pro Länge)")
     ax.legend()
     ax.grid()
     

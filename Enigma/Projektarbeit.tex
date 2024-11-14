@@ -19,72 +19,10 @@
 \usepackage{listings}
 \usepackage[babel]{csquotes}
 \usepackage[backend=biber, style=ieee]{biblatex}
+\include{my_style.sty}
 
 \addbibresource{sources.bib}
-
-\definecolor{DarkGreen}{RGB}{0,100,0}
-
-\definecolor{main-color}{rgb}{0.6627, 0.7176, 0.7764}
-\definecolor{back-color}{rgb}{0.94,0.94,0.94}
-\definecolor{string-color}{rgb}{0.3333, 0.5254, 0.345}
-\definecolor{key-color}{rgb}{0.13,0.13,1}
-\definecolor{typedef-color}{rgb}{0.8, 0.47, 0.196}
-
-\lstdefinestyle{mystyle}
-{
-	language = C,
-	basicstyle = {\ttfamily\small},
-	backgroundcolor = {\color{back-color}},
-	stringstyle = {\color{string-color}},
-	keywordstyle = {\color{key-color}},
-	keywordstyle = [3]{\color{typedef-color}},
-	keywordstyle = [4]{\color{teal}},
-	morekeywords = [3]{uint8_t, bool},
-}
-
-\renewcommand{\lstlistingname}{Quelltext}
-
-%\setlength{\topmargin}{-40pt} 
-
-\newlength{\ChapterRuleWidth}\setlength{\ChapterRuleWidth}{.5pt}
-\newcommand*{\ChRuleWidth}[1]{\setlength{\ChapterRuleWidth}{\dimexpr #1}}%
-\newcommand*{\ChNameVar}{\setkomafont{chapterprefix}}%
-\newcommand*{\ChTitleVar}{\setkomafont{chapter}}%
-\newcommand*{\ChNumVar}{\setkomafont{chapternumber}}%
-\newcommand*{\ChapterNameCase}[1]{#1}
-\newcommand*{\ChNameUpperCase}{\let\ChapterNameCase\MakeUppercase}
-\newcommand*{\ChNameIs}{\renewcommand*\ChapterNameCase[1]{##1}}
-\newcommand*{\ChNameLowerCase}{\let\ChapterNameCase\MakeLowercase}
-\newcommand*{\ChapterTitleCase}[1]{#1}
-\newcommand*{\ChTitleUpperCase}{\let\ChapterTitleCase\MakeUppercase}
-\newcommand*{\ChTitleIs}{\renewcommand*\ChapterTitleCase[1]{##1}}
-\newcommand*{\ChTitleLowerCase}{\let\ChapterTitleCase\MakeLowercase}
-
-\KOMAoptions{chapterprefix}
-\ChNameUpperCase
-\newkomafont{chapternumber}{\Huge}
-\let\raggedchapter\raggedleft
-\RedeclareSectionCommand[%
-beforeskip=-5pt,
-innerskip=45pt,
-afterskip=40pt,
-font=\normalfont\sffamily\Large,
-prefixfont=\Large,
-]{chapter}
-\renewcommand*{\chapterformat}{%
-	\mbox{\ChapterNameCase{\chapappifchapterprefix{\nobreakspace}}%
-		{\usekomafont{chapternumber}{%
-				\rule{0pt}{.8\baselineskip}\thechapter\IfUsePrefixLine{}{\enskip}}}%
-	}%
-}
-\renewcommand*{\chapterlineswithprefixformat}[3]{% 
-	\IfArgIsEmpty{#2}{}{%
-		#2%
-	}%
-	\rule[5pt]{\linewidth}{\ChapterRuleWidth}\\*
-	\ChapterTitleCase{#3}\nobreak
-	\rule[-5pt]{\linewidth}{\ChapterRuleWidth}
-}
+\addbibresource{pictures.bib}
 
 \pagestyle{scrheadings}
 \newcommand{\myifoot}{\textbf{Emanuel Schäffer}}
@@ -94,19 +32,6 @@ prefixfont=\Large,
 \ohead{\headmark}
 \chead{}
 \ifoot{\myifoot}
-
-\newcommand{\figref}[1]{(siehe Abb.~\ref{#1})}
-
-\newcommand{\fmbox}[1]{
-	\begin{center}
-		\fcolorbox{black}{yellow}
-		{\parbox{0.88\textwidth}
-			{\textcolor{black}
-				{#1}
-			}
-		}
-	\end{center}
-}
 
 \begin{document}
 	\subject{Kryptoanalyse der Enigma-Maschine durch eine Software-Nachbildung der Turing-Welchman-Bombe}
@@ -124,15 +49,10 @@ prefixfont=\Large,
 	
 	\tableofcontents
 	
-	%	
-	%	\begin{abstract}
-		%		Enigma-Nachrichten können dechiffriert werden, wenn die Rotorauswahl, die Rotor-~, Ringstellungen und die Steckereinstellungen einzeln wiederhergestellt werden. Die Wiederherstellung der Nachrichtenschlüsseleinstellung ist empfindlich genug, um die korrekte Rotorreihenfolge zu unterscheiden. 
-		%	\end{abstract}
-	
 	\chapter{Einleitung}\label{ch:einleitung}
 	Diese Projektarbeit beschäftigt sich mit der Kryptoanalyse der Enigma-Maschine.
 	Im Speziellen wird hier auf die Kryptoanalyse mit der von Alan Turing und Gordon Welchman entwickelten \glqq Turing-Welchman-Bombe\grqq{} eingegangen.
-	Die Turing-Welchman-Bombe baut auf die Arbeit von Marian Rejewski und seiner \glqq Bomba\grqq{} auf, welcher der Turing-Welchman-Bombe ihren Namen gab.
+	Die Turing-Welchman-Bombe baut auf die Arbeit von Marian Rejewski und seiner \glqq Bomba\grqq{} auf, welche der Turing-Welchman-Bombe ihren Namen gab.
 	Dieses Verfahren zur Kryptoanalyse spielte eine wesentliche Rolle im Zweiten Weltkrieg und trug nach der Meinung vieler Historiker maßgeblich dazu bei, den Krieg zu verkürzen und rettete somit zahlreiche Menschenleben.
 	% 2 Jahre 14 Mio. Menschenleben
 	
@@ -142,16 +62,6 @@ prefixfont=\Large,
 	\include{Turing Bomb/Turing-Bomb}
 	
 	\include{Implementierung/Implementierung}
-	
-%	\begin{algorithm}
-%		\caption{Cycle Finding Algorithm}
-%		\begin{algorithmic}[1]
-%			\Procedure{is\_cyle}{$start :$ \textbf{char}, $c:$ char, $tuples_0 \dots tuples_{n-1}:$ Tuple, $visited\_mask:$ uint32\_t}
-%			\EndProcedure
-%		\end{algorithmic}
-%	\end{algorithm}
-	
-	
 	
 %	\chapter{Häufigkeitsanalyse}\label{ch:haufigkeitsanalyse}
 %	\section{Koinzidenzindex}\label{sec:koinzidenzindex}
@@ -167,31 +77,18 @@ prefixfont=\Large,
 %	Wir Summieren also die Anzahl der Buchstabenpaare auf, und teilen diese durch die Anzahl der allgemein möglichen Buchstabenpaare.
 %	Der Koinzidenzindex ist also ein Maß für die Buchstabenverteilung.
 %	Für ein Text bestehend aus zufälligen Buchstaben beträgt der $IC \approx$ 0.038; wobei er für Deutsch $\approx$ 0.076 beträgt.
-%	\newpage
-%%	
-%	Bemerkungen:
-%	
-%	Improvements:
-%	
-%	Base: 8.5s
-%	
-%	Nur letzte Buchstaben testen: 3.6s
-%	
-%	IC: 3.3s
-%	
-%	Low Level IO: 3.31s
-%	
-%	Nur erster char testen an der Position, an dem das Schlagwort stehen muss: 2.25s 
-%	
-	\chapter{Anhang}
+	\chapter{Anhang}\label{ch:appendix}
+	\section{Zusatzinformationen}\label{sec:add_infos}
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=.7\linewidth]{Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force.png}
+		\includegraphics[width=.7\linewidth]{Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force}
 		\caption{Laufzeit-Graph Menü-Algorithmus}
-		\label{app:menu_runtime}
+		\label{fig:app_menu_runtime}
 	\end{figure}
-
-	\chapter{Glossar}
+	Es wurden pro Länge 1000 Zufalls Crib und Geheimtexte generiert und diese jeweils mit 1000 Durchgängen getestet.
+	
+	\newpage
+	\section{Glossar}\label{sec:glossar}
 	\begin{itemize}
 		\item Blechley-Park: Zentrale militärische Dienststelle, die sich im Zweiten Weltkrieg erfolgreich mit der Entzifferung des deutschen Nachrichtenverkehrs befasste.
 		\item Crib: Klartextfragment, welches an einer bestimmten Stelle im Geheimtext vermutet wurde.
@@ -205,17 +102,11 @@ prefixfont=\Large,
 		\item Spruchschlüssel:  Individueller Schlüssel für einen Funkspruch.
 	\end{itemize}
 	
-	\chapter{Quellen}
-	\printbibliography[heading=none, title={}]
+	\chapter{Quellen}\label{ch:sources}
+	\section{Einzelnachweise}
+	\printbibliography[keyword=sources, heading=none, title={}]
+	\section{Bildnachweise}
+	\printbibliography[keyword=pictures, heading=none, title={}]
 	\nocite{*}
 	\thispagestyle{plain}
-	
-	%Deutsches Museum, Ertel Angewandte Kryptographie \ref{fig:enigma_complete}
-	
-	%https://upload.wikimedia.org/wikipedia/commons/9/9f/Enigma_rotor_set.png Zugriff %11.09.24. 10:57 \ref{fig:enigma_rotors}
-	
-	%https://de.wikipedia.org/wiki/Enigma-Walzen#/media/Datei:Enigma-rotor-flat-contacts.jpg Zugriff 11.09.24. 11:19 \ref{fig:enigma-rotor-contact}
-	
-	
-	
 \end{document}
