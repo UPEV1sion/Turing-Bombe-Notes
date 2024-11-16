@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {4.2.2}Terminal}{16}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}In und Outs}{17}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Diagonalbrett}{17}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Commons}{17}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.5}Commons}{18}{subsection.4.2.5}%
 \contentsline {section}{\numberline {4.3}Algorithmus der Implementation}{18}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Geschwindigkeit der Software-Nachbildung im Kontext}{19}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Anhang}{20}{chapter.6}%
@@ -34,5 +34,5 @@
 \contentsline {section}{\numberline {6.2}Glossar}{21}{section.6.2}%
 \contentsline {chapter}{\numberline {7}Quellen}{22}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Einzelnachweise}{22}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Bildnachweise}{22}{section.7.2}%
+\contentsline {section}{\numberline {7.2}Bildnachweise}{23}{section.7.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -38,8 +38,8 @@ Die Bombe kann somit im Falle der \glqq Scramblersatz-Knappheit\grqq{} entscheid
 \section{Modellierung der Turing-Welchman-Bombe}\label{sec:model}
 \subsection{Scrambler}\label{subsec:impl_scrambler}
 Wie in~\cref{subsec:vorbereitungen} erklärt, vernachlässigt die Bombe den Übertragzeitpunkt der Walzen.
-Es muss also nicht Position der Übertragskerbe mitgeführt werden.
-%Enigma Software gegeben erwähnen?
+Die Software Implementation berücksichtigt ebenfalls die Übertragskerbe der Rotoren nicht.
+%TODO Enigma Software gegeben erwähnen?
 Die Verdrahtung der Scrambler wird als Vektor abgebildet, welcher wie in~\cref{fig:rot1_wiring} die Permutation für jeden Buchstaben speichert.
 Die Buchstaben werden jedoch nicht in der typischen ASCII-Kodierung gespeichert, sondern auf den Wertebereich 0--25 abgebildet.
 Mit dem Resultat kann somit direkt der Vektor des nächsten Scramblers indiziert werden.
@@ -51,7 +51,12 @@ Die Kontakte der Terminals werden Struktur dargestellt.
 Es beinhaltet einen 32 Bit Integer, welcher mit 26 Stellen als Bitvektor die aktiven Kontakte repräsentiert.
 Die Anzahl der aktiven Kontakte werden ebenfalls als Integer mitgeführt.
 Da es im Bezug auf die Laufzeit medioker ist, alle 26 Stellen des Bitvektors traversieren zu müssen, um zu überprüfen welche der 26 aktiv ist, wurde ein normaler Vektor eingeführt, welcher die aktiven Kontakte \glqq dicht\grqq{} speichert. 
-Zuletzt wird der Buchstabe des jeweiligen Kontakts in der Struktur gespeichert.
+%TODO Artikel vor Nummer
+Zuletzt wird der Buchstabe/Nummer des jeweiligen Kontakts in der Struktur gespeichert.
+
+\noindent
+\lstinputlisting[style=mystyle, caption={Realisierung der Terminals}, label={lst:code_impl_terminal}]{Implementierung/terminal.c}
+
 Permutiert ein Scrambler einen Buchstaben, wird mit dem Bitvektor überprüft, ob dieser Kontakt bereits aktiv ist.
 
 Hierbei gibt es zwei Szenarien:
@@ -61,9 +66,6 @@ Hierbei gibt es zwei Szenarien:
 	\item Der Kontakt ist aktiv: Dieser Buchstabe wird ignoriert. 
 \end{enumerate}
 
-\noindent
-\lstinputlisting[style=mystyle, caption={Realisierung der Terminals}, label={lst:code_impl_terminal}]{Implementierung/terminal.c}
-
 Die Terminal Struktur beinhaltet einen Vektor mit 26 Kontakten und einen Zeiger auf den Kontakt des Test-Registers.
 Bei dem Test-Register wird hierbei nicht von einem \glqq normalen\grqq{} Kontakt unterschieden.
 
@@ -71,6 +73,7 @@ Bei dem Test-Register wird hierbei nicht von einem \glqq normalen\grqq{} Kontakt
 
 \subsection{In und Outs}\label{subsec:impl_in_und_outs}
 Die In und Outs werden mit den Scramblern als Knoten in einem Graphen dargestellt.
+%TODO check
 Die Knoten haben Zeiger auf weitere Knoten, die bei dem analogen Original mit dem Out-Kontakt verbunden wären.
 Die In und Outs sind jeweils wieder Zeiger auf Terminal Kontakte.
 Die Scrambler permutieren die aktiven Kontakte des In-Kontakts.
@@ -81,8 +84,7 @@ Eine Möglichkeit das Verhalten mit einer Datenstruktur zu imitieren, ist es, di
 Hierbei Zeigen zum Beispiel der \emph{a}-Kontakt des \emph{B}-Terminals und der \emph{b}-Kontakt des \emph{A}-Terminals auf den gleichen Booleschen Wert.
 Somit ist die Verbindung $A \Leftrightarrow B$ abgebildet.
 Jedoch wäre es hier abermals nötig, den gesamten Vektor zu traversieren, um die aktiven Kontakte herauszufinden.
-Die entsprechenden Kontakte müssten nun wieder einen Bitvektor und einen normalen Vektor besitzen, damit die aktiven Kontakte effektiv bestimmt werden können, was keine wirklichen Ersparnisse bringen würde.
-Durch die Zeiger hätte dieser Ansatz auf einer 64-Bit Maschine mit 5408 Bytes einen recht hohen Speicherbedarf.
+Die entsprechenden Kontakte müssten nun wieder einen normalen Vektor besitzen, in dem die aktiven Kontakte \glqq dicht\grqq{} stehen, damit die Scrambler effektiv arbeiten können, was keine wirklichen Ersparnisse bringen würde.
 
 Aus diesem Grund wurde die Funktion des Diagonalbrettes in einer Funktion gekapselt:
 
@@ -91,34 +93,46 @@ Aus diesem Grund wurde die Funktion des Diagonalbrettes in einer Funktion gekaps
 
 Diese Funktion erhält drei Argumente: Einen Zeiger auf eine Turing Bombe und zwei Integer, die repräsentativ für die beiden Buchstaben der Kontakte stehen, die aktiviert werden sollen.
 
+
 \subsection{Commons}\label{subsec:impl_commons}
 Aufgrund der Einfachheit wurden die Commons in dieser Software-Implementation \glqq weg abstrahiert\grqq.
 Diese wurden durch Zeiger auf den gleichen Kontakt ersetzt.
 Die Anzahl der Kontakte pro Commons und die Gesamtzahl der verwendeten Commons wurde gezählt, sodass diese nicht die Anzahl des analogen Originals überschreiten.
 
 \section{Algorithmus der Implementation}\label{sec:algorithm_bombe}
-In Pseudocode könnte man den Algorithmus der Bombe so darstellen:
-\begin{algorithm}[htbp]
-	\caption{Bombe Algorithmus}
-	\begin{algorithmic}
-			\Procedure{Bombe}{$p_0 \dots p_{n-1} :$ [Char], $c_0 \dots c_{n-1} :$ [Char]}
-			\ForAll{\textsl{rotors} $\in$ \textbf{permut(rotor order)}, \textsl{pos} $\in$ \textbf{[AAA $\dots$ ZZZ]}}
-			\State plugs: Char $\rightarrow \{ $Char$\}$
-			\State plugs$(p_0)\ \cup= \{\textbf{'A'}\}$
-			\While{\textsl{plugs} changing}
-			\ForAll{\textsl{i} $\in$ \textbf{[0\dots n--1]}}
-			\State plugs($c_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(p_i)}$ encrypt(\textsl{rotors, p, pos}+\textsl{i})
-			\State plugs($p_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(c_i)}$ encrypt(\textsl{rotors, p, pos}+\textsl{i})
-			\EndFor
-			\EndWhile
-			\If{$\forall$ \textsl{S} $\in$ \textbf{cod(plugs)}: \#S < \#Char}
-			\State report(\textsl{pos, plugs})
-			\EndIf
-			\EndFor
-			\EndProcedure
-		\end{algorithmic}
-	\label{alg:algorithm}
-\end{algorithm}
+Im Gegensatz zur \glqq echten\grqq{} Bombe, welche eine Steckerbrett-Hypothese für die jeweils 17576 Walzenstellungen einer Walzenlage testete, testet die Software-Nachbildung eine Hypothese für alle Walzenstellungen der 60 möglichen Walzenlagen.
+Eine modifizierte Breitensuche traversiert die Knoten des aufgespannten Graphen der \glqq Scrambler-Knoten\grqq.
+%TODO lookup table for scrambler knoten.
+Da es aufgrund den Tupel-Kombinationen nicht genügt, einen Knoten nur einmal zu besuchen und das Diagonalbrett es unmöglich macht, die Datenstruktur der Knoten linear zur durchlaufen, wird erneut eine \glqq Nachschlagetabelle\grqq{} benötigt.
+Diese Nachschlagetabelle speichert die Knoten, bei denen der jeweilige In-Kontakt mit dem jeweiligen Terminal verbunden ist.
+Zuerst werden alle Scrambler-Knoten von dem Test-Register aus in die Warteschlange der Breitensuche eingereiht, und danach alle Knoten die in einem Terminal anliegen, welches durch direkte Permutation oder durch das Diagonalbrett aktiviert wurden.
+Wird durch die Permutation durch einen Scrambler in dem Out-Kontakt kein neuer Kontakt aktiv, wird dieser Knoten als \glqq besucht\grqq{} gekennzeichnet und nicht mehr in die Warteschlange eingereiht.
+Ist die Warteschlange leer, sind alle Permutationen abgeschlossen und das Test-Register wird überprüft.
+
+
+
+%In Pseudocode könnte man den Algorithmus der Bombe so darstellen:
+%\begin{algorithm}[htbp]
+%	\caption{Bombe Algorithmus}
+%	\begin{algorithmic}
+%			\Procedure{Bombe}{$p_0 \dots p_{n-1} :$ [Char], $c_0 \dots c_{n-1} :$ [Char]}
+%			\ForAll{\textsl{rotors} $\in$ \textbf{permut(rotor order)}, \textsl{pos} $\in$ \textbf{[AAA $\dots$ ZZZ]}}
+%			\State plugs: Char $\rightarrow \{ $Char$\}$
+%			\State plugs$(p_0)\ \cup= \{\textbf{'A'}\}$
+%			\While{\textsl{plugs} changing}
+%			\ForAll{\textsl{i} $\in$ \textbf{[0\dots n--1]}}
+%			\State plugs($c_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(p_i)}$ encrypt(\textsl{rotors, p, pos}+\textsl{i})
+%			\State plugs($p_i$) $\cup=$ $\bigcup_{p \in \text{plugs}(c_i)}$ encrypt(\textsl{rotors, p, pos}+\textsl{i})
+%			\EndFor
+%			\EndWhile
+%			\If{$\forall$ \textsl{S} $\in$ \textbf{cod(plugs)}: \#S < \#Char}
+%			\State report(\textsl{pos, plugs})
+%			\EndIf
+%			\EndFor
+%			\EndProcedure
+%		\end{algorithmic}
+%	\label{alg:algorithm}
+%\end{algorithm}
 
 
 

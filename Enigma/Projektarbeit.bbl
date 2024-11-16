@@ -514,6 +514,37 @@
       \true{nocite}
       \keyw{sources}
     \endentry
+    \entry{dewiki:240861245}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; Stand 16. November 2024]}
+      \field{title}{Letchworth-Enigma --- Wikipedia{,} die freie Enzyklopädie}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb \url{https://de.wikipedia.org/w/index.php?title=Letchworth-Enigma&oldid=240861245}
+      \endverb
+      \verb{url}
+      \verb %5Curl%7Bhttps://de.wikipedia.org/w/index.php?title=Letchworth-Enigma&oldid=240861245%7D
+      \endverb
+      \keyw{sources}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
