@@ -14,7 +14,7 @@ Um eine Turing-Welchman-Bombe in der Programmiersprache C nachzubilden, muss zue
 %TODO
 Geheimtext bildet.
 
-Hierfür werden die Knoten als Struktur dargestellt, welche zum einen den Buchstaben und zum anderen einen Vektor mit den anliegenden Auslegern beinhaltet. 
+Hierfür werden die einzelne Buchstaben als Knoten mithilfe einer Struktur dargestellt, welche zum einen den Buchstaben und zum anderen einen Vektor mit den anliegenden Auslegern beinhaltet. 
 Die Buchstaben-Tupel wurden ebenfalls als Struktur dargestellt, welche zwei Knoten, die Position im Crib und einen Booleschen Wert beinhaltet welcher aussagt, ob dieses Tupel zum Zyklus beiträgt.
 
 
@@ -50,7 +50,7 @@ Der Wertebereich wird durch eine Modulo-Operation zwischen 0 und 25 gehalten.
 Die Kontakte der Terminals werden als Struktur dargestellt.
 Es beinhaltet einen 32 Bit Integer, welcher mit 26 Stellen als Bitvektor die aktiven Kontakte repräsentiert.
 Die Anzahl der aktiven Kontakte wird ebenfalls als Integer mitgeführt.
-Da es in Bezug auf die Laufzeit medioker ist, alle 26 Stellen des Bitvektors traversieren zu müssen, um zu überprüfen, welche der 26 Kontakte aktiv ist, wurde ein normaler Vektor eingeführt, der die aktiven Kontakte \glqq dicht\grqq{} speichert.
+Da es in Bezug auf die Laufzeit medioker ist, alle 26 Stellen des Bitvektors traversieren zu müssen, um zu überprüfen, welche der 26 Kontakte aktiv sind, wurde ein normaler Vektor eingeführt, der die aktiven Kontakte \glqq dicht\grqq{} speichert.
 %TODO Artikel vor Nummer
 Zuletzt wird der Buchstabe/Nummer des jeweiligen Kontakts in der Struktur gespeichert.
 
@@ -72,10 +72,12 @@ Bei dem Test-Register wird hierbei nicht von einem \glqq normalen\grqq{} Kontakt
 %Die Terminals werden als Struktur dargestellt, 
 
 \subsection{In und Outs}\label{subsec:impl_in_und_outs}
-Die In und Outs werden mit den Scramblern als Knoten in einem Graphen dargestellt.
+Die In und Outs werden mit dem dazugehörigen Scramblersatz als Knoten dargestellt.
 %TODO check
-Die Knoten haben Zeiger auf weitere Knoten, die bei dem analogen Original mit dem Out-Kontakt verbunden wären.
-Die In und Outs sind jeweils wieder Zeiger auf Terminal Kontakte.
+Sämtliche Verbindungen durch Kabel und Brücken-Konnektoren des analogen Originals werden hier durch Zeiger auf Kontakte ersetzt, so auch die In- und Out-Kontakte.
+%Die Knoten haben Zeiger auf weitere Knoten, die bei dem analogen Original mit dem Out-Kontakt verbunden wären.
+%Die In und Outs sind jeweils wieder Zeiger Terminal-Kontakte.
+
 %Die Scrambler permutieren die aktiven Kontakte des In-Kontakts.
 
 \subsection{Diagonalbrett}\label{subsec:impl_diagonal_board}
@@ -104,14 +106,13 @@ Die Anzahl der Kontakte pro Commons und die Gesamtzahl der verwendeten Commons w
 Im Gegensatz zur \glqq echten\grqq{} Bombe, welche eine Steckerbrett-Hypothese für die jeweils 17576 Walzenstellungen einer Walzenlage testet, testet die Software-Nachbildung eine Hypothese für alle Walzenstellungen der 60 möglichen Walzenlagen.
 Eine modifizierte Breitensuche traversiert die Knoten des aufgespannten Graphen der \glqq Scrambler-Knoten\grqq.
 %TODO lookup table for scrambler knoten.
-Da es aufgrund der Tupel-Kombinationen nicht genügt, einen Knoten nur einmal zu besuchen, und das Diagonalbrett es unmöglich macht, die Datenstruktur der Knoten linear zur durchlaufen, wird erneut eine \glqq Nachschlagetabelle\grqq{} benötigt.
+Da es aufgrund der Tupel-Kombinationen nicht genügt, einige Knoten nur einmal zu besuchen, und das Diagonalbrett es unmöglich macht, die Datenstruktur der Knoten linear zur durchlaufen, wird erneut eine \glqq Nachschlagetabelle\grqq{} benötigt.
 Die Nachschlagetabelle besitzt 26 Stellen, jeweils für 26 Terminal-Kontakte.
 Die Knoten, die durch den In-Kontakt mit einem jeweiligen Terminal verbunden sind, werden in dieser Tabelle abgelegt.
-Zuerst werden alle Scrambler-Knoten die mit dem In-Kontakt des Test-Registers verbunden sind in die Warteschlange eingereiht, danach die Commons der jeweiligen Knoten, und als letztes die Knoten, welche an jenen Kontakten anliegen, die durch direkte Permutation der Scrambler oder durch das Diagonalbrett aktiviert wurden.
+Zuerst werden alle Scrambler-Knoten die durch den In-Kontakt mit dem Test-Register verbunden sind in die Warteschlange eingereiht, danach die Commons der jeweiligen Knoten, und als letztes die Knoten, welche an jene Kontakte anliegen, die durch direkte Permutation der Scrambler oder durch das Diagonalbrett aktiviert wurden.
 Wird durch die Permutation eines Scramblers in dem mit ihm verbunden Out-Kontakt kein neuer Kontakt aktiv, wird dieser Knoten als \glqq besucht\grqq{} gekennzeichnet und nicht mehr in die Warteschlange eingereiht.
 Ist die Warteschlange leer, sind alle Permutationen abgeschlossen und das Test-Register wird überprüft.
 Die Software-Nachbildung hält nach den in~\cref{subsec:test-register} beschriebenen Regeln.
-
 
 %In Pseudocode könnte man den Algorithmus der Bombe so darstellen:
 %\begin{algorithm}[htbp]
