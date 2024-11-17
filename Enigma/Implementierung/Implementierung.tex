@@ -29,9 +29,9 @@ Ein Tupel wie \texttt{W:S} ist also sowohl unter \texttt{W} als auch unter \text
 Ein Tiefensuche-Algorithmus, der modifiziert wurde, um weniger \glqq gierig\grqq{} zu agieren, schlägt die Tupel in der Tabelle nach und markiert die besuchten Tupel.
 %Bei dem Rücksetzverfahren der Tiefensuche wird die Markierung der Tupel, die nicht zum Zyklus beitragen entfernt.
 Das Ergebnis ist eine gemessene, lineare Laufzeit.\footnote{Es wurden Crib-Längen bis 26 betrachtet, um zu garantieren, dass die lineare Laufzeit bei einer maximalen Länge von 13 Buchstaben gegeben ist.
-Der Laufzeit Graph ist im Anhang enthalten:~\cref{fig:app_menu_runtime}}
+Der Laufzeit-Graph ist im Anhang enthalten:~\cref{fig:app_menu_runtime}}
 
-Das Menü wird als Vektor von \glqq CribCipherTuple\grqq{} in einer Struktur mit der Länge abgelegt.
+Das Menü wird als Vektor von \texttt{CribCipherTuple} in einer Struktur mit der Länge abgelegt.
 Da es erforderlich ist, eine eindeutige \glqq Route\grqq{} durch das Menü anzugeben, werden Tupel-Kombination bei den betroffenen Knoten als Ausleger angegeben. 
 Die Bombe kann somit im Falle der \glqq Scramblersatz-Knappheit\grqq{} entscheiden, ob sie diesen (nicht notwendigen) Bestandteil des Menüs aufnehmen möchte.
 
@@ -47,10 +47,10 @@ Es muss zudem die Walzenlage mitgeführt werden, welche mit dem zu permutierende
 Der Wertebereich wird durch eine Modulo-Operation zwischen 0 und 25 gehalten.
 
 \subsection{Terminal}\label{subsec:impl_terminal}
-Die Kontakte der Terminals werden Struktur dargestellt.
+Die Kontakte der Terminals werden als Struktur dargestellt.
 Es beinhaltet einen 32 Bit Integer, welcher mit 26 Stellen als Bitvektor die aktiven Kontakte repräsentiert.
-Die Anzahl der aktiven Kontakte werden ebenfalls als Integer mitgeführt.
-Da es im Bezug auf die Laufzeit medioker ist, alle 26 Stellen des Bitvektors traversieren zu müssen, um zu überprüfen welche der 26 aktiv ist, wurde ein normaler Vektor eingeführt, welcher die aktiven Kontakte \glqq dicht\grqq{} speichert. 
+Die Anzahl der aktiven Kontakte wird ebenfalls als Integer mitgeführt.
+Da es in Bezug auf die Laufzeit medioker ist, alle 26 Stellen des Bitvektors traversieren zu müssen, um zu überprüfen, welche der 26 Kontakte aktiv ist, wurde ein normaler Vektor eingeführt, der die aktiven Kontakte \glqq dicht\grqq{} speichert.
 %TODO Artikel vor Nummer
 Zuletzt wird der Buchstabe/Nummer des jeweiligen Kontakts in der Struktur gespeichert.
 
@@ -61,12 +61,12 @@ Permutiert ein Scrambler einen Buchstaben, wird mit dem Bitvektor überprüft, o
 
 Hierbei gibt es zwei Szenarien:
 \begin{enumerate}
-	\item Der Kontakt ist inaktiv: In dem Bitvektor wird die repräsentative Stelle aktiviert, der Buchstabe in dem normalen Integer Vektor gespeichert und die Anzahl der Aktiven Verbindungen inkrementiert.
+	\item Der Kontakt ist inaktiv: In dem Bitvektor wird die repräsentative Stelle aktiviert, der Buchstabe wird in dem normalen Integer Vektor abgelegt und die Anzahl der aktiven Verbindungen inkrementiert.
 	
 	\item Der Kontakt ist aktiv: Dieser Buchstabe wird ignoriert. 
 \end{enumerate}
 
-Die Terminal Struktur beinhaltet einen Vektor mit 26 Kontakten und einen Zeiger auf den Kontakt des Test-Registers.
+Die Terminal Struktur beinhaltet einen Vektor mit 26 Kontakte und einen Zeiger auf den Kontakt des Test-Registers.
 Bei dem Test-Register wird hierbei nicht von einem \glqq normalen\grqq{} Kontakt unterschieden.
 
 %Die Terminals werden als Struktur dargestellt, 
@@ -76,22 +76,23 @@ Die In und Outs werden mit den Scramblern als Knoten in einem Graphen dargestell
 %TODO check
 Die Knoten haben Zeiger auf weitere Knoten, die bei dem analogen Original mit dem Out-Kontakt verbunden wären.
 Die In und Outs sind jeweils wieder Zeiger auf Terminal Kontakte.
-Die Scrambler permutieren die aktiven Kontakte des In-Kontakts.
+%Die Scrambler permutieren die aktiven Kontakte des In-Kontakts.
 
 \subsection{Diagonalbrett}\label{subsec:impl_diagonal_board}
 Das Diagonalbrett als native Datenstruktur darzustellen, hat sich als ein eher schlechter Einfall herausgestellt.
-Eine Möglichkeit das Verhalten mit einer Datenstruktur zu imitieren, ist es, die einzelne Kontakte der Terminals als Vektor mit Zeiger auf Booleschen Werten abzubilden.
-Hierbei Zeigen zum Beispiel der \emph{a}-Kontakt des \emph{B}-Terminals und der \emph{b}-Kontakt des \emph{A}-Terminals auf den gleichen Booleschen Wert.
+Eine Möglichkeit das Verhalten mit einer Datenstruktur zu imitieren, ist es, dem einzelnen Kontakte der Terminals als Vektor mit Zeiger auf Booleschen Werten abzubilden.
+Hierbei zeigt zum Beispiel der \emph{a}-Kontakt des \emph{B}-Terminals und der \emph{b}-Kontakt des \emph{A}-Terminals auf den gleichen Booleschen Wert.
 Somit ist die Verbindung $A \Leftrightarrow B$ abgebildet.
 Jedoch wäre es hier abermals nötig, den gesamten Vektor zu traversieren, um die aktiven Kontakte herauszufinden.
-Die entsprechenden Kontakte müssten nun wieder einen normalen Vektor besitzen, in dem die aktiven Kontakte \glqq dicht\grqq{} stehen, damit die Scrambler effektiv arbeiten können, was keine wirklichen Ersparnisse bringen würde.
+Die entsprechenden Kontakte müssten nun wieder einen normalen Vektor besitzen, in dem die aktiven Kontakte \glqq dicht\grqq{} stehen, damit die Scrambler effektiv arbeiten können.
+Somit wäre es hier immer noch notwendig die Kontakte separat zu behandeln.
 
 Aus diesem Grund wurde die Funktion des Diagonalbrettes in einer Funktion gekapselt:
 
 \noindent
 \lstinputlisting[style=mystyle, caption={Realisierung des Diagonalbrettes}, label={lst:code_impl_diag_board}]{Implementierung/diag_method.c}
-
-Diese Funktion erhält drei Argumente: Einen Zeiger auf eine Turing Bombe und zwei Integer, die repräsentativ für die beiden Buchstaben der Kontakte stehen, die aktiviert werden sollen.
+%TODO TuringBombe Struct erklären?
+Diese Funktion erhält drei Argumente: Einen Zeiger auf eine \texttt{TuringBombe} und zwei Integer, repräsentativ für die zwei Terminal-Buchstaben, die aktiviert werden sollen.
 
 
 \subsection{Commons}\label{subsec:impl_commons}
@@ -100,15 +101,16 @@ Diese wurden durch Zeiger auf den gleichen Kontakt ersetzt.
 Die Anzahl der Kontakte pro Commons und die Gesamtzahl der verwendeten Commons wurde gezählt, sodass diese nicht die Anzahl des analogen Originals überschreiten.
 
 \section{Algorithmus der Implementation}\label{sec:algorithm_bombe}
-Im Gegensatz zur \glqq echten\grqq{} Bombe, welche eine Steckerbrett-Hypothese für die jeweils 17576 Walzenstellungen einer Walzenlage testete, testet die Software-Nachbildung eine Hypothese für alle Walzenstellungen der 60 möglichen Walzenlagen.
+Im Gegensatz zur \glqq echten\grqq{} Bombe, welche eine Steckerbrett-Hypothese für die jeweils 17576 Walzenstellungen einer Walzenlage testet, testet die Software-Nachbildung eine Hypothese für alle Walzenstellungen der 60 möglichen Walzenlagen.
 Eine modifizierte Breitensuche traversiert die Knoten des aufgespannten Graphen der \glqq Scrambler-Knoten\grqq.
 %TODO lookup table for scrambler knoten.
-Da es aufgrund den Tupel-Kombinationen nicht genügt, einen Knoten nur einmal zu besuchen und das Diagonalbrett es unmöglich macht, die Datenstruktur der Knoten linear zur durchlaufen, wird erneut eine \glqq Nachschlagetabelle\grqq{} benötigt.
-Diese Nachschlagetabelle speichert die Knoten, bei denen der jeweilige In-Kontakt mit dem jeweiligen Terminal verbunden ist.
-Zuerst werden alle Scrambler-Knoten von dem Test-Register aus in die Warteschlange der Breitensuche eingereiht, und danach alle Knoten die in einem Terminal anliegen, welches durch direkte Permutation oder durch das Diagonalbrett aktiviert wurden.
-Wird durch die Permutation durch einen Scrambler in dem Out-Kontakt kein neuer Kontakt aktiv, wird dieser Knoten als \glqq besucht\grqq{} gekennzeichnet und nicht mehr in die Warteschlange eingereiht.
+Da es aufgrund der Tupel-Kombinationen nicht genügt, einen Knoten nur einmal zu besuchen, und das Diagonalbrett es unmöglich macht, die Datenstruktur der Knoten linear zur durchlaufen, wird erneut eine \glqq Nachschlagetabelle\grqq{} benötigt.
+Die Nachschlagetabelle besitzt 26 Stellen, jeweils für 26 Terminal-Kontakte.
+Die Knoten, die durch den In-Kontakt mit einem jeweiligen Terminal verbunden sind, werden in dieser Tabelle abgelegt.
+Zuerst werden alle Scrambler-Knoten die mit dem In-Kontakt des Test-Registers verbunden sind in die Warteschlange eingereiht, danach die Commons der jeweiligen Knoten, und als letztes die Knoten, welche an jenen Kontakten anliegen, die durch direkte Permutation der Scrambler oder durch das Diagonalbrett aktiviert wurden.
+Wird durch die Permutation eines Scramblers in dem mit ihm verbunden Out-Kontakt kein neuer Kontakt aktiv, wird dieser Knoten als \glqq besucht\grqq{} gekennzeichnet und nicht mehr in die Warteschlange eingereiht.
 Ist die Warteschlange leer, sind alle Permutationen abgeschlossen und das Test-Register wird überprüft.
-
+Die Software-Nachbildung hält nach den in~\cref{subsec:test-register} beschriebenen Regeln.
 
 
 %In Pseudocode könnte man den Algorithmus der Bombe so darstellen:
