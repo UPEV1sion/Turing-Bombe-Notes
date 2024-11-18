@@ -99,8 +99,10 @@ Alan Turing machte die Beobachtung, dass die Steckerbrett-Verbindungen der Enigm
 Dies ist durch die Eigenschaft des Steckerbrettes der Enigma-Maschine gegeben, welche eine monoalphabetische Substitution durchführt, die sich über den kompletten Chiffrierungs-Prozess nicht ändert.
 
 Die Zahlen auf den Kanten geben hierbei die Position des Tupels innerhalb der gefundenen Crib-Geheimtext Kombination an.
-Tupel wie 0, 1, 10, 14, 8 und 9 werden hier als \glqq Ausleger\grqq{} bezeichnet, da diese nicht aktiv zum Zyklus beitragen, aber trotzdem von Relevanz bei der Kryptoanalyse sind.
+Tupel wie 0, 1, 8, 9, 10 und 14 werden hier als \glqq Ausleger\grqq{} bezeichnet, da diese nicht aktiv zum Zyklus beitragen, aber trotzdem von Relevanz bei der Kryptoanalyse sind.
 Aus Gründen, die später erläutert werden, sind Tupel-Kombinationen wie 5 und 11 äußerst effektiv für die Kryptoanalyse.
+Tupel, die keinen Zyklus bilden, können ignoriert werden.
+Somit sind die Tupel 2, 3 und 7 für den weiteren Verlauf der Kryptoanalyse irrelevant.
 
 
 \newpage

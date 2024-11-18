@@ -112,9 +112,7 @@ Das Ergebnis ist eine sogenannte fixpunktfreie Permutation.
 Kein Element behält somit seine Anfangsposition.
 Da $\forall x \in Alphabet,\; enc(x) \ne x$ bleiben nur noch wenige Positionen übrig, an welchen sich ein bekannter Funkspruch-Abschnitt (Known-plaintext) befinden kann.
 
-\fmbox{\textbf{Permutationen der Rotoren} \[enc(x): A \longmapsto A,\quad enc(x) \coloneqq R_1^{-1} \circ R_2^{-1} \circ R_3^{-1} \circ U \circ R_3 \circ R_2 \circ R_1(x)\]}
-
-\newpage
+%\newpage
 
 \subsection{Steckerbrett}\label{subsec:steckerbrett}
 
@@ -130,6 +128,8 @@ Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichk
 	\label{fig:enigma_plugboard}
 \end{figure}
 
+Die Permutationen der Buchstaben lassen sich durch die folgende Formel beschrieben:
+\fmbox{\textbf{Permutation der Buchstaben} \[enc(x): A \longmapsto A,\quad enc(x) \coloneqq S\circ R_1^{-1} \circ R_2^{-1} \circ R_3^{-1} \circ U \circ R_3 \circ R_2 \circ R_1 \circ S(x)\]}
 
 \section{Übertragung der Nachrichten}\label{sec:uebertragung-der-nachrichten}
 Bei der Enigma-Maschine wurde jeden Tag ein Tagesschlüssel eingestellt, welcher durch ein Code-Buch vorgegeben war.

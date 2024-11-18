@@ -38,7 +38,7 @@ Die Bombe kann somit im Falle der \glqq Scramblersatz-Knappheit\grqq{} entscheid
 \section{Modellierung der Turing-Welchman-Bombe}\label{sec:model}
 \subsection{Scrambler}\label{subsec:impl_scrambler}
 Wie in~\cref{subsec:vorbereitungen} erklärt, vernachlässigt die Bombe den Übertragzeitpunkt der Walzen.
-Die Software Implementation berücksichtigt ebenfalls die Übertragskerbe der Rotoren nicht.
+Die Software-Implementation berücksichtigt ebenfalls die Übertragskerbe der Rotoren nicht.
 %TODO Enigma Software gegeben erwähnen?
 Die Verdrahtung der Scrambler wird als Vektor abgebildet, welcher wie in~\cref{fig:rot1_wiring} die Permutation für jeden Buchstaben speichert.
 Die Buchstaben werden jedoch nicht in der typischen ASCII-Kodierung gespeichert, sondern auf den Wertebereich 0--25 abgebildet.
@@ -48,7 +48,7 @@ Der Wertebereich wird durch eine Modulo-Operation zwischen 0 und 25 gehalten.
 
 \subsection{Terminal}\label{subsec:impl_terminal}
 Die Kontakte der Terminals werden als Struktur dargestellt.
-Es beinhaltet einen 32 Bit Integer, welcher mit 26 Stellen als Bitvektor die aktiven Kontakte repräsentiert.
+Es beinhaltet einen 32 Bit Integer, welcher als Bitvektor mit 26 seiner Stellen die aktiven Kontakte repräsentiert.
 Die Anzahl der aktiven Kontakte wird ebenfalls als Integer mitgeführt.
 Da es in Bezug auf die Laufzeit medioker ist, alle 26 Stellen des Bitvektors traversieren zu müssen, um zu überprüfen, welche der 26 Kontakte aktiv sind, wurde ein normaler Vektor eingeführt, der die aktiven Kontakte \glqq dicht\grqq{} speichert.
 %TODO Artikel vor Nummer
@@ -57,7 +57,7 @@ Zuletzt wird der Buchstabe/Nummer des jeweiligen Kontakts in der Struktur gespei
 \noindent
 \lstinputlisting[style=mystyle, caption={Realisierung der Terminals}, label={lst:code_impl_terminal}]{Implementierung/terminal.c}
 
-Permutiert ein Scrambler einen Buchstaben, wird mit dem Bitvektor überprüft, ob dieser Kontakt bereits aktiv ist.
+Permutiert ein Scrambler einen Buchstaben, wird mithilfe des Bitvektors überprüft, ob dieser Kontakt bereits aktiv ist.
 
 Hierbei gibt es zwei Szenarien:
 \begin{enumerate}
@@ -72,7 +72,7 @@ Bei dem Test-Register wird hierbei nicht von einem \glqq normalen\grqq{} Kontakt
 %Die Terminals werden als Struktur dargestellt, 
 
 \subsection{In und Outs}\label{subsec:impl_in_und_outs}
-Die In und Outs werden mit dem dazugehörigen Scramblersatz als Knoten dargestellt.
+Die In- und Out-Kontakte werden mit dem dazugehörigen Scramblersätzen als Knoten dargestellt.
 %TODO check
 Sämtliche Verbindungen durch Kabel und Brücken-Konnektoren des analogen Originals werden hier durch Zeiger auf Kontakte ersetzt, so auch die In- und Out-Kontakte.
 %Die Knoten haben Zeiger auf weitere Knoten, die bei dem analogen Original mit dem Out-Kontakt verbunden wären.
@@ -87,7 +87,7 @@ Hierbei zeigt zum Beispiel der \emph{a}-Kontakt des \emph{B}-Terminals und der \
 Somit ist die Verbindung $A \Leftrightarrow B$ abgebildet.
 Jedoch wäre es hier abermals nötig, den gesamten Vektor zu traversieren, um die aktiven Kontakte herauszufinden.
 Die entsprechenden Kontakte müssten nun wieder einen normalen Vektor besitzen, in dem die aktiven Kontakte \glqq dicht\grqq{} stehen, damit die Scrambler effektiv arbeiten können.
-Somit wäre es hier immer noch notwendig die Kontakte separat zu behandeln.
+Somit wäre es hier abermals notwendig die Kontakte separat zu behandeln.
 
 Aus diesem Grund wurde die Funktion des Diagonalbrettes in einer Funktion gekapselt:
 
