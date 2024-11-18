@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{none/global//global/global/global}
-    \entry{enigmarotorset2004}{misc}{}{}
+  \datalist[entry]{none/global//global/global}
+    \entry{enigmarotorset2004}{misc}{}
       \name{author}{1}{}{%
         {{hash=e0dedb40dda8df32fd056b6b6551502b}{%
            family={{Wikimedia Commons}},
@@ -27,12 +27,10 @@
       }
       \strng{namehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{fullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{fullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{bibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorbibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authornamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorfullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{authorfullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -49,7 +47,7 @@
       \endverb
       \keyw{pictures}
     \endentry
-    \entry{scherbiuschiffriermaschine1925}{patent}{}{}
+    \entry{scherbiuschiffriermaschine1925}{patent}{}
       \name{author}{1}{}{%
         {{hash=e7e262c463e045a9366bb43af81898ff}{%
            family={Scherbius},
@@ -59,14 +57,12 @@
       }
       \strng{namehash}{e7e262c463e045a9366bb43af81898ff}
       \strng{fullhash}{e7e262c463e045a9366bb43af81898ff}
-      \strng{fullhashraw}{e7e262c463e045a9366bb43af81898ff}
       \strng{bibnamehash}{e7e262c463e045a9366bb43af81898ff}
       \strng{authorbibnamehash}{e7e262c463e045a9366bb43af81898ff}
       \strng{authornamehash}{e7e262c463e045a9366bb43af81898ff}
       \strng{authorfullhash}{e7e262c463e045a9366bb43af81898ff}
-      \strng{authorfullhashraw}{e7e262c463e045a9366bb43af81898ff}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{8}
@@ -85,7 +81,7 @@
       \endverb
       \keyw{sources}
     \endentry
-    \entry{enigmareflektor}{misc}{}{}
+    \entry{enigmareflektor}{misc}{}
       \name{author}{1}{}{%
         {{hash=f118a9ffb84abe972a0ecbc1cce45df2}{%
            family={{Ravensburg-Weingarten University}},
@@ -93,14 +89,12 @@
       }
       \strng{namehash}{f118a9ffb84abe972a0ecbc1cce45df2}
       \strng{fullhash}{f118a9ffb84abe972a0ecbc1cce45df2}
-      \strng{fullhashraw}{f118a9ffb84abe972a0ecbc1cce45df2}
       \strng{bibnamehash}{f118a9ffb84abe972a0ecbc1cce45df2}
       \strng{authorbibnamehash}{f118a9ffb84abe972a0ecbc1cce45df2}
       \strng{authornamehash}{f118a9ffb84abe972a0ecbc1cce45df2}
       \strng{authorfullhash}{f118a9ffb84abe972a0ecbc1cce45df2}
-      \strng{authorfullhashraw}{f118a9ffb84abe972a0ecbc1cce45df2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{note}{[Online; Stand 22. Oktober 2024]}
       \field{year}{2011}
@@ -112,7 +106,7 @@
       \endverb
       \keyw{pictures}
     \endentry
-    \entry{wiki:enigma}{misc}{}{}
+    \entry{wiki:enigma}{misc}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -120,15 +114,13 @@
       }
       \strng{namehash}{9c677286866aad38f8e9b660f5411814}
       \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
-      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
       \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{[Online; Stand 23. Oktober 2024]}
@@ -142,7 +134,7 @@
       \endverb
       \keyw{sources}
     \endentry
-    \entry{wiki:enigmasteckerbrett}{misc}{}{}
+    \entry{wiki:enigmasteckerbrett}{misc}{}
       \name{author}{1}{}{%
         {{hash=e0dedb40dda8df32fd056b6b6551502b}{%
            family={{Wikimedia Commons}},
@@ -150,15 +142,13 @@
       }
       \strng{namehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{fullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{fullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{bibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorbibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authornamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorfullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{authorfullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{[Online; Stand 24. Oktober 2024]}
@@ -172,7 +162,7 @@
       \endverb
       \keyw{pictures}
     \endentry
-    \entry{wiki:enigmacodebook}{misc}{}{}
+    \entry{wiki:enigmacodebook}{misc}{}
       \name{author}{1}{}{%
         {{hash=e0dedb40dda8df32fd056b6b6551502b}{%
            family={{Wikimedia Commons}},
@@ -180,15 +170,13 @@
       }
       \strng{namehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{fullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{fullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{bibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorbibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authornamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorfullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{authorfullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \field{extraname}{3}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{[Online; Stand 24. Oktober 2024]}
@@ -202,7 +190,7 @@
       \endverb
       \keyw{pictures}
     \endentry
-    \entry{schluesselm1940}{misc}{}{}
+    \entry{schluesselm1940}{misc}{}
       \name{author}{1}{}{%
         {{hash=cbd3eb556cc6ab563a5a1dfc67fbea3f}{%
            family={{Oberkommando der Kriegsmarine}},
@@ -210,14 +198,12 @@
       }
       \strng{namehash}{cbd3eb556cc6ab563a5a1dfc67fbea3f}
       \strng{fullhash}{cbd3eb556cc6ab563a5a1dfc67fbea3f}
-      \strng{fullhashraw}{cbd3eb556cc6ab563a5a1dfc67fbea3f}
       \strng{bibnamehash}{cbd3eb556cc6ab563a5a1dfc67fbea3f}
       \strng{authorbibnamehash}{cbd3eb556cc6ab563a5a1dfc67fbea3f}
       \strng{authornamehash}{cbd3eb556cc6ab563a5a1dfc67fbea3f}
       \strng{authorfullhash}{cbd3eb556cc6ab563a5a1dfc67fbea3f}
-      \strng{authorfullhashraw}{cbd3eb556cc6ab563a5a1dfc67fbea3f}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Der {Schlüssel} {M} - {Verfahren} {M} {Allgemein}}
@@ -234,7 +220,7 @@
       \endverb
       \keyw{sources}
     \endentry
-    \entry{wiki:bombe_picture}{misc}{}{}
+    \entry{wiki:bombe_picture}{misc}{}
       \name{author}{1}{}{%
         {{hash=e0dedb40dda8df32fd056b6b6551502b}{%
            family={{Wikimedia Commons}},
@@ -242,15 +228,13 @@
       }
       \strng{namehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{fullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{fullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{bibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorbibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authornamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorfullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{authorfullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \field{extraname}{4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{[Online; Stand 27. Oktober 2024]}
@@ -264,7 +248,7 @@
       \endverb
       \keyw{pictures}
     \endentry
-    \entry{wiki:bombescrambler}{misc}{}{}
+    \entry{wiki:bombescrambler}{misc}{}
       \name{author}{1}{}{%
         {{hash=e0dedb40dda8df32fd056b6b6551502b}{%
            family={{Wikimedia Commons}},
@@ -272,12 +256,10 @@
       }
       \strng{namehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{fullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{fullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{bibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorbibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authornamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorfullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{authorfullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \field{extraname}{5}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -294,7 +276,7 @@
       \endverb
       \keyw{pictures}
     \endentry
-    \entry{wiki:bomberear}{misc}{}{}
+    \entry{wiki:bomberear}{misc}{}
       \name{author}{1}{}{%
         {{hash=e0dedb40dda8df32fd056b6b6551502b}{%
            family={{Wikimedia Commons}},
@@ -302,12 +284,10 @@
       }
       \strng{namehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{fullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{fullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{bibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorbibnamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authornamehash}{e0dedb40dda8df32fd056b6b6551502b}
       \strng{authorfullhash}{e0dedb40dda8df32fd056b6b6551502b}
-      \strng{authorfullhashraw}{e0dedb40dda8df32fd056b6b6551502b}
       \field{extraname}{6}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -324,7 +304,7 @@
       \endverb
       \keyw{pictures}
     \endentry
-    \entry{ertelloemannangewandte2018}{book}{}{}
+    \entry{ertelloemannangewandte2018}{book}{}
       \name{author}{2}{}{%
         {{hash=0ad7b7b50f220390cbf1c36575c6a49a}{%
            family={Ertel},
@@ -342,14 +322,12 @@
       }
       \strng{namehash}{de8197282fc56e60af85b6390cf7a876}
       \strng{fullhash}{de8197282fc56e60af85b6390cf7a876}
-      \strng{fullhashraw}{de8197282fc56e60af85b6390cf7a876}
       \strng{bibnamehash}{de8197282fc56e60af85b6390cf7a876}
       \strng{authorbibnamehash}{de8197282fc56e60af85b6390cf7a876}
       \strng{authornamehash}{de8197282fc56e60af85b6390cf7a876}
       \strng{authorfullhash}{de8197282fc56e60af85b6390cf7a876}
-      \strng{authorfullhashraw}{de8197282fc56e60af85b6390cf7a876}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{5. überarbeitete und erweiterte Auflage}
@@ -359,7 +337,7 @@
       \true{nocite}
       \keyw{sources}
     \endentry
-    \entry{dewiki:schluesselprozedur}{misc}{}{}
+    \entry{dewiki:schluesselprozedur}{misc}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -367,15 +345,13 @@
       }
       \strng{namehash}{9c677286866aad38f8e9b660f5411814}
       \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
-      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
       \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{[Online; Stand 14. November 2024]}
@@ -390,7 +366,7 @@
       \endverb
       \keyw{sources}
     \endentry
-    \entry{ellsburybomb1998}{misc}{}{}
+    \entry{ellsburybomb1998}{misc}{}
       \name{author}{1}{}{%
         {{hash=93a26a60d1891a03a08e20844e22b0d2}{%
            family={{Graham Ellsbury}},
@@ -398,14 +374,12 @@
       }
       \strng{namehash}{93a26a60d1891a03a08e20844e22b0d2}
       \strng{fullhash}{93a26a60d1891a03a08e20844e22b0d2}
-      \strng{fullhashraw}{93a26a60d1891a03a08e20844e22b0d2}
       \strng{bibnamehash}{93a26a60d1891a03a08e20844e22b0d2}
       \strng{authorbibnamehash}{93a26a60d1891a03a08e20844e22b0d2}
       \strng{authornamehash}{93a26a60d1891a03a08e20844e22b0d2}
       \strng{authorfullhash}{93a26a60d1891a03a08e20844e22b0d2}
-      \strng{authorfullhashraw}{93a26a60d1891a03a08e20844e22b0d2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The Turing Bomb}
@@ -423,7 +397,7 @@
       \endverb
       \keyw{sources}
     \endentry
-    \entry{virtualcolossusbombe}{misc}{}{}
+    \entry{virtualcolossusbombe}{misc}{}
       \name{author}{1}{}{%
         {{hash=14228e4eb7be9af10ef171aa319a3d43}{%
            family={{Virtual Colossus Project, Martin Gillow}},
@@ -431,14 +405,12 @@
       }
       \strng{namehash}{14228e4eb7be9af10ef171aa319a3d43}
       \strng{fullhash}{14228e4eb7be9af10ef171aa319a3d43}
-      \strng{fullhashraw}{14228e4eb7be9af10ef171aa319a3d43}
       \strng{bibnamehash}{14228e4eb7be9af10ef171aa319a3d43}
       \strng{authorbibnamehash}{14228e4eb7be9af10ef171aa319a3d43}
       \strng{authornamehash}{14228e4eb7be9af10ef171aa319a3d43}
       \strng{authorfullhash}{14228e4eb7be9af10ef171aa319a3d43}
-      \strng{authorfullhashraw}{14228e4eb7be9af10ef171aa319a3d43}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Bombe Technical Information}
@@ -456,7 +428,7 @@
       \endverb
       \keyw{sources}
     \endentry
-    \entry{turingbomben2014}{misc}{}{}
+    \entry{turingbomben2014}{misc}{}
       \name{author}{1}{}{%
         {{hash=eda7297ea1c61e1c215c2e810294951c}{%
            family={{Entropia, andi}},
@@ -464,14 +436,12 @@
       }
       \strng{namehash}{eda7297ea1c61e1c215c2e810294951c}
       \strng{fullhash}{eda7297ea1c61e1c215c2e810294951c}
-      \strng{fullhashraw}{eda7297ea1c61e1c215c2e810294951c}
       \strng{bibnamehash}{eda7297ea1c61e1c215c2e810294951c}
       \strng{authorbibnamehash}{eda7297ea1c61e1c215c2e810294951c}
       \strng{authornamehash}{eda7297ea1c61e1c215c2e810294951c}
       \strng{authorfullhash}{eda7297ea1c61e1c215c2e810294951c}
-      \strng{authorfullhashraw}{eda7297ea1c61e1c215c2e810294951c}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Turingbomben}
@@ -489,7 +459,7 @@
       \endverb
       \keyw{sources}
     \endentry
-    \entry{enwiki:bombe}{misc}{}{}
+    \entry{enwiki:bombe}{misc}{}
       \name{author}{1}{}{%
         {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
            family={{Wikipedia contributors}},
@@ -497,12 +467,10 @@
       }
       \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
-      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
       \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
-      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -514,7 +482,7 @@
       \true{nocite}
       \keyw{sources}
     \endentry
-    \entry{dewiki:240861245}{misc}{}{}
+    \entry{dewiki:240861245}{misc}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -522,12 +490,10 @@
       }
       \strng{namehash}{9c677286866aad38f8e9b660f5411814}
       \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
-      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
       \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
       \field{extraname}{3}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}

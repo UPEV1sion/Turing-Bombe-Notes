@@ -43,7 +43,7 @@ In~\cref{fig:rot1_wiring} ist die Verdrahtung der Walze~I zu sehen.
 \end{figure}
 
 Diese Verdrahtung ist starr und individuell für jede Walze.
-Eine Enigma-Walze hat 26 Eingangs- und 26 Ausgangskontakte.
+Eine Enigma-Walze hat 26 Eingangs- und 26 Ausgangs-Kontakte.
 Zudem kann eine Walze 26 Ausgangspositionen annehmen, jeweils repräsentativ für das Alphabet.
 Wird nun an den Eingangskontakt \glqq A\grqq{} Spannung angelegt, so wird dieser Buchstabe durch die interne Verdrahtung zu einem \glqq E\grqq{} permutiert.
 
@@ -51,7 +51,7 @@ Um die Enigma-Maschine in Betrieb zu nehmen, müssen drei von acht möglichen Wa
 Diese drei Walzen werden in Reihe geschaltet.
 Die rechte Walze wird bei jedem Tastendruck um eine Position weitergerückt.
 Hat diese Walze eine komplette Rotation vollzogen, rückt die Walze links neben ihr um eine Position weiter.\footnote{Eine Analogie hierfür ist das Verhalten eines mechanischen Kilometerzählers oder das Verhalten von Sekunden-, Minuten- und Studenzeigern einer Uhr.}
-Die 26 Eingangskontakte der rechten Walze werden durch 26 Kontakte der Enigma-Maschine versorgt, welche mit der Tastatur verbunden sind.
+Die 26 Eingangs-Kontakte der rechten Walze werden durch 26 Kontakte der Enigma-Maschine versorgt, welche mit der Tastatur verbunden sind.
 Die Enigma-Maschinen Kontakte sind starr und bewegen sich nicht.
 Wird nun ein \glqq A\grqq{} betätigt, während sich die Walze in Stellung \glqq A\grqq{} befindet, wird diese zuerst rotiert und dann durchlaufen.
 Der Strom nimmt somit den \glqq B\grqq{} Pfad.
@@ -83,17 +83,18 @@ die festlegt, wann sich die Walze links von der aktuellen bewegt.
 %\end{figure}
 
 \newpage
-
 \subsection{Umkehrwalze}\label{subsec:umkehrwalze}
 Der originalen Patentschrift\autocite{scherbiuschiffriermaschine1925} von 1918 ist zu entnehmen, dass sehr frühe Enigma-Maschinen nicht involutorisch wirkten.
-Das bedeutet ganz allgemein, dass $dec \ne enc$ ist.
+Das bedeutet ganz allgemein, dass $E_K \ne D_K$ ist.
+$E_K$ ist die Chiffrierfunktion in Abhängigkeit eines Schlüssels – hier die Konfiguration der Enigma-Maschine.
+$D_K$ stellt die Dechiffrierfunktion dar.
 Es wird also zur Dechiffrierung eine andere Funktion, als zur Chiffrierung benötigt.
 Konkret bedeutet das für sehr frühe Enigma-Maschinen, dass diese zur Dechiffrierung einer Nachricht, die zuvor von einer Enigma-Maschine chiffriert wurde, einen speziellen Modus benötigen.
 Um die chiffrierte Nachricht zu dechiffrieren, muss ein Hebel umgelegt werden und die Walzen müssen in Ausgangsstellung gebracht werden.
 Nun wird Strom nicht von rechts nach links, sondern von links nach rechts durch die Walzen geleitet.
 
 Da das daraus resultierende Gesamtgewicht von rund 50\si{\kg} unakzeptabel für den Feldeinsatz war und der zusätzlich benötigte Mechanismus fehleranfällig erschien, wurde die Umkehrwalze oder auch der Reflektor von der Wehrmacht adaptiert.
-Die Umkehrwalze sorgt dafür, dass $dec = enc$ ist, sprich mit der gleichen Einstellung ein beliebiger Text sowohl chiffriert als auch dechiffriert werden kann.
+Die Umkehrwalze sorgt dafür, dass $E_K = D_K$ ist, sprich mit der gleichen Einstellung ein beliebiger Text sowohl chiffriert als auch dechiffriert werden kann.
 Wie in~\cref{fig:enigma_reflector} zu erkennen, besitzt die Umkehrwalze nicht 52, sondern nur 26 Kontakte.
 Sie \glqq wirft\grqq{} das Signal zurück und schickt dieses ein weiteres Mal, in entgegengesetzter Richtung durch die Walzen.
 Es werden Buchstabenpaare gebildet, welche die Umkehrwalze kommutativ wirken lassen und die Enigma-Maschine involutorisch machen.
@@ -110,7 +111,7 @@ Doch leider ist dieser geniale Einfall die wohl größte Sicherheitslücke der E
 Aufgrund der Buchstabenpaare wird niemals ein Buchstabe auf sich selber abgebildet.
 Das Ergebnis ist eine sogenannte fixpunktfreie Permutation.
 Kein Element behält somit seine Anfangsposition.
-Da $\forall x \in Alphabet,\; enc(x) \ne x$ bleiben nur noch wenige Positionen übrig, an welchen sich ein bekannter Funkspruch-Abschnitt (Known-plaintext) befinden kann.
+Da $\forall x \in Alphabet,\; E_K(x) \ne x$ bleiben nur noch wenige Positionen übrig, an welchen sich ein bekannter Funkspruch-Abschnitt (Known-plaintext) befinden kann.
 
 %\newpage
 
@@ -119,7 +120,7 @@ Da $\forall x \in Alphabet,\; enc(x) \ne x$ bleiben nur noch wenige Positionen �
 Da ein Schlüsselraum von 686.518.560 Möglichkeiten\footnote{Diese Berechnung berücksichtigt die Anomalie des Fortschaltmechanismus.\autocite{wiki:enigma}} der Wehrmacht nicht genügte, wurde der Enigma-Maschine das Steckerbrett hinzugefügt.
 Das Steckerbrett wirkt kommutativ und substituiert zwei Buchstaben. 
 Es wird jeweils vor und nach dem Walzensatz traversiert. 
-Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichkeiten durch das Steckerbrett erscheint gewaltig, jedoch werden sämtliche Möglichkeiten von der Turing-Welchman-Bombe überwunden und spielen für die Sicherheit der Maschine keine Rolle.
+Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichkeiten durch das Steckerbrett erscheint gewaltig, jedoch werden all diese Möglichkeiten von der Turing-Welchman-Bombe überwunden und spielen für die Sicherheit der Maschine keine Rolle.
 
 \begin{figure}[htbp]
 	\centering
@@ -128,8 +129,9 @@ Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichk
 	\label{fig:enigma_plugboard}
 \end{figure}
 
-Die Permutationen der Buchstaben lassen sich durch die folgende Formel beschrieben:
-\fmbox{\textbf{Permutation der Buchstaben} \[enc(x): A \longmapsto A,\quad enc(x) \coloneqq S\circ R_1^{-1} \circ R_2^{-1} \circ R_3^{-1} \circ U \circ R_3 \circ R_2 \circ R_1 \circ S(x)\]}
+Die Permutation der Buchstaben lässt sich durch folgende Formel beschrieben:
+%TODO Enigma Einstellung in Unterfunktionen.
+\fmbox{\textbf{Permutation der Buchstaben} \[E_K(x): A \longmapsto A,\quad E_K(x) \coloneqq S\circ W_1^{-1} \circ W_2^{-1} \circ W_3^{-1} \circ U \circ W_3 \circ W_2 \circ W_1 \circ S(x)\]}
 
 \section{Übertragung der Nachrichten}\label{sec:uebertragung-der-nachrichten}
 Bei der Enigma-Maschine wurde jeden Tag ein Tagesschlüssel eingestellt, welcher durch ein Code-Buch vorgegeben war.
@@ -139,11 +141,10 @@ In~\cref{fig:enigma_code_book} ist ein Code-Buch-Auszug für eine Enigma-Maschin
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.7\linewidth]{Enigma/Enigma-code-book}
+	\includegraphics[width=.65\linewidth]{Enigma/Enigma-code-book}
 	\caption{Code-Buch-Auszug\autocite{wiki:enigmacodebook}}
 	\label{fig:enigma_code_book}
 \end{figure}
-
 
 \newpage
 
@@ -157,7 +158,8 @@ Der Schlüssler gab den zu verschlüsselnden Text nach bestimmten Regeln ein\aut
 
 Der Empfänger musste nun auf seiner Enigma-Maschine den Tagesschlüssel einstellen und die Walzen in die über den Spruchkopf mitgeteilte Grundstellung bringen.
 Nun entschlüsselte er mit dieser Einstellung den Spruchschlüssel.
-Wenn die Walzenstellung mitgeteilt durch den Spruchschlüssel auf der Enigma-Maschine eingestellt wurde, konnte die eigentliche Nachricht dechiffriert werden.
+Wenn die Walzenstellung mitgeteilt durch den entschlüsselten Spruchschlüssel auf der Enigma-Maschine eingestellt wurde, konnte die eigentliche Nachricht dechiffriert werden.
 
-Hierbei sei angemerkt, dass sich das Verfahren der Nachrichtenübertragung über die Kriegsjahre mehrfach änderte. So war die Grundstellung der Walzen vor 1938 noch Teil des Code-Buchs.
+Hierbei sei angemerkt, dass sich das Verfahren der Nachrichtenübertragung über die Kriegsjahre mehrfach änderte.
+So war die Grundstellung der Walzen vor 1938 noch Teil des Code-Buchs.
 
