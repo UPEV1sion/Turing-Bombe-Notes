@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.11)  16 NOV 2024 23:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.11)  18 NOV 2024 09:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1568,19 +1568,19 @@ Package pdftex.def Info: Enigma/UKW-D.jpg  used on input line 104.
 (pdftex.def)             Requested size: 209.12683pt x 156.5794pt.
 
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 117.
+Package cleveref Info: loaded `ngerman' language definitions on input line 123.
 
 [6{C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
 c}{C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
 c}{C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <
 ./Enigma/UKW-D.jpg>]
-<Enigma/enigma-steckerbrett.jpg, id=139, 910.40125pt x 508.90125pt>
+<Enigma/enigma-steckerbrett.jpg, id=141, 910.40125pt x 508.90125pt>
 File: Enigma/enigma-steckerbrett.jpg Graphic file (type jpg)
 <use Enigma/enigma-steckerbrett.jpg>
-Package pdftex.def Info: Enigma/enigma-steckerbrett.jpg  used on input line 128
+Package pdftex.def Info: Enigma/enigma-steckerbrett.jpg  used on input line 126
 .
 (pdftex.def)             Requested size: 167.2989pt x 93.51627pt.
-<Enigma/Enigma-code-book.png, id=143, 745.05154pt x 522.28113pt>
+<Enigma/Enigma-code-book.png, id=145, 745.05154pt x 522.28113pt>
 File: Enigma/Enigma-code-book.png Graphic file (type png)
 <use Enigma/Enigma-code-book.png>
 Package pdftex.def Info: Enigma/Enigma-code-book.png  used on input line 142.
@@ -1598,7 +1598,7 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 60.
 
  (Turing Bomb/Turing-Bomb.tex
 chapter 3.
-<Turing Bomb/BletchleyParkBombe.jpg, id=165, 455.7828pt x 404.712pt>
+<Turing Bomb/BletchleyParkBombe.jpg, id=168, 455.7828pt x 404.712pt>
 File: Turing Bomb/BletchleyParkBombe.jpg Graphic file (type jpg)
 <use Turing Bomb/BletchleyParkBombe.jpg>
 Package pdftex.def Info: Turing Bomb/BletchleyParkBombe.jpg  used on input line
@@ -1621,7 +1621,7 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 Package cleveref Info: loaded `ngerman' language definitions on input line 81.
 [10]
-<Turing Bomb/crib_cipher_cycle.png, id=185, 516.0078pt x 375.44266pt>
+<Turing Bomb/crib_cipher_cycle.png, id=188, 516.0078pt x 375.44266pt>
 File: Turing Bomb/crib_cipher_cycle.png Graphic file (type png)
 <use Turing Bomb/crib_cipher_cycle.png>
 Package pdftex.def Info: Turing Bomb/crib_cipher_cycle.png  used on input line 
@@ -1629,34 +1629,34 @@ Package pdftex.def Info: Turing Bomb/crib_cipher_cycle.png  used on input line
 (pdftex.def)             Requested size: 250.95476pt x 182.5936pt.
 
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 106.
+Package cleveref Info: loaded `ngerman' language definitions on input line 108.
 
 [11 <./Turing Bomb/crib_cipher_cycle.png>]
-<Turing Bomb/WireBrushesOnBombeDrum.jpg, id=196, 159.41911pt x 106.27942pt>
+<Turing Bomb/WireBrushesOnBombeDrum.jpg, id=199, 159.41911pt x 106.27942pt>
 File: Turing Bomb/WireBrushesOnBombeDrum.jpg Graphic file (type jpg)
 <use Turing Bomb/WireBrushesOnBombeDrum.jpg>
 Package pdftex.def Info: Turing Bomb/WireBrushesOnBombeDrum.jpg  used on input 
-line 115.
+line 117.
 (pdftex.def)             Requested size: 167.2989pt x 111.5399pt.
 
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 152.
+Package cleveref Info: loaded `ngerman' language definitions on input line 154.
 
 [12 <./Turing Bomb/WireBrushesOnBombeDrum.jpg>]
-Overfull \hbox (1.69351pt too wide) in paragraph at lines 154--161
+Overfull \hbox (1.69351pt too wide) in paragraph at lines 156--163
 \T1/lmr/m/n/10.95 Gordon Welch-man fiel auf, dass bei frü-hen Bom-ben nicht die
  Kom-mu-ta-ti-vi-tät des Stecker-
  []
 
-<Turing Bomb/Bletchley_Park_Bombe_Rear.jpg, id=208, 803.0pt x 1149.29375pt>
+<Turing Bomb/Bletchley_Park_Bombe_Rear.jpg, id=211, 803.0pt x 1149.29375pt>
 File: Turing Bomb/Bletchley_Park_Bombe_Rear.jpg Graphic file (type jpg)
 <use Turing Bomb/Bletchley_Park_Bombe_Rear.jpg>
 Package pdftex.def Info: Turing Bomb/Bletchley_Park_Bombe_Rear.jpg  used on inp
-ut line 229.
+ut line 231.
 (pdftex.def)             Requested size: 209.12683pt x 131.97495pt.
 
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 233.
+Package cleveref Info: loaded `ngerman' language definitions on input line 235.
 
 [13 <./Turing Bomb/Bletchley_Park_Bombe_Rear.jpg>])
 
@@ -1681,14 +1681,13 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 
 ] (Implementierung/terminal.c)
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 74.
+Package cleveref Info: loaded `ngerman' language definitions on input line 67.
 [16] (Implementierung/diag_method.c)
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 101.
-
+Package cleveref Info: loaded `ngerman' language definitions on input line 92.
 [17]
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 139.
+Package cleveref Info: loaded `ngerman' language definitions on input line 130.
 
 [18]
 chapter 5.
@@ -1698,7 +1697,7 @@ chapter 5.
 
 ]
 chapter 6.
-<Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force.png, id=306, 462.528
+<Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force.png, id=310, 462.528
 pt x 346.896pt>
 File: Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force.png Graphic fil
 e (type png)
@@ -1788,14 +1787,15 @@ Package logreq Info: Writing requests to 'Projektarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44586 strings out of 473682
- 934431 string characters out of 5719235
- 1946419 words of memory out of 5000000
- 66883 multiletter control sequences out of 15000+600000
+ 44592 strings out of 473682
+ 934583 string characters out of 5719235
+ 1946585 words of memory out of 5000000
+ 66889 multiletter control sequences out of 15000+600000
  646588 words of font info for 102 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,20n,121p,10944b,2383s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
+<C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+b><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxo10.p
 fb><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.
 pfb><C:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.
@@ -1810,10 +1810,11 @@ Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/
 Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/
 Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C
 :/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
-:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Projektarbeit.pdf (23 pages, 3233002 bytes).
+:/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:
+/Users/escha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Projektarbeit.pdf (23 pages, 3265497 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
+ 591 PDF objects out of 1000 (max. 8388607)
  147 named destinations out of 1000 (max. 500000)
  341 words of extra memory for PDF output out of 10000 (max. 10000000)
 

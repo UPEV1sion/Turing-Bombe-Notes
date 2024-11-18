@@ -6,9 +6,6 @@
 %Der zu permutierende Buchstabe wird hierfür als Index in den Vektor genutzt.
 
 
-%\section{Turing-Welchman-Bombe}\label{sec:impl_bombe}
-%\section{Algorithmus Bombe}\label{sec:algorithmus-bombe}
-%
 \section{Menü Algorithmus}\label{sec:cycle-finding-algorithm}
 Um eine Turing-Welchman-Bombe in der Programmiersprache C nachzubilden, muss zuerst ein Algorithmus entworfen werden, welcher das Menü durch ein von dem Nutzer vorgegebenes Crib und 
 %TODO
@@ -17,8 +14,6 @@ Geheimtext bildet.
 Hierfür werden die einzelne Buchstaben als Knoten mithilfe einer Struktur dargestellt, welche zum einen den Buchstaben und zum anderen einen Vektor mit den anliegenden Auslegern beinhaltet. 
 Die Buchstaben-Tupel wurden ebenfalls als Struktur dargestellt, welche zwei Knoten, die Position im Crib und einen Booleschen Wert beinhaltet welcher aussagt, ob dieses Tupel zum Zyklus beiträgt.
 
-
-%\section{Software Implementierung}\label{sec:implementierung_bombe}
 
 \noindent
 \lstinputlisting[style=mystyle, caption={Realisierung der Menü Strukturen}, label={lst:code_impl_menu}]{Implementierung/menu_structs.c}
@@ -52,7 +47,7 @@ Es beinhaltet einen 32 Bit Integer, welcher als Bitvektor mit 26 seiner Stellen 
 Die Anzahl der aktiven Kontakte wird ebenfalls als Integer mitgeführt.
 Da es in Bezug auf die Laufzeit medioker ist, alle 26 Stellen des Bitvektors traversieren zu müssen, um zu überprüfen, welche der 26 Kontakte aktiv sind, wurde ein normaler Vektor eingeführt, der die aktiven Kontakte \glqq dicht\grqq{} speichert.
 %TODO Artikel vor Nummer
-Zuletzt wird der Buchstabe/Nummer des jeweiligen Kontakts in der Struktur gespeichert.
+Zuletzt wird der Buchstabe/die Nummer des jeweiligen Kontakts in der Struktur gespeichert.
 
 \noindent
 \lstinputlisting[style=mystyle, caption={Realisierung der Terminals}, label={lst:code_impl_terminal}]{Implementierung/terminal.c}
@@ -69,16 +64,9 @@ Hierbei gibt es zwei Szenarien:
 Die Terminal Struktur beinhaltet einen Vektor mit 26 Kontakte und einen Zeiger auf den Kontakt des Test-Registers.
 Bei dem Test-Register wird hierbei nicht von einem \glqq normalen\grqq{} Kontakt unterschieden.
 
-%Die Terminals werden als Struktur dargestellt, 
-
 \subsection{In und Outs}\label{subsec:impl_in_und_outs}
 Die In- und Out-Kontakte werden mit dem dazugehörigen Scramblersätzen als Knoten dargestellt.
-%TODO check
 Sämtliche Verbindungen durch Kabel und Brücken-Konnektoren des analogen Originals werden hier durch Zeiger auf Kontakte ersetzt, so auch die In- und Out-Kontakte.
-%Die Knoten haben Zeiger auf weitere Knoten, die bei dem analogen Original mit dem Out-Kontakt verbunden wären.
-%Die In und Outs sind jeweils wieder Zeiger Terminal-Kontakte.
-
-%Die Scrambler permutieren die aktiven Kontakte des In-Kontakts.
 
 \subsection{Diagonalbrett}\label{subsec:impl_diagonal_board}
 Das Diagonalbrett als native Datenstruktur darzustellen, hat sich als ein eher schlechter Einfall herausgestellt.

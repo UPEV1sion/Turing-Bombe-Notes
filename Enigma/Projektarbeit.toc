@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {2.2}Funktionsweise}{5}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Walzen}{5}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Umkehrwalze}{6}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Steckerbrett}{7}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Steckerbrett}{6}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}Übertragung der Nachrichten}{7}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Die Turing-Welchman-Bombe}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Einführung}{9}{section.3.1}%
