@@ -9,7 +9,7 @@ sub run_biber {
 }
 
 $pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1 %O %S';
-$pdf_mode = 1; # Enable PDF output
+$pdf_mode = 1; 
 
 $diagnostics = 1;
 
