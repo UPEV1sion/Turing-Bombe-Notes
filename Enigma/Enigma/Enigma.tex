@@ -88,7 +88,7 @@ Der originalen Patentschrift\autocite{scherbiuschiffriermaschine1925} von 1918 i
 Das bedeutet ganz allgemein, dass $E_K \ne D_K$ ist.
 $E_K$ ist die Chiffrierfunktion in Abhängigkeit eines Schlüssels – hier die Konfiguration der Enigma-Maschine.
 $D_K$ stellt die Dechiffrierfunktion dar.
-Es wird also zur Dechiffrierung eine andere Funktion, als zur Chiffrierung benötigt.
+%Es wird also zur Dechiffrierung eine andere Funktion, als zur Chiffrierung benötigt.
 Konkret bedeutet das für sehr frühe Enigma-Maschinen, dass diese zur Dechiffrierung einer Nachricht, die zuvor von einer Enigma-Maschine chiffriert wurde, einen speziellen Modus benötigen.
 Um die chiffrierte Nachricht zu dechiffrieren, muss ein Hebel umgelegt werden und die Walzen müssen in Ausgangsstellung gebracht werden.
 Nun wird Strom nicht von rechts nach links, sondern von links nach rechts durch die Walzen geleitet.
@@ -120,7 +120,7 @@ Da $\forall x \in Alphabet,\; E_K(x) \ne x$ bleiben nur noch wenige Positionen �
 Da ein Schlüsselraum von 686.518.560 Möglichkeiten\footnote{Diese Berechnung berücksichtigt die Anomalie des Fortschaltmechanismus.\autocite{wiki:enigma}} der Wehrmacht nicht genügte, wurde der Enigma-Maschine das Steckerbrett hinzugefügt.
 Das Steckerbrett wirkt kommutativ und substituiert zwei Buchstaben. 
 Es wird jeweils vor und nach dem Walzensatz traversiert. 
-Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichkeiten durch das Steckerbrett erscheint gewaltig, jedoch werden all diese Möglichkeiten von der Turing-Welchman-Bombe überwunden und spielen für die Sicherheit der Maschine keine Rolle.
+Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichkeiten durch das Steckerbrett erscheint gewaltig, jedoch werden all diese Möglichkeiten von der Turing-Welchman-Bombe überwunden und spielen für die Sicherheit der Maschine de facto keine Rolle.
 
 \begin{figure}[htbp]
 	\centering
@@ -130,7 +130,7 @@ Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichk
 \end{figure}
 
 Die Permutation der Buchstaben lässt sich durch folgende Formel beschrieben:
-%TODO Enigma Einstellung in Unterfunktionen.
+%TODO Enigma Einstellung in Unterfunktionen?
 \fmbox{\textbf{Permutation der Buchstaben} \[E_K(x): A \longmapsto A,\quad E_K(x) \coloneqq S\circ W_1^{-1} \circ W_2^{-1} \circ W_3^{-1} \circ U \circ W_3 \circ W_2 \circ W_1 \circ S(x)\]}
 
 \section{Übertragung der Nachrichten}\label{sec:uebertragung-der-nachrichten}
@@ -141,7 +141,7 @@ In~\cref{fig:enigma_code_book} ist ein Code-Buch-Auszug für eine Enigma-Maschin
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.65\linewidth]{Enigma/Enigma-code-book}
+	\includegraphics[width=.6\linewidth]{Enigma/Enigma-code-book}
 	\caption{Code-Buch-Auszug\autocite{wiki:enigmacodebook}}
 	\label{fig:enigma_code_book}
 \end{figure}
