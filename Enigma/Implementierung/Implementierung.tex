@@ -12,7 +12,7 @@ Um eine Turing-Welchman-Bombe in der Programmiersprache C nachzubilden, muss zue
 Geheimtext bildet.
 
 Hierfür werden die einzelne Buchstaben als Knoten mithilfe einer Struktur dargestellt, welche zum einen den Buchstaben und zum anderen einen Vektor mit den anliegenden Auslegern beinhaltet. 
-Die Buchstaben-Tupel wurden ebenfalls als Struktur dargestellt, welche zwei Knoten, die Position im Crib und einen Booleschen Wert beinhaltet welcher aussagt, ob dieses Tupel zum Zyklus beiträgt.
+Die Buchstaben-Tupel wurden ebenfalls als Struktur dargestellt, welche zwei Knoten, die Position im Crib und einen Booleschen Wert beinhaltet, welcher aussagt, ob dieses Tupel zum Zyklus beiträgt.
 
 
 \noindent
@@ -20,7 +20,7 @@ Die Buchstaben-Tupel wurden ebenfalls als Struktur dargestellt, welche zwei Knot
 Die Tupel werden nun in einer \glqq Nachschlagetabelle\grqq{} abgelegt.
 Diese Tabelle hat 26 Stellen, repräsentativ für das Alphabet.
 Ein jeweiliges Tupel wird sowohl unter dem ersten als auch unter dem zweiten Buchstaben abgelegt. 
-Ein Tupel wie \texttt{W:S} ist also sowohl unter \texttt{W} als auch unter \texttt{S} abgelegt.
+Ein Tupel wie \texttt{W:S} ist also unter \texttt{W} als auch unter \texttt{S} abgelegt.
 Ein Tiefensuche-Algorithmus, der modifiziert wurde, um weniger \glqq gierig\grqq{} zu agieren, schlägt die Tupel in der Tabelle nach und markiert die besuchten Tupel.
 %Bei dem Rücksetzverfahren der Tiefensuche wird die Markierung der Tupel, die nicht zum Zyklus beitragen entfernt.
 Das Ergebnis ist eine gemessene, lineare Laufzeit.\footnote{Es wurden Crib-Längen bis 26 betrachtet, um zu garantieren, dass die lineare Laufzeit bei einer maximalen Länge von 13 Buchstaben gegeben ist.

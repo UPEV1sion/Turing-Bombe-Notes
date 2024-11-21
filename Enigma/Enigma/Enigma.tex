@@ -85,16 +85,18 @@ die festlegt, wann sich die Walze links von der aktuellen bewegt.
 \newpage
 \subsection{Umkehrwalze}\label{subsec:umkehrwalze}
 Der originalen Patentschrift\autocite{scherbiuschiffriermaschine1925} von 1918 ist zu entnehmen, dass sehr frühe Enigma-Maschinen nicht involutorisch wirkten.
-Das bedeutet ganz allgemein, dass $E_K \ne D_K$ ist.
-$E_K$ ist die Chiffrierfunktion in Abhängigkeit eines Schlüssels – hier die Konfiguration der Enigma-Maschine.
-$D_K$ stellt die Dechiffrierfunktion dar.
+%Das bedeutet ganz allgemein, dass $E_K \ne D_K$ ist.
+%$E_K$ ist die Chiffrierfunktion in Abhängigkeit eines Schlüssels – hier die Konfiguration der Enigma-Maschine.
+%$D_K$ stellt die Dechiffrierfunktion dar.
 %Es wird also zur Dechiffrierung eine andere Funktion, als zur Chiffrierung benötigt.
 Konkret bedeutet das für sehr frühe Enigma-Maschinen, dass diese zur Dechiffrierung einer Nachricht, die zuvor von einer Enigma-Maschine chiffriert wurde, einen speziellen Modus benötigen.
 Um die chiffrierte Nachricht zu dechiffrieren, muss ein Hebel umgelegt werden und die Walzen müssen in Ausgangsstellung gebracht werden.
 Nun wird Strom nicht von rechts nach links, sondern von links nach rechts durch die Walzen geleitet.
 
 Da das daraus resultierende Gesamtgewicht von rund 50\si{\kg} unakzeptabel für den Feldeinsatz war und der zusätzlich benötigte Mechanismus fehleranfällig erschien, wurde die Umkehrwalze oder auch der Reflektor von der Wehrmacht adaptiert.
-Die Umkehrwalze sorgt dafür, dass $E_K = D_K$ ist, sprich mit der gleichen Einstellung ein beliebiger Text sowohl chiffriert als auch dechiffriert werden kann.
+Die Umkehrwalze sorgt dafür, dass 
+%$E_K = D_K$ ist, sprich 
+mit der gleichen Einstellung und \glqq Modus\grqq{} ein beliebiger Text sowohl chiffriert als auch dechiffriert werden kann.
 Wie in~\cref{fig:enigma_reflector} zu erkennen, besitzt die Umkehrwalze nicht 52, sondern nur 26 Kontakte.
 Sie \glqq wirft\grqq{} das Signal zurück und schickt dieses ein weiteres Mal, in entgegengesetzter Richtung durch die Walzen.
 Es werden Buchstabenpaare gebildet, welche die Umkehrwalze kommutativ wirken lassen und die Enigma-Maschine involutorisch machen.
@@ -131,7 +133,7 @@ Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichk
 
 Die Permutation der Buchstaben lässt sich durch folgende Formel beschrieben:
 %TODO Enigma Einstellung in Unterfunktionen?
-\fmbox{\textbf{Permutation der Buchstaben} \[E_K(x): A \longmapsto A,\quad E_K(x) \coloneqq S\circ W_1^{-1} \circ W_2^{-1} \circ W_3^{-1} \circ U \circ W_3 \circ W_2 \circ W_1 \circ S(x)\]}
+\fmbox{\textbf{Permutation der Buchstaben} \[E_K: A \longmapsto A,\quad E_K(x) \coloneqq S\circ W_1^{-1} \circ W_2^{-1} \circ W_3^{-1} \circ U \circ W_3 \circ W_2 \circ W_1 \circ S(x)\]}
 
 \section{Übertragung der Nachrichten}\label{sec:uebertragung-der-nachrichten}
 Bei der Enigma-Maschine wurde jeden Tag ein Tagesschlüssel eingestellt, welcher durch ein Code-Buch vorgegeben war.
