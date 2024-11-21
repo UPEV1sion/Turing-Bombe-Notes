@@ -11,33 +11,52 @@
 \usepackage{xparse}
 \usepackage{tikzsymbols}
 \usetikzlibrary{tikzlings}
+\usetikzlibrary{shapes.callouts}
+\usetikzlibrary{arrows.meta}
 \usepackage[shortlabels]{enumitem}
 \pgfplotsset{width=10cm, compat=1.18}
 \usetikzlibrary{patterns}
 
-
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-\newcommand{\inflimit}{\lim\limits_{n\rightarrow\infty}}
-\DeclareDocumentCommand{\partder}{m o}{%
-	\IfValueTF{#2}{%
-		\frac{\partial #1}{\partial #2}%
-	}{%
-		\frac{\partial f}{\partial #1}%
-	}%
-}
+\definecolor{msg-red}{rgb}{1, 0.7, 0.56}
 
 \begin{document}
-	\begin{tikzpicture}
-		\begin{scope}[xshift=-26]
-			\fill[\thing@bubblecolour] (2,2.4) ellipse[x radius=0.7, y radius=0.35]; 
-			\fill[\thing@bubblecolour] (1.55,2.35) circle[radius=0.25] (2.0,2.15) circle[radius=0.25] (2.4,2.25) circle[radius=0.25] (1.6,2.55) circle[radius=0.25] (2.0,2.6) circle[radius=0.25] (2.35,2.5) circle[radius=0.25] (1.65,1.95) circle[radius=0.1] (1.55,1.80) circle[radius=0.06] (1.47,1.70) circle[radius=0.03];
-%			\node at (2,2.4) {\thing@think};
-		\end{scope}
-		\Strichmaxerl[5]
-		\node[below] at (-0.3, 0) {Alice};
-		\draw[->, thick] (0.5, 0.7) -- (6.5, 0.7);
-		\node[below] at (7.35, 0) {Bob};
-		\hspace{7cm}
-		\Strichmaxerl[5]
-	\end{tikzpicture}
+	\begin{figure}[htbp]
+		\centering
+		\begin{tikzpicture}
+			\node[cloud callout, callout relative pointer={(0.2, -0.8)}, cloud puff arc=120, aspect=1.5, align=center, fill=white, draw] 
+			at (0, 2.8) {$K_S$};
+			\Strichmaxerl[5]
+			\node[below] at (-0.3, 0) {Alice};
+			
+			\draw[-{Stealth[scale=1]}, thick] (0.5, 1) -- (1.3, 1) node[midway, above] {$K_S$};
+			\node[draw=black, fill=msg-red, rounded corners, thick] 
+			at (2,1) {$E_{K_{T}}$};
+			\draw[-{Stealth[scale=1]}, thick] (2.7, 1) -- (4, 1) node[midway, above] {$E_{K_{T}}(K_S)$};
+			
+			\node[draw=black, fill=msg-red, rounded corners, thick] 
+			at (4.8,1) {$D_{K_{T}}$};
+			
+			\draw[thick] (5.5, 1) -- (7, 0.7) node[midway, above] {$D_{K_{T}}(K_S)$};
+			
+			\node[draw=black, fill=msg-red, rounded corners, thick] 
+			at (7.7,0.7) {$D_{K_{S}}$};
+			
+			
+			\draw[-{Stealth[scale=1]}, thick] (0.5, 0.3) -- (4, 0.3) node[midway, below] {$M$};
+			\node[draw=black, fill=msg-red, rounded corners, thick] 
+			at (4.8,0.3) {$E_{K_{S}}$};
+			\draw[thick] (5.5, 0.3) -- (7, 0.7) node[midway, below] {$E_{K_{S}}(M)$};
+			\draw[thick, -{Stealth[scale=1]}] (7,0.7) -- (7.1,0.7);
+			
+			\draw[thick, -{Stealth[scale=1]}] (8.4, 0.7) -- (9.8, 0.7) node[midway, above] {$M$};
+			
+			\node[below] at (10.35, 0) {Bob};
+			\hspace{10cm}
+			\Strichmaxerl[5]
+		\end{tikzpicture}
+		\caption{Übertragung der Nachrichten}
+	\end{figure}
+	
+	Hierbei stellt $K_S$ den Spruchschlüssel und $K_T$ den Tageschlüssel dar.
+
 \end{document}
