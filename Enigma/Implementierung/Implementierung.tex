@@ -94,12 +94,13 @@ Die Anzahl der Kontakte pro Commons und die Gesamtzahl der verwendeten Commons w
 Im Gegensatz zur \glqq echten\grqq{} Bombe, welche eine Steckerbrett-Hypothese für die jeweils 17576 Walzenstellungen einer Walzenlage testet, testet die Software-Nachbildung eine Hypothese für alle Walzenstellungen der 60 möglichen Walzenlagen.
 Eine modifizierte Breitensuche traversiert die Knoten des aufgespannten Graphen der \glqq Scrambler-Knoten\grqq.
 %TODO lookup table for scrambler knoten.
-Da es aufgrund der Tupel-Kombinationen nicht genügt, einige Knoten nur einmal zu besuchen, und das Diagonalbrett es unmöglich macht, die Datenstruktur der Knoten linear zur durchlaufen, wird erneut eine \glqq Nachschlagetabelle\grqq{} benötigt.
+Da es aufgrund der Tupel-Kombinationen nicht genügt, einige Knoten nur einmal zu besuchen, und das Diagonalbrett es schwierig macht, die Datenstruktur der Knoten linear zur durchlaufen, wird erneut eine \glqq Nachschlagetabelle\grqq{} benötigt.
 Die Nachschlagetabelle besitzt 26 Stellen, jeweils für 26 Terminal-Kontakte.
 Die Knoten, die durch den In-Kontakt mit einem jeweiligen Terminal verbunden sind, werden in dieser Tabelle abgelegt.
 Zuerst werden alle Scrambler-Knoten die durch den In-Kontakt mit dem Test-Register verbunden sind in die Warteschlange eingereiht, danach die Commons der jeweiligen Knoten, und als letztes die Knoten, welche an jene Kontakte anliegen, die durch direkte Permutation der Scrambler oder durch das Diagonalbrett aktiviert wurden.
 Wird durch die Permutation eines Scramblers in dem mit ihm verbunden Out-Kontakt kein neuer Kontakt aktiv, wird dieser Knoten als \glqq besucht\grqq{} gekennzeichnet und nicht mehr in die Warteschlange eingereiht.
 Ist die Warteschlange leer, sind alle Permutationen abgeschlossen und das Test-Register wird überprüft.
+Ergeben die Permutationen keine gültige Konfiguration, werden alle Kontakte die durch Permutation oder Diagonalbrett aktiviert wurden, deaktiviert.
 Die Software-Nachbildung hält nach den in~\cref{subsec:test-register} beschriebenen Regeln.
 
 %In Pseudocode könnte man den Algorithmus der Bombe so darstellen:
