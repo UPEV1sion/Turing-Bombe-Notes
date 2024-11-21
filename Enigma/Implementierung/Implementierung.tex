@@ -93,7 +93,6 @@ Die Anzahl der Kontakte pro Commons und die Gesamtzahl der verwendeten Commons w
 \section{Algorithmus der Implementation}\label{sec:algorithm_bombe}
 Im Gegensatz zur \glqq echten\grqq{} Bombe, welche eine Steckerbrett-Hypothese für die jeweils 17576 Walzenstellungen einer Walzenlage testet, testet die Software-Nachbildung eine Hypothese für alle Walzenstellungen der 60 möglichen Walzenlagen.
 Eine modifizierte Breitensuche traversiert die Knoten des aufgespannten Graphen der \glqq Scrambler-Knoten\grqq.
-%TODO lookup table for scrambler knoten.
 Da es aufgrund der Tupel-Kombinationen nicht genügt, einige Knoten nur einmal zu besuchen, und das Diagonalbrett es schwierig macht, die Datenstruktur der Knoten linear zur durchlaufen, wird erneut eine \glqq Nachschlagetabelle\grqq{} benötigt.
 Die Nachschlagetabelle besitzt 26 Stellen, jeweils für 26 Terminal-Kontakte.
 Die Knoten, die durch den In-Kontakt mit einem jeweiligen Terminal verbunden sind, werden in dieser Tabelle abgelegt.

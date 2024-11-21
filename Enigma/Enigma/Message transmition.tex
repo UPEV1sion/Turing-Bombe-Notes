@@ -1,0 +1,43 @@
+\documentclass[a4paper, ngerman]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{mathtools, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{xparse}
+\usepackage{tikzsymbols}
+\usetikzlibrary{tikzlings}
+\usepackage[shortlabels]{enumitem}
+\pgfplotsset{width=10cm, compat=1.18}
+\usetikzlibrary{patterns}
+
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inflimit}{\lim\limits_{n\rightarrow\infty}}
+\DeclareDocumentCommand{\partder}{m o}{%
+	\IfValueTF{#2}{%
+		\frac{\partial #1}{\partial #2}%
+	}{%
+		\frac{\partial f}{\partial #1}%
+	}%
+}
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{scope}[xshift=-26]
+			\fill[\thing@bubblecolour] (2,2.4) ellipse[x radius=0.7, y radius=0.35]; 
+			\fill[\thing@bubblecolour] (1.55,2.35) circle[radius=0.25] (2.0,2.15) circle[radius=0.25] (2.4,2.25) circle[radius=0.25] (1.6,2.55) circle[radius=0.25] (2.0,2.6) circle[radius=0.25] (2.35,2.5) circle[radius=0.25] (1.65,1.95) circle[radius=0.1] (1.55,1.80) circle[radius=0.06] (1.47,1.70) circle[radius=0.03];
+%			\node at (2,2.4) {\thing@think};
+		\end{scope}
+		\Strichmaxerl[5]
+		\node[below] at (-0.3, 0) {Alice};
+		\draw[->, thick] (0.5, 0.7) -- (6.5, 0.7);
+		\node[below] at (7.35, 0) {Bob};
+		\hspace{7cm}
+		\Strichmaxerl[5]
+	\end{tikzpicture}
+\end{document}
