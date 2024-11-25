@@ -19,9 +19,9 @@
 \usepackage{listings}
 \usepackage[babel]{csquotes}
 \usepackage{tikzsymbols}
+\usepackage{float}
 \usetikzlibrary{tikzlings}
-\usetikzlibrary{shapes.callouts}
-\usetikzlibrary{arrows.meta}
+\usetikzlibrary{patterns, positioning, shapes.geometric, shapes.callouts, arrows.meta}
 \usepackage[backend=biber, style=ieee]{biblatex}
 
 \include{my_style.sty}
@@ -63,6 +63,8 @@
 	
 	\include{Implementierung/Implementierung}
 	
+	\include{Anhang/Anhang}
+	
 %	\chapter{Häufigkeitsanalyse}\label{ch:haufigkeitsanalyse}
 %	\section{Koinzidenzindex}\label{sec:koinzidenzindex}
 %	\thispagestyle{scrheadings}
@@ -77,15 +79,8 @@
 %	Wir Summieren also die Anzahl der Buchstabenpaare auf, und teilen diese durch die Anzahl der allgemein möglichen Buchstabenpaare.
 %	Der Koinzidenzindex ist also ein Maß für die Buchstabenverteilung.
 %	Für ein Text bestehend aus zufälligen Buchstaben beträgt der $IC \approx$ 0.038; wobei er für Deutsch $\approx$ 0.076 beträgt.
-	\chapter{Anhang}\label{ch:appendix}
-	\section{Zusatzinformationen}\label{sec:add_infos}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=.7\linewidth]{Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force}
-		\caption{Laufzeit-Graph Menü-Algorithmus}
-		\label{fig:app_menu_runtime}
-	\end{figure}
-	Es wurden pro Länge 1000 Zufalls Crib und Geheimtexte generiert und diese jeweils mit 1000 Durchgängen getestet.
+	
+	
 	
 	\newpage
 	\section{Glossar}\label{sec:glossar}
