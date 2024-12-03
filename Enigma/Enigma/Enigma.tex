@@ -113,7 +113,7 @@ Doch leider ist dieser geniale Einfall die wohl größte Sicherheitslücke der E
 Aufgrund der Buchstabenpaare wird niemals ein Buchstabe auf sich selber abgebildet.
 Das Ergebnis ist eine sogenannte fixpunktfreie Permutation.
 Kein Element behält somit seine Anfangsposition.
-Da $\forall x \in \mathrm{Alphabet},\; E_K(x) \ne x$ bleiben nur noch wenige Positionen übrig, an welchen sich ein bekannter Funkspruch-Abschnitt (Known-plaintext) befinden kann.
+Da $\mathcal{A}\coloneqq\{\mathrm{A}, \mathrm{B}, \mathrm{C}, \ldots, \mathrm{Z}\},\; \forall x \in \mathcal{A},\; E_K(x) \ne x$ bleiben nur noch wenige Positionen übrig, an welchen sich ein bekannter Funkspruch-Abschnitt (Known-plaintext) befinden kann.
 
 %\newpage
 
@@ -133,7 +133,7 @@ Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichk
 
 Die Permutation der Buchstaben lässt sich durch folgende Formel beschrieben:
 %TODO Enigma Einstellung in Unterfunktionen?
-\fmbox{\textbf{Permutation der Buchstaben} \[E_K: \mathrm{A} \longmapsto \mathrm{A},\quad E_K(x) \coloneqq S\circ W_1^{-1} \circ W_2^{-1} \circ W_3^{-1} \circ U \circ W_3 \circ W_2 \circ W_1 \circ S(x)\]}
+\fmbox{\textbf{Permutation der Buchstaben} \[E_K: \mathcal{A} \longmapsto \mathcal{A},\quad E_K(x) \coloneqq S\circ W_1^{-1} \circ W_2^{-1} \circ W_3^{-1} \circ U \circ W_3 \circ W_2 \circ W_1 \circ S(x)\]}
 
 \section{Übertragung der Nachrichten}\label{sec:uebertragung-der-nachrichten}
 Bei der Enigma-Maschine wurde jeden Tag ein Tagesschlüssel eingestellt, welcher durch ein Code-Buch vorgegeben war.
