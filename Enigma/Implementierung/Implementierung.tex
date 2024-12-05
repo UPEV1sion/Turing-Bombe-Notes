@@ -27,7 +27,7 @@ Das Ergebnis ist eine gemessene, lineare Laufzeit.\footnote{Es wurden Crib-Läng
 Der Laufzeit-Graph ist im Anhang enthalten:~\cref{fig:app_menu_runtime}}
 
 Das Menü wird als Vektor von \texttt{CribCipherTuple} in einer Struktur mit der Länge abgelegt.
-Da es erforderlich ist, eine eindeutige \glqq Route\grqq{} durch das Menü anzugeben, werden Tupel-Kombination bei den betroffenen Knoten als Ausleger angegeben. 
+Da es erforderlich ist, eine eindeutige \glqq Route\grqq{} durch das Menü anzugeben, werden Tupel-Kombinationen bei den betroffenen Knoten als Ausleger angegeben. 
 Die Bombe kann somit im Falle der \glqq Scramblersatz-Knappheit\grqq{} entscheiden, ob sie diesen (nicht notwendigen) Bestandteil des Menüs aufnehmen möchte.
 
 \section{Modellierung der Turing-Welchman-Bombe}\label{sec:model}
@@ -70,7 +70,7 @@ Sämtliche Verbindungen durch Kabel und Brücken-Konnektoren des analogen Origin
 
 \subsection{Diagonalbrett}\label{subsec:impl_diagonal_board}
 Das Diagonalbrett als native Datenstruktur darzustellen, hat sich als ein eher schlechter Einfall herausgestellt.
-Eine Möglichkeit das Verhalten mit einer Datenstruktur zu imitieren, ist es, dem einzelnen Kontakte der Terminals als Vektor mit Zeiger auf Booleschen Werten abzubilden.
+Eine Möglichkeit das Verhalten mit einer Datenstruktur zu imitieren, ist es, die einzelnen Kontakte der Terminals als Vektor mit Zeiger auf Booleschen Werten abzubilden.
 Hierbei zeigt zum Beispiel der \emph{a}-Kontakt des \emph{B}-Terminals und der \emph{b}-Kontakt des \emph{A}-Terminals auf den gleichen Booleschen Wert.
 Somit ist die Verbindung $A \Leftrightarrow B$ abgebildet.
 Jedoch wäre es hier abermals nötig, den gesamten Vektor zu traversieren, um die aktiven Kontakte herauszufinden.
@@ -93,7 +93,7 @@ Die Anzahl der Kontakte pro Commons und die Gesamtzahl der verwendeten Commons w
 \section{Algorithmus der Implementation}\label{sec:algorithm_bombe}
 Im Gegensatz zur \glqq echten\grqq{} Bombe, welche eine Steckerbrett-Hypothese für die jeweils 17576 Walzenstellungen einer Walzenlage testet, testet die Software-Nachbildung eine Hypothese für alle Walzenstellungen der 60 möglichen Walzenlagen.
 Eine modifizierte Breitensuche traversiert die Knoten des aufgespannten Graphen der \glqq Scrambler-Knoten\grqq.
-Da es aufgrund der Tupel-Kombinationen nicht genügt, einige Knoten nur einmal zu besuchen, und das Diagonalbrett es schwierig macht, die Datenstruktur der Knoten linear zur durchlaufen, wird erneut eine \glqq Nachschlagetabelle\grqq{} benötigt.
+Da es aufgrund der Tupel-Kombinationen nicht genügt, einige Knoten nur einmal zu besuchen, und das Diagonalbrett es schwierig macht, die Datenstruktur der Knoten linear zu durchlaufen, wird erneut eine \glqq Nachschlagetabelle\grqq{} benötigt.
 Die Nachschlagetabelle besitzt 26 Stellen, jeweils für 26 Terminal-Kontakte.
 Die Knoten, die durch den In-Kontakt mit einem jeweiligen Terminal verbunden sind, werden in dieser Tabelle abgelegt.
 Zuerst werden alle Scrambler-Knoten, die durch den In-Kontakt mit dem Test-Register verbunden sind, in die Warteschlange eingereiht. 

@@ -3,7 +3,7 @@
 
 Um die Funktionsweise der Turing-Welchman-Bombe und ihrer Software-Nachbildung zu verstehen, muss zuerst die Enigma-Maschine verstanden werden.
 Im Folgenden sei ein Überblick über die Enigma-Maschine gegeben.
-Die Enigma-Maschine ist eine Rotor-Chiffrier-\allowbreak maschine, die 1918 von Arthur Scherbius zum Patent angemeldet wurde und hauptsächlich im Zweiten Weltkrieg zum Einsatz kam.
+Die Enigma-Maschine ist eine Rotor-Chiffrier\-maschine, die 1918 von Arthur Scherbius zum Patent angemeldet wurde und hauptsächlich im Zweiten Weltkrieg zum Einsatz kam.
 Aufgrund der Sicherheitsanforderungen der deutschen Wehrmacht wurde die kommerziell erwerbliche Enigma-Maschine modifiziert.
 In~\cref{fig:enigma_complete} ist eine solche modifizierte Enigma-Maschine zu sehen.
 Die von der Wehrmacht eingesetzten Enigma-Maschinen verfügten zunächst über drei Walzen~(Ziffer~13).
@@ -113,7 +113,7 @@ Doch leider ist dieser geniale Einfall die wohl größte Sicherheitslücke der E
 Aufgrund der Buchstabenpaare wird niemals ein Buchstabe auf sich selber abgebildet.
 Das Ergebnis ist eine sogenannte fixpunktfreie Permutation.
 Kein Element behält somit seine Anfangsposition.
-Da $\forall x \in Alphabet,\; E_K(x) \ne x$ bleiben nur noch wenige Positionen übrig, an welchen sich ein bekannter Funkspruch-Abschnitt (Known-plaintext) befinden kann.
+Da $\mathcal{A}\coloneqq\{\mathrm{A}, \mathrm{B}, \mathrm{C}, \ldots, \mathrm{Z}\},\; \forall x \in \mathcal{A},\; E_K(x) \ne x$ bleiben nur noch wenige Positionen übrig, an welchen sich ein bekannter Funkspruch-Abschnitt (Known-plaintext) befinden kann.
 
 %\newpage
 
@@ -133,7 +133,7 @@ Die Anzahl von 150.738.274.937.250\autocite{wiki:enigma} zusätzlichen Möglichk
 
 Die Permutation der Buchstaben lässt sich durch folgende Formel beschrieben:
 %TODO Enigma Einstellung in Unterfunktionen?
-\fmbox{\textbf{Permutation der Buchstaben} \[E_K: A \longmapsto A,\quad E_K(x) \coloneqq S\circ W_1^{-1} \circ W_2^{-1} \circ W_3^{-1} \circ U \circ W_3 \circ W_2 \circ W_1 \circ S(x)\]}
+\fmbox{\textbf{Permutation der Buchstaben} \[E_K: \mathcal{A} \longmapsto \mathcal{A},\quad E_K(x) \coloneqq S\circ W_1^{-1} \circ W_2^{-1} \circ W_3^{-1} \circ U \circ W_3 \circ W_2 \circ W_1 \circ S(x)\]}
 
 \section{Übertragung der Nachrichten}\label{sec:uebertragung-der-nachrichten}
 Bei der Enigma-Maschine wurde jeden Tag ein Tagesschlüssel eingestellt, welcher durch ein Code-Buch vorgegeben war.

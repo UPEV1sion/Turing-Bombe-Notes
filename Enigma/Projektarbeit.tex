@@ -20,6 +20,7 @@
 \usepackage[babel]{csquotes}
 \usepackage{tikzsymbols}
 \usepackage{float}
+\usepackage{csquotes}
 \usetikzlibrary{tikzlings}
 \usetikzlibrary{patterns, positioning, shapes.geometric, shapes.callouts, arrows.meta}
 \usepackage[backend=biber, style=ieee]{biblatex}
@@ -29,14 +30,7 @@
 \addbibresource{sources.bib}
 \addbibresource{pictures.bib}
 
-\pagestyle{scrheadings}
-\newcommand{\myifoot}{\textbf{Emanuel Schäffer}}
-%\newcommand{\mycfoot}{\textbf{RWU--University of Applied Sciences}}
-\automark{section}
-%\ofoot{\mycfoot}
-\ohead{\headmark}
-\chead{}
-\ifoot{\myifoot}
+\MakeOuterQuote{"}
 
 \begin{document}
 	\subject{Kryptoanalyse der Enigma-Maschine durch eine Software-Nachbildung der Turing-Welchman-Bombe}
