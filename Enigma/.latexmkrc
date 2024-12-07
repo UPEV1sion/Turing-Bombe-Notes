@@ -1,3 +1,5 @@
+@default_excluded_files = ('latex_all_makros.tex');
+
 $bibtex_use = 2;
 
 $latex = 'pdflatex %O %S';  
