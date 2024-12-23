@@ -20,7 +20,6 @@
 \usepackage[babel]{csquotes}
 \usepackage{tikzsymbols}
 \usepackage{float}
-\usepackage{csquotes}
 \usetikzlibrary{tikzlings}
 \usetikzlibrary{patterns, positioning, shapes.geometric, shapes.callouts, arrows.meta}
 \usepackage[backend=biber, style=ieee]{biblatex}
@@ -77,9 +76,8 @@
 %	Für ein Text bestehend aus zufälligen Buchstaben beträgt der $IC \approx$ 0.038; wobei er für Deutsch $\approx$ 0.076 beträgt.
 	
 	
-	
 	\newpage
-	\section{Glossar}\label{sec:glossar}
+	\chapter{Glossar}\label{sec:glossar}
 	\begin{itemize}
 		\item Blechley-Park: Zentrale militärische Dienststelle, die sich im Zweiten Weltkrieg erfolgreich mit der Entzifferung des deutschen Nachrichtenverkehrs befasste.
 		\item Crib: Klartextfragment, welches an einer bestimmten Stelle im Geheimtext vermutet wurde.
@@ -100,4 +98,8 @@
 	\printbibliography[keyword=pictures, heading=none, title={}]
 	\nocite{*}
 	\thispagestyle{plain}
+	
+	
+	\appendix
+	\include{Anhang/Anhang}
 \end{document}
