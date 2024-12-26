@@ -1,21 +1,45 @@
 \chapter{Geschwindigkeit der Software-Nachbildung im Kontext}\label{ch:speed}
 
+\section{Koinzidenzindex}\label{sec:koinzidenzindex}
+Hatte die Bombe gestoppt, machten sich die Mitarbeiter in Bletchley Park daran, den Stopp zu "bewerten". 
+Genauer wird überprüft, ob die Enigma-Konfiguration, signalisiert durch den Stopp, zu einem sinnvollen Ergebnis führt.
+Da es äußerst Anspruchsvoll sein dürfte, einen Linguistikexperten durch einen Algorithmus abzubilden, brauchen wir einen anderen Weg, einen Text zu bewerten.
+Ein geeignetes Maß für die Annäherung eines Textes an authentisches Deutsch ist der Koinzidenzindex:
+
+\fmbox{\textbf{Koinzidenzindex}\[IC = \frac{\sum_{i=A}^{Z}f_i(f_i-1)}{N(N-1)}\]}
+	
+	
+Sei $f_i$ die Häufigkeit des Buchstabens in Abhängigkeit von $i$ und $N$ die Gesamtanzahl der Buchstaben.
+%Wir Summieren also die Anzahl der Buchstabenpaare auf, und teilen diese durch die Anzahl der allgemein möglichen Buchstabenpaare.
+Der Koinzidenzindex ist ein Maß für die Buchstabenverteilung.
+Für einen Text, bestehend aus zufälligen Buchstaben, beträgt der $IC \approx$ 0.038, wobei er für Deutsch $\approx$ 0.078 beträgt.
+Ermittelt die Nachbildung einen Stopp, so wird der gesamte Geheimtext dechiffriert und mit dem Koinzidenzindex bewertet.
+Gemessen wird der "Abstand" zum Referenzwert 0.078.
+Texte, bei denen der Abstand des Koninzidenzindexes am geringsten ausfällt, werden am höchsten bewertet.
+
+
+\section{Geschwindigkeit im Kontext der "echten" Bombe}\label{sec:speed}
 Um die Geschwindigkeit der Software-Implementierung in einen Kontext zu setzen, muss die Entschlüsselungsprozedur genau analysiert werden.
 In Bletchley Park waren zu Kriegsende mehr als 210 Bomben im Einsatz.
-Durch eine erhöhte Drehzahl der Scramblern konnte eine Walzenlage innerhalb von etwa sechs abgearbeitet werden.
-Angenommen das Crib wurde richtig gewählt, konnten somit alle 60 Walzenlagen innerhalb von sechs Minuten abgearbeitet werden.
-Da die Bestimmung des Menüs, Konfiguration der Bombe und die Bewertung der Walzenlagen in Bletchley Park Handarbeit war, konnte die Arbeitszeit für diese Arbeitsgänge variieren.
+Der Bombe war es möglich, eine Walzenlage innerhalb von etwa 20 Minuten abzuarbeiten.
+Da über 210 Bomben zu Verfügung standen, war es möglich alle 60 Walzenlagen in dieser Zeit abzuarbeiten.
+%Da das bewerten eine mühselige Handarbeit war, konnte die letztendliche Entschlüsselung des Tagesschlüssels 2-4 Stunden andauern.
+Da die Bestimmung des Menüs, Konfiguration der Bombe und die Bewertung der Walzenlagen in Bletchley Park Handarbeit war, variierte die Arbeitszeit bis zur Brechung des Schlüssels im Mittel zwischen 2-4 Stunden.
+Die Bestimmung des Cribs beruhte einzig und allein auf der Expertise der Linguistischen Experten. 
+Somit wurden manche Schlüssel gar nicht gebrochen.
+Leider sind mögliche Heuristiken bei der Überprüfung der Stopps nicht überliefert.
 
+\newpage
 \begin{figure}[htbp]
 	\centering
 	\caption{Geschätzte Anzahl der Stops pro Walzenlage~\autocite{enwiki:bombe}}
 	\label{fig:num-stops}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+	\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}
 		\hline
 		& \multicolumn{9}{c|}{Buchstaben im Menü} \\
-		\hline
+%		\hline
 		Zyklen & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 \\
-		\hline
+		\hhline{|=||=|=|=|=|=|=|=|=|=|}
 		3 & 2.2  & 1.1  & 0.42  & 0.14  & 0.04  & <0.01  & <0.01  & <0.01  & <0.01 \\
 		\hline
 		2 & 58  & 28  & 11  & 3.8  & 1.2  & 0.30  & 0.06  & <0.01  & <0.01  \\
@@ -29,9 +53,13 @@ Da die Bestimmung des Menüs, Konfiguration der Bombe und die Bewertung der Walz
 
 
 Wie in~\cref{fig:num-stops} zu sehen, hängen die Anzahl der Stopps stark von der "Güte" des Menüs ab.
-Die Software-Implementation benötigt für erstellen des Menüs der Länge zwölf, die Abarbeitung aller Walzenlagen und das "bewerten" der Stopps im Mittel 
+Die Software-Implementation benötigt für Erstellen eines Menüs der Länge zwölf, die Abarbeitung aller Walzenlagen und das "bewerten" der Stopps im Mittel
 %TODO checking machine time
-$8.5\si{\sec}$.
+$150\si{\ms}$.
 
 \[
+\frac{3\si{\hour} \cdot 60 \cdot 60 \cdot 1000}{150\si{\ms}} \approx 72000
 \]
+
+Ein moderner Computer\footnote{Systemspezifikationen im Anhang enthalten:~\cref{fig:sys-spec}.} ist somit um Faktor 72000 schneller als der kombinierte Kriegsaufwand der knapp 9000 Bletchley Park Mitarbeiter.
+Es sei angemerkt, dass die Bewertung der Stopps durch Linguistische Experten hochwertiger ist als der Koenzi
