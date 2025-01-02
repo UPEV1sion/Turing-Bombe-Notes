@@ -8,9 +8,27 @@
 		\centering
 		\scalebox{\scalepic}{
 			\begin{tikzpicture}
-				\tikzset{func/.style={rectangle, draw, fill=func-red, rounded corners}}
-				\tikzset{arr/.style={-{Stealth[scale=1]}, thick, shorten <=.1cm, shorten >=.1cm}}
-				\tikzset{think/.style={cloud callout, callout relative pointer={(0.2, -0.8)}, cloud puff arc=120, aspect=1.5, align=center, fill=white, draw}}
+				\tikzset{func/.style={
+						rectangle,
+						 draw, 
+						 fill=func-red, 
+						 rounded corners
+					 }}
+				\tikzset{arr/.style={
+						-{Stealth[scale=1]}, 
+						thick, 
+						shorten <=.1cm, 
+						shorten >=.1cm
+					}}
+				\tikzset{think/.style={
+						cloud callout, 
+						callout relative pointer={(0.2, -0.8)}, 
+						cloud puff arc=120, 
+						aspect=1.5, 
+						align=center, 
+						fill=white, 
+						draw
+					}}
 				
 				\node at +(0,.5cm) (alice){};
 				\node[think, above=1.8cm of alice] {$K_S$};
