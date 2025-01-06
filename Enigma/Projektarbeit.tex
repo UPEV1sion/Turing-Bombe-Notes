@@ -20,6 +20,8 @@
 \usepackage[babel]{csquotes}
 \usepackage{tikzsymbols}
 \usepackage{float}
+\usepackage{hhline}
+\usepackage{longtable}
 \usetikzlibrary{tikzlings}
 \usetikzlibrary{patterns, positioning, shapes.geometric, shapes.callouts, arrows.meta}
 \usepackage[backend=biber, style=ieee]{biblatex}
@@ -59,26 +61,14 @@
 	
 	\include{Implementierung/Implementierung}
 	
-%	\chapter{Häufigkeitsanalyse}\label{ch:haufigkeitsanalyse}
-%	\section{Koinzidenzindex}\label{sec:koinzidenzindex}
-%	\thispagestyle{scrheadings}
-%	
-%	Zunächst benötigen wir ein geeignetes Maß, um den Grad der Annäherung eines teilweise dechiffrierten Klartextes an authentisches Deutsch abzuschätzen.
-%	Dafür verwenden wir den Koinzidenzindex:
-%	
-%	\fmbox{\textbf{Koinzidenzindex}\[IC = \frac{\sum_{i=A}^{Z}f_i(f_i-1)}{N(N-1)}\]}
-%	
-%	
-%	Sei $f_i$ die Häufigkeit des Buchstabens in Abhängigkeit von $i$ und $N$ die Gesamtanzahl der Buchstaben.
-%	Wir Summieren also die Anzahl der Buchstabenpaare auf, und teilen diese durch die Anzahl der allgemein möglichen Buchstabenpaare.
-%	Der Koinzidenzindex ist also ein Maß für die Buchstabenverteilung.
-%	Für ein Text bestehend aus zufälligen Buchstaben beträgt der $IC \approx$ 0.038; wobei er für Deutsch $\approx$ 0.076 beträgt.
+	\include{Geschwindigkeit-Kontext/Geschwindigkeit-Kontext}
 	
+%	\include{Anhang/Anhang}
 	
 	\newpage
 	\chapter{Glossar}\label{sec:glossar}
 	\begin{itemize}
-		\item Blechley-Park: Zentrale militärische Dienststelle, die sich im Zweiten Weltkrieg erfolgreich mit der Entzifferung des deutschen Nachrichtenverkehrs befasste.
+		\item Bletchley Park: Zentrale militärische Dienststelle, die sich im Zweiten Weltkrieg erfolgreich mit der Entzifferung des deutschen Nachrichtenverkehrs befasste.
 		\item Crib: Klartextfragment, welches an einer bestimmten Stelle im Geheimtext vermutet wurde.
 		\item $D_K$: Die Dechiffrierfunktion.
 		\item $E_K$: Die Chiffrierfunktion.

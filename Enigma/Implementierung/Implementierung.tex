@@ -24,7 +24,7 @@ Tupel wie \texttt{W:S} werden also unter \texttt{W} und unter \texttt{S} abgeleg
 Ein Tiefensuche-Algorithmus, der modifiziert wurde, um weniger \glqq gierig\grqq{} zu agieren, schlägt die Tupel in der Tabelle nach und markiert die besuchten Tupel.
 %Bei dem Rücksetzverfahren der Tiefensuche wird die Markierung der Tupel, die nicht zum Zyklus beitragen entfernt.
 Das Ergebnis ist eine gemessene, lineare Laufzeit.\footnote{Es wurden Crib-Längen bis 26 betrachtet, um zu garantieren, dass die lineare Laufzeit bei einer maximalen Länge von 13 Buchstaben gegeben ist.
-Der Laufzeit-Graph ist im Anhang enthalten:~\cref{fig:app_menu_runtime}}
+Der Laufzeit-Graph ist im Anhang enthalten:~\cref{fig:app_menu_runtime}.}
 
 Das Menü wird als Vektor von \texttt{CribCipherTuple} in einer Struktur mit der Länge abgelegt.
 Da es erforderlich ist, eine eindeutige \glqq Route\grqq{} durch das Menü anzugeben, werden Tupel-Kombinationen bei den betroffenen Knoten als Ausleger angegeben. 
@@ -105,7 +105,6 @@ Ist die Warteschlange leer, ergo keine Permutationen mehr möglich, wird das Tes
 Ergeben die Permutationen keine gültige Konfiguration, werden alle Kontakte die durch Permutation oder Diagonalbrett aktiviert wurden, deaktiviert. 
 %und Knoten als nicht besucht gekennzeichnet.
 Die Software-Nachbildung hält nach den in~\cref{subsec:test-register} beschriebenen Regeln.
-
 %In Pseudocode könnte man den Algorithmus der Bombe so darstellen:
 %\begin{algorithm}[htbp]
 %	\caption{Bombe Algorithmus}
@@ -128,7 +127,3 @@ Die Software-Nachbildung hält nach den in~\cref{subsec:test-register} beschrieb
 %		\end{algorithmic}
 %	\label{alg:algorithm}
 %\end{algorithm}
-
-
-
-\chapter{Geschwindigkeit der Software-Nachbildung im Kontext}\label{ch:speed}
