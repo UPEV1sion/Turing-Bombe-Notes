@@ -70,12 +70,12 @@ Sämtliche Verbindungen durch Kabel und Brücken-Konnektoren des analogen Origin
 
 \subsection{Diagonalbrett}\label{subsec:impl_diagonal_board}
 Das Diagonalbrett als native Datenstruktur darzustellen, hat sich als ein eher schlechter Einfall herausgestellt.
-Eine Möglichkeit das Verhalten mit einer Datenstruktur zu imitieren, ist es, die einzelnen Kontakte der Terminals als Vektor mit Zeiger auf Booleschen Werten abzubilden.
+Eine Möglichkeit, das Verhalten mit einer Datenstruktur zu imitieren, ist es, die einzelnen Kontakte der Terminals als Vektor mit Zeiger auf Booleschen Werten abzubilden.
 Hierbei zeigt zum Beispiel der \emph{a}-Kontakt des \emph{B}-Terminals und der \emph{b}-Kontakt des \emph{A}-Terminals auf den gleichen Booleschen Wert.
 Somit ist die Verbindung $A \Leftrightarrow B$ abgebildet.
 Jedoch wäre es hier abermals nötig, den gesamten Vektor zu traversieren, um die aktiven Kontakte herauszufinden.
 Die entsprechenden Kontakte müssten nun wieder einen normalen Vektor besitzen, in dem die aktiven Kontakte \glqq dicht\grqq{} stehen, damit die Scrambler effektiv arbeiten können.
-Somit wäre es hier abermals notwendig die Kontakte separat zu behandeln.
+Somit wäre es hier abermals notwendig, die Kontakte separat zu behandeln.
 
 Aus diesem Grund wurde die Funktion des Diagonalbrettes in einer Funktion gekapselt:
 

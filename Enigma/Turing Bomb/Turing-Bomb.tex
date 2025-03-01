@@ -42,7 +42,7 @@ Die~\cref{fig:positioning_crib} zeigt solch eine Positionierung.
 	\label{fig:positioning_crib}
 	\resizebox{\linewidth}{!}{
 		\ttfamily
-		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 			\hline
 			B & H & N & C & X & S & E & Q & K & O & B & I & I & O & D & W & F & B & T & Z & G & C & Y & E & H & Q & Q & J \\
 			\hline
@@ -61,7 +61,7 @@ Die~\cref{fig:positioning_crib} zeigt solch eine Positionierung.
 \end{figure}	
 
 In Bletchley Park waren zudem viele Sprachexperten beschäftigt, die darauf spezialisiert waren, solche Cribs zu erstellen.
-Dies erforderte sowohl sehr gute Kenntnisse über die Deutsche Sprache als auch sehr gute Kenntnisse über die in~\cref{sec:uebertragung-der-nachrichten}
+Dies erforderte sowohl sehr gute Kenntnisse über die Deutsche Sprache, als auch sehr gute Kenntnisse über die in~\cref{sec:uebertragung-der-nachrichten}
 beschriebenen Regeln zu Funkspruch-Verschlüsselung.
 Zudem mussten Eigenheiten und die \glqq Schreibfäule\grqq{} der Funker beachtet werden.
 Ein Crib wurde unter der Vermutung benutzt, dass während der kompletten Eingabezeit des Abschnittes nur die rechte Walze (schnelle) Walze rotiert hat.
@@ -123,10 +123,10 @@ Die Walzen der Bombe werden oft Scrambler genannt.
 Die meisten Bomben bestanden aus dreimal zwölf Scramblersätzen.
 Zwölf Scramblersätze ergeben eine \glqq Chain\grqq.
 Ein Scramblersatz bestand aus drei Scrambler und simulierte eine Enigma-Maschine.
-Der Grund, warum zwölf \glqq Enigmas\grqq{} parallel verwendet werden ist, da somit eine komplette Ausgangsstellung der Walzen für das jeweilige Crib in einem Arbeitsgang überprüft werden kann.
+Der Grund, warum zwölf \glqq Enigmas\grqq{} parallel verwendet werden, ist, da somit eine komplette Ausgangsstellung der Walzen für das jeweilige Crib in einem Arbeitsgang überprüft werden kann.
 Der unterste Scrambler eines Scramblersatzes repräsentiert die rechte, schnelle Walze einer Enigma-Maschine.
 Der mittlere und oberste Scrambler ist repräsentativ für die mittlere und linke Walze der Enigma-Maschine.
-Da die Scrambler keine Übertragskerbe besitzen, bewegt sich der nächste Scrambler immer nach eine vollen Rotation des aktuellen Scramblers, unabhängig von der Startposition. 
+Da die Scrambler keine Übertragskerbe besitzen, bewegt sich der nächste Scrambler immer nach einer vollen Rotation des aktuellen Scramblers, unabhängig von der Startposition.
 
 Wurde nun durch die Mitarbeiter von Bletchley Park ein passendes Menü bestimmt, konnten die Scrambler in ihre Ausgangsstellung gebracht werden. 
 Hierfür muss in dem Zyklus eine \glqq Route\grqq{} bestimmt werden.
@@ -134,7 +134,7 @@ Für den Zyklus in~\cref{fig:crib_cipher_cycle} könnte die Route lauten: \textt
 
 Die Zahlen auf den Kanten werden als \glqq Offsets\grqq{} für die untersten Walzen benutzt.
 In unserem Beispiel sind also die Ausgangsstellungen der Scrambler also \texttt{AAA}, \texttt{AAL} und so weiter.
-Sollen jetzt auch noch Ausleger oder andere Tupel-Kombinationen wie 5 und 11 eingebunden werden, so können diese einfach an passender Stelle eingefügt werden: \texttt{AAD, AAE, AAK}.
+Sollen jetzt auch noch Ausleger, oder andere Tupel-Kombinationen wie 5 und 11 eingebunden werden, so können diese einfach an passender Stelle eingefügt werden: \texttt{AAD, AAE, AAK}.
 Die Gesamtlänge der Elemente des Zyklus darf nicht zwölf überschreiten.
 
 \subsection{Terminal}\label{subsec:terminal}
