@@ -132,6 +132,19 @@ Die Anzahl von \num{150738274937250}\autocite{wiki:enigma} zusätzlichen Möglic
 \end{figure}
 
 Die Permutation der Buchstaben lässt sich durch folgende Formel beschrieben:
+\[
+	S_{n+1} = 
+	\begin{cases}
+		(S_n + 1)\; \mathrm{mod }\; 26, & \text{wenn vorherige Walze in der Kerbposition ist}\\
+		S_n, & \text{sonnst}
+	\end{cases}
+\]
+%TODO Verdrahtung
+\[
+	W(S_n) = \tau^{S_n} \circ W \circ \tau^{-S_n}
+\]
+
+
 %TODO Enigma Einstellung in Unterfunktionen?
 \fmbox{\textbf{Permutation der Buchstaben}
 	\[
