@@ -37,6 +37,7 @@ Die Software-Implementation berücksichtigt ebenfalls die Übertragskerbe der Ro
 %TODO Enigma Software gegeben erwähnen?
 Die Verdrahtung der Scrambler wird als Vektor abgebildet, welcher wie in~\cref{fig:rot1_wiring} die Permutation für jeden Buchstaben speichert.
 Die Buchstaben werden jedoch nicht in der typischen ASCII-Kodierung gespeichert, sondern auf den Wertebereich 0--25 abgebildet.
+%TODO check
 Mit dem Resultat kann somit direkt der Vektor des nächsten Scramblers indiziert werden.
 Es muss zudem die Walzenlage mitgeführt werden, welche mit dem zu permutierenden Buchstaben addiert wird, um den Vektor-Index zu bilden.
 Der Wertebereich wird durch eine Modulo-Operation zwischen 0 und 25 gehalten.
