@@ -36,7 +36,15 @@
 				\node[below] at (-0.3, 0) {Alice};
 				\node[func, right=of alice] at +(0, .5cm) (enigma) {Enigma};
 				\draw[arr] (alice) -- node[above] {$K_S$} (enigma);
-				\draw[arr] (enigma.north)+(0, .7cm) node[above] {$K_T$} -- (enigma);
+				
+				\coordinate (KT-end) at ($(enigma.north)+(.5cm,0)$);
+				\coordinate (KT-start) at ($(enigma.north)+(0.5cm, .7cm)$);
+				\draw[arr] (KT-start) node[above] {$K_T$} -- (KT-end);
+				
+				\coordinate (KD-end) at ($(enigma.north)+(-.5cm,0)$);
+				\coordinate (KD-start) at ($(enigma.north)+(-.5cm, .7cm)$);
+				\draw[arr] (KD-start) node[above] {$K_D$} -- (KD-end);
+
 				\node[right=2cm of enigma] (dest) {};
 				\draw[arr] (enigma.east) -- node[above] {$K_S'$} (dest);
 				\draw[gray] 
@@ -50,7 +58,8 @@
 				-- ++(-0.5cm, 0.2cm) 
 				-- ++(-0.5cm, -0.2cm)
 				-- cycle;
- 				\draw[arr] ($(enigma.north)+(.3cm, 1cm)$) -| ($(dest)+(1cm, .3cm)$);
+				\node[right =0cm of KT-start] (path) {};
+ 				\draw[arr] (path) -| ($(dest)+(1cm, .3cm)$);
 			\end{tikzpicture}
 		}
 		\caption{Erzeugung Spruchkopf}
