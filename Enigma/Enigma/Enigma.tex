@@ -131,24 +131,33 @@ Die Anzahl von \num{150738274937250}\autocite{wiki:enigma} zusätzlichen Möglic
 	\label{fig:enigma_plugboard}
 \end{figure}
 
-Die Permutation der Buchstaben lässt sich durch folgende Formel beschrieben:
+Die Permutation der Buchstaben lässt sich durch folgende Formel beschrieben.
+
+Es sei:
+\begin{itemize}
+	\item $x \in \{0,1,\ldots,25\}:$ für den zu permutierenden Buchstaben.
+	\item $\tau_i(n):$ Die Walzenstellung der Walze $i$ beim Tastendruck $n$.
+	\item $W_i:$ die feste Permutation der Walze $i$, das heißt $W_i: \mathbb{Z}_{26} \longmapsto \mathbb{Z}_{26}$.
+	\item $W_i^{-1}:$ die inverse Permutation der Walze $i$.
+	\item $S:$ Die feste Permutation des Steckerbretts.
+	\item $U$: Die feste Permutation der Umkehrwalze.
+\end{itemize}
+
+So ergibt sich die folgende Funktion:
+
 \[
-	S_{n+1} = 
-	\begin{cases}
-		(S_n + 1)\; \mathrm{mod }\; 26, & \text{wenn vorherige Walze in der Kerbposition ist}\\
-		S_n, & \text{sonnst}
-	\end{cases}
-\]
-%TODO Verdrahtung
-\[
-	W(S_n) = \tau^{S_n} \circ W \circ \tau^{-S_n}
+	W_i^{\mathrm{rot}}(x) = \left(W_i\left((x + \tau_i(n)) \mod 26\right) - \tau_i(n)\right) \mod 26
 \]
 
+Das gilt auch für die Inverse:
 
-%TODO Enigma Einstellung in Unterfunktionen?
+\[
+	\left( W_i^{\mathrm{rot}}\right)^{-1} (x) = \left(W_i^{-1}(\left(x + \tau_i(n)) \mod 26\right) - \tau_i(n)\right) \mod 26
+\]
+
 \fmbox{\textbf{Permutation der Buchstaben}
 	\[
-	E_K: \mathcal{A} \longmapsto \mathcal{A},\quad E_K(x) \coloneqq S\circ W_1^{-1} \circ W_2^{-1} \circ W_3^{-1} \circ U \circ W_3 \circ W_2 \circ W_1 \circ S(x)
+	 E_K(x) \coloneqq S\circ \left( W_1^{\mathrm{rot}}\right) ^{-1} \circ \left(W_2^{\mathrm{rot}}\right) ^{-1} \circ \left(W_3^{\mathrm{rot}}\right)^{-1} \circ U \circ W_3^{\mathrm{rot}} \circ W_2^{\mathrm{rot}} \circ W_1^{\mathrm{rot}} \circ S(x)
 	\]
 }
 
