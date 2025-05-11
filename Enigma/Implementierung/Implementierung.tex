@@ -14,9 +14,11 @@ Geheimtext bildet.
 Hierfür werden die einzelnen Buchstaben als Knoten mithilfe einer Struktur dargestellt, welche zum einen den Buchstaben und zum anderen einen Vektor mit den anliegenden Auslegern beinhaltet.
 Die Buchstaben-Tupel wurden ebenfalls als Struktur dargestellt, welche zwei Knoten, die Position im Crib und einen Booleschen Wert beinhaltet, welcher aussagt, ob dieses Tupel zum Zyklus beiträgt.
 
-
 \noindent
-\lstinputlisting[style=mystyle, caption={Realisierung der Menü Strukturen}, label={lst:code_impl_menu}]{Implementierung/menu_structs.c}
+\begin{figure}[htbp]
+\lstinputlisting[style=mystyle, caption={Realisierung der Menü Strukturen}, label={lst:code_impl_menu}]{Implementierung/menu_structs.c}	
+\end{figure}
+
 Die Tupel werden nun in einer \glqq Nachschlagetabelle\grqq{} abgelegt.
 Diese Tabelle hat 26 Stellen, repräsentativ für das Alphabet.
 Ein jeweiliges Tupel wird sowohl unter dem ersten als auch unter dem zweiten Buchstaben abgelegt. 
@@ -51,7 +53,9 @@ Da es in Bezug auf die Laufzeit medioker ist, alle 26 Stellen des Bitvektors tra
 Zuletzt wird der Buchstabe/die Nummer des jeweiligen Kontakts in der Struktur gespeichert.
 
 \noindent
-\lstinputlisting[style=mystyle, caption={Realisierung der Terminals}, label={lst:code_impl_terminal}]{Implementierung/terminal.c}
+\begin{figure}[H]
+\lstinputlisting[style=mystyle, caption={Realisierung der Terminals}, label={lst:code_impl_terminal}]{Implementierung/terminal.c}	
+\end{figure}
 
 Permutiert ein Scrambler einen Buchstaben, wird mithilfe des Bitvektors überprüft, ob dieser Kontakt bereits aktiv ist.
 
@@ -81,7 +85,9 @@ Somit wäre es hier abermals notwendig, die Kontakte separat zu behandeln.
 Aus diesem Grund wurde die Funktion des Diagonalbrettes in einer Funktion gekapselt:
 
 \noindent
-\lstinputlisting[style=mystyle, caption={Realisierung des Diagonalbrettes}, label={lst:code_impl_diag_board}]{Implementierung/diag_method.c}
+\begin{figure}[H]
+	\lstinputlisting[style=mystyle,caption={Realisierung des Diagonalbrettes}, label={lst:code_impl_diag_board}]{Implementierung/diag_method.c}
+\end{figure}
 %TODO TuringBombe Struct erklären?
 Diese Funktion erhält drei Argumente: Einen Zeiger auf eine \texttt{TuringBombe} und zwei Integer, repräsentativ für die zwei Terminal-Buchstaben, die aktiviert werden sollen.
 

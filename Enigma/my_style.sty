@@ -11,6 +11,9 @@
 \definecolor{key-color}{rgb}{0.13,0.13,1}
 \definecolor{typedef-color}{rgb}{0.8, 0.47, 0.196}
 
+%links
+\definecolor{gold}{rgb}{0.8, 0.65, 0.1}
+
 \lstdefinestyle{mystyle}
 {
 	language = C,
@@ -29,7 +32,7 @@
 
 \renewcommand{\lstlistingname}{Quelltext}
 
-%\setlength{\topmargin}{-40pt} 
+\linespread{1.2}
 
 \newlength{\ChapterRuleWidth}\setlength{\ChapterRuleWidth}{.5pt}
 \newcommand*{\ChRuleWidth}[1]{\setlength{\ChapterRuleWidth}{\dimexpr #1}}%
@@ -51,8 +54,8 @@
 \let\raggedchapter\raggedleft
 \RedeclareSectionCommand[%
 beforeskip=-5pt,
-innerskip=45pt,
-afterskip=40pt,
+innerskip=30pt,
+afterskip=25pt,
 font=\normalfont\sffamily\Large,
 prefixfont=\Large,
 ]{chapter}
@@ -100,4 +103,12 @@ prefixfont=\Large,
 	group-separator= {\,}
 }
 
+\setlength{\headsep}{10pt} 
 
+\hypersetup{
+	colorlinks=true,         
+	linkcolor=gold,          
+	urlcolor=blue,           
+	citecolor=gold,           
+	pdfborder={0 0 0},       
+}

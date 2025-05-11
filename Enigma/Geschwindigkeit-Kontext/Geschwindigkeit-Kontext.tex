@@ -7,7 +7,12 @@ Genauer wird überprüft, ob die Enigma-Konfiguration, signalisiert durch den St
 Zunächst wird ein Maß benötigt, mit welchem sich teilweise/vollständig dechiffrierte Texte "bewerten" lässt.
 Ein geeignetes Maß für die Annäherung eines Textes an authentisches Deutsch ist der Koinzidenzindex:
 
-\fmbox{\textbf{Koinzidenzindex}\[IC = \frac{\sum_{i=A}^{Z}f_i(f_i-1)}{N(N-1)}\]}
+\fmbox{\textbf{Koinzidenzindex}
+	\begin{equation}
+		\label{eq:koinzidenindex}
+		IC = \frac{\sum_{i=A}^{Z}f_i(f_i-1)}{N(N-1)}
+	\end{equation}
+}
 	
 	
 Sei $f_i$ die Häufigkeit des Buchstabens in Abhängigkeit von $i$ und $N$ die Gesamtanzahl der Buchstaben.
@@ -31,7 +36,6 @@ Die Bestimmung des Cribs beruhte einzig und allein auf der Expertise der Linguis
 Aus diesem Grund wurden manche Schlüssel gar nicht gebrochen.
 Leider sind mögliche Heuristiken bei der Überprüfung der Stopps nicht überliefert.
 
-\newpage
 \begin{figure}[htbp]
 	\centering
 	\caption{Geschätzte Anzahl der Stops pro Walzenlage~\autocite{enwiki:bombe}}
@@ -63,5 +67,5 @@ $150\si{\ms}$.
 \frac{3\si{\hour} \cdot 60 \cdot 60 \cdot 1000}{150\si{\ms}} \approx 72000
 \]
 
-Ein moderner Computer\footnote{Systemspezifikationen im Anhang enthalten:~\cref{fig:sys-spec}.} ist somit um Faktor 72000 schneller, als der kombinierte Kriegsaufwand der knapp 9000 Bletchley Park Mitarbeiter.
+Ein moderner Computer\footnote{Systemspezifikationen im Anhang enthalten:~\cref{tab:sys-spec}.} ist somit um Faktor 72000 schneller, als der kombinierte Kriegsaufwand der knapp 9000 Bletchley Park Mitarbeiter.
 Es sei angemerkt, dass die Bewertung der Stopps durch Linguistische Experten hochwertiger ist, als der Koinzidenzindex.

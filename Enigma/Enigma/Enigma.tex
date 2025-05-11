@@ -1,7 +1,7 @@
 \chapter{Die Enigma-Maschine}\label{ch:die-enigma}
 \section{Einführung}\label{sec:einfuhrung}
 
-Um die Funktionsweise der Turing-Welchman-Bombe und ihrer Software-Nachbildung zu verstehen, muss zuerst die Enigma-Maschine verstanden werden.
+Um die Funktionsweise der Turing-Welchman-Bombe und ihrer Software-Nach\-bil\-dung zu verstehen, muss zuerst die Enigma-Maschine verstanden werden.
 Im Folgenden sei ein Überblick über die Enigma-Maschine gegeben.
 Die Enigma-Maschine ist eine Rotor-Chiffrier\-maschine, die 1918 von Arthur Scherbius zum Patent angemeldet wurde und hauptsächlich im Zweiten Weltkrieg zum Einsatz kam.
 Aufgrund der Sicherheitsanforderungen der deutschen Wehrmacht wurde die kommerziell erwerbliche Enigma-Maschine modifiziert.
@@ -10,15 +10,14 @@ Die von der Wehrmacht eingesetzten Enigma-Maschinen verfügten zunächst über d
 Neuerungen waren das Steckerbrett~(siehe~\cref{fig:enigma_complete}~front) und gegen Ende des Krieges eine zusätzliche, vierte Walze. 
 Adaptiert wurde die Umkehrwalze~(Ziffer~20).
 Hier wird, wenn nicht ausdrücklich erwähnt, ausschließlich die Enigma M3 mit drei Walzen betrachtet.
-\nopagebreak
-\begin{figure}[htbp]
+\vspace*{-2pt}
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=.42\linewidth]{Enigma/Enigma-plakat}
+	\includegraphics[width=.39\linewidth]{Enigma/Enigma-plakat}
 	\caption{Die Enigma-Maschine (Foto Deutsches Museum München)}
 	\label{fig:enigma_complete}
 \end{figure}
-
-\newpage
+\vspace{-1em}
 
 \section{Funktionsweise}\label{sec:funktionsweise}
 
@@ -82,7 +81,6 @@ die festlegt, wann sich die Walze links von der aktuellen bewegt.
 %	\label{fig:enigma-rotor-contact}
 %\end{figure}
 
-\newpage
 \subsection{Umkehrwalze}\label{subsec:umkehrwalze}
 Der originalen Patentschrift\autocite{scherbiuschiffriermaschine1925} von 1918 ist zu entnehmen, dass sehr frühe Enigma-Maschinen nicht involutorisch wirkten.
 %Das bedeutet ganz allgemein, dass $E_K \ne D_K$ ist.
@@ -137,8 +135,8 @@ Es sei:
 \begin{itemize}
 	\item $x \in \{0,1,\ldots,25\}:$ für den zu permutierenden Buchstaben.
 	\item $\tau_i(n):$ Die Walzenstellung der Walze $i$ beim Tastendruck $n$.
-	\item $W_i:$ die feste Permutation der Walze $i$, das heißt $W_i: \mathbb{Z}_{26} \longmapsto \mathbb{Z}_{26}$.
-	\item $W_i^{-1}:$ die inverse Permutation der Walze $i$.
+	\item $W_i:$ Die feste Permutation der Walze $i$, das heißt $W_i: \mathbb{Z}_{26} \longmapsto \mathbb{Z}_{26}$.
+	\item $W_i^{-1}:$ Die inverse Permutation der Walze $i$.
 	\item $S:$ Die feste Permutation des Steckerbretts.
 	\item $U$: Die feste Permutation der Umkehrwalze.
 \end{itemize}
@@ -146,19 +144,21 @@ Es sei:
 So ergibt sich die folgende Funktion:
 
 \[
-	W_i^{\mathrm{rot}}(x) = \left(W_i\left((x + \tau_i(n)) \mod 26\right) - \tau_i(n)\right) \mod 26
+	W_i^{\mathrm{rot}}(x) \coloneqq \left(W_i\left((x + \tau_i(n)) \mod 26\right) - \tau_i(n)\right) \mod 26
 \]
 
 Das gilt auch für die Inverse:
 
 \[
-	\left( W_i^{\mathrm{rot}}\right)^{-1} (x) = \left(W_i^{-1}(\left(x + \tau_i(n)) \mod 26\right) - \tau_i(n)\right) \mod 26
+	\left( W_i^{\mathrm{rot}}\right)^{-1} (x) \coloneqq \left(W_i^{-1}(\left(x + \tau_i(n)) \mod 26\right) - \tau_i(n)\right) \mod 26
 \]
 
 \fmbox{\textbf{Permutation der Buchstaben}
-	\[
-	 E_K(x) \coloneqq S\circ \left( W_1^{\mathrm{rot}}\right) ^{-1} \circ \left(W_2^{\mathrm{rot}}\right) ^{-1} \circ \left(W_3^{\mathrm{rot}}\right)^{-1} \circ U \circ W_3^{\mathrm{rot}} \circ W_2^{\mathrm{rot}} \circ W_1^{\mathrm{rot}} \circ S(x)
-	\]
+	\begin{equation}
+		\small
+		\label{eq:letter_permut}
+		E_K(x) \coloneqq S\circ \left( W_1^{\mathrm{rot}}\right) ^{-1} \circ \left(W_2^{\mathrm{rot}}\right) ^{-1} \circ \left(W_3^{\mathrm{rot}}\right)^{-1} \circ U \circ W_3^{\mathrm{rot}} \circ W_2^{\mathrm{rot}} \circ W_1^{\mathrm{rot}} \circ S(x)
+	\end{equation}
 }
 
 \section{Übertragung der Nachrichten}\label{sec:uebertragung-der-nachrichten}
@@ -173,8 +173,6 @@ In~\cref{fig:enigma_code_book} ist ein Code-Buch-Auszug für eine Enigma-Maschin
 	\caption{Code-Buch-Auszug\autocite{wiki:enigmacodebook}}
 	\label{fig:enigma_code_book}
 \end{figure}
-
-\newpage
 
 Nach 1938 musste der Schlüssler sich eine eigene Grundstellung der Walzen überlegen, mit welchem er den sogenannten Spruchschlüssel verschlüsselte.
 Nun überlegte sich der Schlüssler einen \glqq zufälligen\grqq{} Spruchschlüssel, mit dem der Text chiffriert wurde.\footnote{In Wahrheit wählten die Schlüssler oft den gleichen Schlüssel, der meist persönliche Informationen wie zum Beispiel den Namen der Freundin enthielt.}

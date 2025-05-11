@@ -22,6 +22,10 @@
 \usepackage{float}
 \usepackage{hhline}
 \usepackage{longtable}
+\usepackage{standalone}
+\usepackage{pgfplots}
+
+%\geometry{bindingoffset=1cm}
 
 \usetikzlibrary{tikzlings}
 \usetikzlibrary{patterns, positioning, shapes.geometric, shapes.callouts, arrows.meta}
@@ -36,6 +40,9 @@
 %\DeclareMathOperator{\mod}{mod}
 
 \begin{document}
+	\pagenumbering{roman}
+	\setcounter{page}{1}
+	
 	\subject{Kryptoanalyse der Enigma-Maschine durch eine Software-Nachbildung der Turing-Welchman-Bombe}
 	\title{Turing-Welchman-Bombe}
 %	\titlehead{}
@@ -44,14 +51,23 @@
 	\publishers{RWU--University of Applied Sciences \\ Prof. Dipl.-Math. Ekkehard Löhmann}
 	\maketitle
 	
+	\cleardoublepage
+	\chapter*{Kolophon}
+	Dieses Dokument wurde mit \LaTeX{} gesetzt und verwendet die \emph{Lucida} Schriftart.
+	
+	\cleardoublepage
 	\tableofcontents
 	
-	\chapter{Einleitung}\label{ch:einleitung}
+	\chapter*{Einleitung}\label{ch:einleitung}
 	Diese Projektarbeit beschäftigt sich mit der Kryptoanalyse der Enigma-Maschine.
 	Im Speziellen wird hier auf die Kryptoanalyse mit der von Alan Turing und Gordon Welchman entwickelten \glqq Turing-Welchman-Bombe\grqq{} eingegangen.
 	Die Turing-Welchman-Bombe baut auf die Arbeit von Marian Rejewski und seiner \glqq Bomba\grqq{} auf, welche der Turing-Welchman-Bombe ihren Namen gab.
 	Dieses Verfahren zur Kryptoanalyse spielte eine wesentliche Rolle im Zweiten Weltkrieg und trug nach der Meinung vieler Historiker maßgeblich dazu bei, den Krieg zu verkürzen und rettete somit zahlreiche Menschenleben.
 	% 2 Jahre 14 Mio. Menschenleben
+	
+	\cleardoublepage
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
 	
 	
 	\include{Enigma/Enigma}
