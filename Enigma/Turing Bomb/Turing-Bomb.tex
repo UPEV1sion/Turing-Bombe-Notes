@@ -9,7 +9,7 @@ Dieses Verfahren basiert ähnlich wie der Zyklometer auf \glqq Zyklen\grqq.
 Jedoch wurde hier nicht die Verdopplung des Spruchschlüssels im Spruchkopf ausgenutzt, sondern Zyklen zwischen einem an einer bestimmten Stelle im Geheimtext vermuteten Klartext (Crib) und dem Geheimtext bestimmt.
 Die Turing-Welchman-Bombe testet immer eine Hypothese einer Steckerbrett-Verbindung und probierte mit drei von acht möglichen Walzen alle Walzenstellungen durch.
 Auch wenn diese Hypothese sich als nicht korrekt erwies, findet die Turing-Welchman-Bombe bei korrekter Walzenlage durch Reductio ad absurdum trotzdem die gültigen Steckerbrett-Verbindungen.
-Ziel war es die abgefangene Nachricht und ultimativ den Tagesschlüssel zu knacken.
+Ziel war es, die abgefangene Nachricht und ultimativ den Tagesschlüssel zu knacken.
 Aufgrund der Einfachheit wird im Folgenden der Begriff \glqq Bombe\grqq{} anstelle von \glqq Turing-Welchman-Bombe\grqq{} verwendet.
 \vspace{-13pt}
 \begin{figure}[H]
@@ -88,6 +88,7 @@ Er gibt die Einstellungen der Bombe vor.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=.6\linewidth]{Turing Bomb/crib_cipher_cycle}
+%	\includegraphics[width=.6\linewidth]{Turing Bomb/crib_cycle_cipher_graph}
 	\caption{Crib-Geheimtext Menü}
 	\label{fig:crib_cipher_cycle}
 \end{figure}
@@ -158,8 +159,6 @@ Der Kontakt gleich dem Terminal-Buchstaben wird \glqq Self-Steckered\grqq{} gena
 
 \begin{figure}[htbp]
 	\centering
-	\caption{Diagonalbrett Verbindungen}
-	\label{fig:diagonal_board_connections}
 %	\begin{tikzpicture}[scale=0.7, every node/.style={scale=0.8}]
 %		\foreach \i in {0,..., 4}{
 %			\foreach \j in {0,..., 4}{
@@ -185,6 +184,8 @@ Der Kontakt gleich dem Terminal-Buchstaben wird \glqq Self-Steckered\grqq{} gena
 %		
 %	\end{tikzpicture}
 	\input{Turing Bomb/diag_board}
+	\caption{Diagonalbrett Verbindungen}
+	\label{fig:diagonal_board_connections}
 \end{figure}
 
 
@@ -215,9 +216,9 @@ Es wird vermutet, dass während des Chiffrierungs-Prozesses die Steckerbrett-Ver
 
 \begin{figure}[htbp]
 	\centering
+	\input{Turing Bomb/diag_board_wired}
 	\caption{Diagonalbrett Verbindungen mit Scrambler Verbindungen}
 	\label{fig:diagonal_board_connections_w_scrambler}
-	\input{Turing Bomb/diag_board_wired}
 \end{figure}
 
 In~\cref{fig:diagonal_board_connections_w_scrambler} wird die Hypothese der Steckerbrett-Verbindung $A \Leftrightarrow B$ getestet.

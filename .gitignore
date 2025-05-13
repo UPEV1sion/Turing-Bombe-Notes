@@ -13,6 +13,7 @@
 !*.c
 !*.py
 !*.gitignore
+!*.dat
 
 !*/
 

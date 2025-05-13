@@ -1,0 +1,31 @@
+% !TeX program = lualatex
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{graphs, graphdrawing, quotes, arrows.meta, shapes, backgrounds}
+\usegdlibrary{force}
+
+\begin{document}
+	\begin{tikzpicture}[>=Stealth, node distance=2.2cm,
+%		every node/.style={draw, circle, minimum size=1cm, fill=blue!10, font=\bfseries\small},
+%		every edge/.style={draw, rounded corners},
+%		edge quotes/.style={midway, fill=white, inner sep=1pt, font=\footnotesize}
+		]
+		\graph[spring layout] {
+			S --["0"]W;
+			N --["1"]E;
+			M --["2"]T;
+			K --["3"]T;
+			G --["4"]E;
+			S --["6"]V;
+			T --["7"]O;
+			Z --["8"]R;
+			Z --["9"]H;
+			U --["10"]E;
+			G --["5,11"]R;
+			A --["12"]S;
+			R --["13"]A;
+			L --["14"]G;
+			V --["15"]E;
+		};
+	\end{tikzpicture}
+\end{document}

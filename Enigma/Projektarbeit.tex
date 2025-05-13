@@ -28,7 +28,7 @@
 %\geometry{bindingoffset=1cm}
 
 \usetikzlibrary{tikzlings}
-\usetikzlibrary{patterns, positioning, shapes.geometric, shapes.callouts, arrows.meta}
+\usetikzlibrary{patterns, positioning, shapes.geometric, shapes.callouts, arrows.meta, graphs}
 \usepackage[backend=biber, style=ieee]{biblatex}
 
 \include{my_style.sty}
@@ -37,7 +37,6 @@
 \addbibresource{pictures.bib}
 
 \MakeOuterQuote{"}
-%\DeclareMathOperator{\mod}{mod}
 
 \begin{document}
 	\pagenumbering{roman}
@@ -53,7 +52,7 @@
 	
 	\cleardoublepage
 	\chapter*{Kolophon}
-	Dieses Dokument wurde mit \LaTeX{} gesetzt und verwendet die \emph{Lucida} Schriftart.
+	Dieses Dokument wurde mit \LaTeX{} gesetzt und verwendet die \textsl{Lucida} Schriftart.
 	
 	\cleardoublepage
 	\tableofcontents
