@@ -36,29 +36,24 @@ Die Bestimmung des Cribs beruhte einzig und allein auf der Expertise der Linguis
 Aus diesem Grund wurden manche Schlüssel gar nicht gebrochen.
 Leider sind mögliche Heuristiken bei der Überprüfung der Stopps nicht überliefert.
 
-\begin{figure}[htbp]
+\begin{table}[htbp]
 	\centering
-	\caption{Geschätzte Anzahl der Stops pro Walzenlage~\autocite{enwiki:bombe}}
-	\label{fig:num-stops}
+	\caption{Geschätzte Anzahl der Stopps pro Walzenlage~\autocite{enwiki:bombe}}
+	\label{tab:num-stops}
 	\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}
 		\hline
-		& \multicolumn{9}{c|}{Buchstaben im Menü} \\
-%		\hline
-		Zyklen & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 \\
+		                                    &              \multicolumn{9}{c|}{Buchstaben im Menü}               \\ 
+		              Zyklen                &   8   &   9   &  10  &  11  &  12  &  13   &  14   &  15   &  16   \\
 		\hhline{|=||=|=|=|=|=|=|=|=|=|}
-		3 & 2.2  & 1.1  & 0.42  & 0.14  & 0.04  & <0.01  & <0.01  & <0.01  & <0.01 \\
-		\hline
-		2 & 58  & 28  & 11  & 3.8  & 1.2  & 0.30  & 0.06  & <0.01  & <0.01  \\
-		\hline
-		1 & 1500  & 720  & 280  & 100  & 31  & 7.7  & 1.6  & 0.28  & 0.04  \\
-		\hline
-		0 & 40000  & 19000  & 7300  & 2700  & 820  & 200  & 43  & 7.3  & 1.0  \\
-		\hline
+						 3 					&  2.2  &  1.1  & 0.42 & 0.14 & 0.04 & <0.01 & <0.01 & <0.01 & <0.01 \\ \hline
+		                 2                  &  58   &  28   &  11  & 3.8  & 1.2  & 0.30  & 0.06  & <0.01 & <0.01 \\ \hline
+		                 1                  & 1500  &  720  & 280  & 100  &  31  &  7.7  &  1.6  & 0.28  & 0.04  \\ \hline
+		                 0                  & 40000 & 19000 & 7300 & 2700 & 820  &  200  &  43   &  7.3  &  1.0  \\ \hline
 	\end{tabular}
-\end{figure}
+\end{table}
 
 
-Wie in~\cref{fig:num-stops} zu sehen, hängen die Anzahl der Stopps stark von der "Güte" des Menüs ab.
+Wie in~\cref{tab:num-stops} zu sehen, hängen die Anzahl der Stopps stark von der "Güte" des Menüs ab.
 Die Software-Implementation benötigt für Erstellen eines Menüs der Länge zwölf, die Abarbeitung aller Walzenlagen und das "bewerten" der Stopps im Mittel
 %TODO checking machine time
 $150\si{\ms}$.
