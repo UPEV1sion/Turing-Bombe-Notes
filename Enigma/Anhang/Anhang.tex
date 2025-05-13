@@ -36,7 +36,15 @@
 				\node[below] at (-0.3, 0) {Alice};
 				\node[func, right=of alice] at +(0, .5cm) (enigma) {Enigma};
 				\draw[arr] (alice) -- node[above] {$K_S$} (enigma);
-				\draw[arr] (enigma.north)+(0, .7cm) node[above] {$K_T$} -- (enigma);
+				
+				\coordinate (KT-end) at ($(enigma.north)+(.5cm,0)$);
+				\coordinate (KT-start) at ($(enigma.north)+(0.5cm, .7cm)$);
+				\draw[arr] (KT-start) node[above] {$K_T$} -- (KT-end);
+				
+				\coordinate (KD-end) at ($(enigma.north)+(-.5cm,0)$);
+				\coordinate (KD-start) at ($(enigma.north)+(-.5cm, .7cm)$);
+				\draw[arr] (KD-start) node[above] {$K_D$} -- (KD-end);
+
 				\node[right=2cm of enigma] (dest) {};
 				\draw[arr] (enigma.east) -- node[above] {$K_S'$} (dest);
 				\draw[gray] 
@@ -50,7 +58,8 @@
 				-- ++(-0.5cm, 0.2cm) 
 				-- ++(-0.5cm, -0.2cm)
 				-- cycle;
- 				\draw[arr] ($(enigma.north)+(.3cm, 1cm)$) -| ($(dest)+(1cm, .3cm)$);
+				\node[right =0cm of KT-start] (path) {};
+ 				\draw[arr] (path) -| ($(dest)+(1cm, .3cm)$);
 			\end{tikzpicture}
 		}
 		\caption{Erzeugung Spruchkopf}
@@ -97,7 +106,13 @@
 				\node[below] at (-0.3, 0) {Bob};
 				\node[func, left=of bob] (enigma) {Enigma};
 				\draw[arr] (enigma) -- node[above] {$K_S$}(bob);
-				\draw[arr] (enigma.north)+(0, .7cm) node (top env) {} -- node[right, midway] {$K_T$} (enigma);
+				\draw[arr] (enigma.north)+(.7cm, .7cm) node (top env) {} -- node[left, midway] {$K_T$} ($(enigma)+(.7cm,.2cm)$);
+				\coordinate (KD-end) at ($(enigma.north)+(-.6cm,0)$);
+%				\coordinate (KT-End) at ($(enigma.north)+(.5cm,0)$);
+				\coordinate (KD-start) at ($(enigma.north)+(-.6cm, .7cm)$);
+				\draw[arr] (KD-start) node[above] {$K_D$} -- (KD-end);
+				
+				
 				\draw[gray] 
 				(top env)++(-1cm,0)
 				-- ++(0,0.5cm) 
@@ -167,12 +182,12 @@
 %\section{Laufzeit Menü Algorithmus}\label{sec:runtime_menu}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.7\linewidth]{Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force}
+%	\includegraphics[width=.7\linewidth]{Turing Bomb/Crib-Cipher Loop/Runtime Graph Graph vs Force}
+	\input{Turing Bomb/Crib-Cipher Loop/runtime_graph}
 	\caption{Laufzeit-Graph Menü-Algorithmus}
 	\label{fig:app_menu_runtime}
 \end{figure}
-Es wurden pro Länge 1000 Zufalls Crib und Geheimtexte generiert und diese
-jeweils mit 1000 Durchgängen getestet.
+Es wurden pro Länge 1000 zufällige Cribs und Geheimtexte generiert und diese jeweils mit 1000 Durchgängen getestet.
 
 \chapter{Systemspezifikationen}\label{ch:sys-spec}
 \begin{table}[htbp]

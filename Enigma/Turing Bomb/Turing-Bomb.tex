@@ -11,15 +11,14 @@ Die Turing-Welchman-Bombe testet immer eine Hypothese einer Steckerbrett-Verbind
 Auch wenn diese Hypothese sich als nicht korrekt erwies, findet die Turing-Welchman-Bombe bei korrekter Walzenlage durch Reductio ad absurdum trotzdem die gültigen Steckerbrett-Verbindungen.
 Ziel war es die abgefangene Nachricht und ultimativ den Tagesschlüssel zu knacken.
 Aufgrund der Einfachheit wird im Folgenden der Begriff \glqq Bombe\grqq{} anstelle von \glqq Turing-Welchman-Bombe\grqq{} verwendet.
-\nopagebreak
-\begin{figure}
+\vspace{-13pt}
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\linewidth]{Turing Bomb/BletchleyParkBombe}
+	\includegraphics[width=0.39\linewidth]{Turing Bomb/BletchleyParkBombe}
 	\caption{Eine Turing-Welchman-Bombe in Bletchley Park\autocite{wiki:bombe_picture}}
 	\label{fig:bombe}
 \end{figure}
-
-\newpage
+\vspace{-2em}
 
 \section{Funktionsweise}\label{sec:funktionsweise_bombe}
 
@@ -78,7 +77,6 @@ Dafür musste ein Funker-Trupp in der Nähe des Ereignisses sein, welcher nicht 
 Ein mögliches Ziel war hier zum Beispiel ein Seegebiet in der Nähe eines U-Boots, da diese stets eine Enigma-Maschine an Bord hatten.
 Nun beinhaltete der kurz darauf folgende Funkspruch mit einer hohen Sicherheit das Wort: \glqq Minen\grqq.
 
-\newpage
 \subsubsection{Menü}\label{subsubsec:menu}
 Nun werden Buchstaben-Tupel zwischen Crib und Geheimtext gebildet.
 An einem Beispiel von \glqq WETTERVORHERSAGE\grqq{} und \glqq SNMKGGSTZZUGARLV\grqq{} wären solche Tupel: \texttt{W:S}, \texttt{E:N} et cetera.
@@ -103,9 +101,6 @@ Tupel wie 0, 1, 8, 9, 10 und 14 werden hier als \glqq Ausleger\grqq{} bezeichnet
 Aus Gründen, die später erläutert werden, sind Tupel-Kombinationen wie 5 und 11 äußerst effektiv für die Kryptoanalyse.
 Tupel, die keinen Zyklus bilden, können ignoriert werden.
 Somit sind die Tupel 2, 3 und 7 für den weiteren Verlauf der Kryptoanalyse irrelevant.
-
-
-\newpage
 
 \subsection{Scrambler}\label{subsec:scrambler}
 Wie auch die Enigma-Maschine hat auch die Bombe \glqq Walzen\grqq.
@@ -189,31 +184,7 @@ Der Kontakt gleich dem Terminal-Buchstaben wird \glqq Self-Steckered\grqq{} gena
 %		
 %		
 %	\end{tikzpicture}
-	\begin{tikzpicture}[scale=0.7, every node/.style={scale=0.8}]
-		
-		%Säulen
-		\foreach \i in {0,2,4,6} {
-			\foreach \j in {0,0.2,0.4,0.6} {
-				\draw[thin] (\i+\j,1.5) -- (\i+\j,5+\j*2);
-			}
-			\node[below] at (\i+0.3, 1.5) {\emph{\char\numexpr65+\i/2}};
-		}
-		
-		
-		%Querverbindungen
-		\foreach \j in {0.2,0.4,0.6} {
-			\draw[thin](\j,5+\j*2) .. controls (\j*5,5+\j*1.5) .. (\j*10,5);
-		}	
-		
-		\foreach \j in {0.4, 0.6} {
-			\draw[thin](\j+2,5+\j*2) .. controls ({(\j + 2 + \j*10 + 0.2)/2},5+\j*1.6) .. (\j*10+0.2,5.4);
-		}
-		
-		\draw[thin](4.6,6.2) .. controls (5.25,6.1) .. (6.4,5.8);
-		
-		%TODO at A terminal
-%		\draw[->] (-1,5.6) -- (0.2,5.4) node[left] at (-1,5.6) {\emph{b}-Kontakt im \emph{A}-Terminal};
-	\end{tikzpicture}
+	\input{Turing Bomb/diag_board}
 \end{figure}
 
 
@@ -233,7 +204,6 @@ In~\cref{fig:bombe_rear} sind die Terminals, Commons und In und Outs mit den \gl
 	\caption{Rückansicht der Bombe\autocite{wiki:bomberear}}
 	\label{fig:bombe_rear}
 \end{figure}
-\newpage
 
 \subsection{Test-Register}\label{subsec:test-register}
 Um eine Steckerbrett-Verbindungs Hypothese zu testen, muss ein Test-Register bestimmt werden.
@@ -247,48 +217,7 @@ Es wird vermutet, dass während des Chiffrierungs-Prozesses die Steckerbrett-Ver
 	\centering
 	\caption{Diagonalbrett Verbindungen mit Scrambler Verbindungen}
 	\label{fig:diagonal_board_connections_w_scrambler}
-	\begin{tikzpicture}[scale=1, every node/.style={scale=0.8}]
-	
-		
-		%Säulen
-		\foreach \i in {0,2,4,6} {
-			\foreach \j in {0,0.1,0.2,0.3} {
-				\draw[thin] (\i+\j,1) -- (\i+\j,5+\j*2);
-			}
-			\node[below] at (\i+0.15, 1) {\emph{\char\numexpr65+\i/2}};
-		}
-		
-		%Querverbindungen
-		\foreach \j in {0.1,0.2,0.3} {
-			\draw[thin](\j,5+\j*2) .. controls (\j*10,5+\j*1.5) .. (\j*20,5);
-		}	
-		\draw[very thick] (0.1,1) -- (0.1,5.2) .. controls (1,5 + 0.1 * 1.5) .. (2,5) -- (2, 1);
-		
-		\foreach \j in {0.2, 0.3} {
-			\draw[thin](\j+2,5+\j*2) .. controls ({(\j + 2 + \j*20 + 0.1)/2}, 5+\j*1.5) .. (\j*20 + 0.1, 5.2);
-		}
-		
-		
-		\draw[thin](4.3,5.6) .. controls (5.25,5.5) .. (6.2,5.4);
-		
-		\foreach \j in {0,0.1,0.2,0.3} {
-			\draw[thin] (2+\j,2+\j) -- (4+\j,2+\j);
-			\fill (2+\j,2+\j) circle (1pt);
-			\fill (4+\j,2+\j) circle (1pt);
-		}
-		\fill (2.8, 1.9) rectangle (3.5, 2.4);
-		\node[above] at (3.2, 2.4) {\texttt{1: AAA}};
-		
-		\foreach \j in {0,0.1,0.2,0.3}{
-			\draw[thin] (\j, 3+\j) -- (4+\j, 3+\j);
-			\fill (\j,3+\j) circle (1pt);
-			\fill (4+\j,3+\j) circle (1pt);
-		}
-		
-		\fill (0.8, 2.9) rectangle (1.5, 3.4);
-		
-		\node[above] at (1.2, 3.4) {\texttt{2: AAB}};
-	\end{tikzpicture}
+	\input{Turing Bomb/diag_board_wired}
 \end{figure}
 
 In~\cref{fig:diagonal_board_connections_w_scrambler} wird die Hypothese der Steckerbrett-Verbindung $A \Leftrightarrow B$ getestet.

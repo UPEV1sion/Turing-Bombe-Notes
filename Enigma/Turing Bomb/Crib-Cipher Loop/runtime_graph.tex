@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+
+
+\begin{document}
+	\begin{tikzpicture}
+	\begin{axis}[
+		grid=major,
+		title={Laufzeit Graph Menü Algorithmus($1000 \cdot 1000$ Durchgänge pro Länge)},
+		title style={yshift=10pt},
+		xlabel={Inputvektor Länge},
+		ylabel={Laufzeit (Sekunden)},
+		axis lines=left,
+		enlarge x limits={true},
+		enlarge y limits={true},
+		legend style={
+			at={(0.4,1)},
+			anchor=north,
+			font=\small
+		}
+		]
+		\addplot[thick, mark=none, gold] table[y=y1, x expr=\coordindex] {Turing Bomb/Crib-Cipher Loop/data.dat};
+		\addlegendentry{"Graphen" Algorithmus}
+		\addplot[thick, mark=none] table[y=y2, x expr=\coordindex] {Turing Bomb/Crib-Cipher Loop/data.dat};
+		\addlegendentry{"Naiver" Algorithmus}
+	\end{axis}	
+	\end{tikzpicture}
+\end{document}
