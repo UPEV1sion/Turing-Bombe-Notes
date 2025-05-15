@@ -1,9 +1,10 @@
-\documentclass[ngerman, a4paper, footsepline, headsepline]{scrreport}
+\documentclass[ngerman, a4paper, footsepline, headsepline, 9pt]{scrreport}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{lmodern}
-\usepackage{mathtools, amsfonts, amssymb}
+\usepackage{mathtools}
+\usepackage{amsfonts, amssymb}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{algorithm}
@@ -25,13 +26,23 @@
 \usepackage{standalone}
 \usepackage{pgfplots}
 
+\pgfplotsset{compat=1.18}
+
+
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{unicode-math}
+
+\setmainfont{Lucida Bright OT}
+\setmathfont{Lucida Bright Math OT}
+
 %\geometry{bindingoffset=1cm}
 
 \usetikzlibrary{tikzlings}
 \usetikzlibrary{patterns, positioning, shapes.geometric, shapes.callouts, arrows.meta, graphs}
 \usepackage[backend=biber, style=ieee]{biblatex}
 
-\include{my_style.sty}
+\input{my_style.sty}
 
 \addbibresource{sources.bib}
 \addbibresource{pictures.bib}
@@ -43,7 +54,7 @@
 	\pagenumbering{roman}
 	\setcounter{page}{1}
 	
-	\subject{Projektarbeit zur Kryptoanalyse der Enigma-Maschine durch eine Software-Nachbildung der Turing-Welchman-Bombe\\
+	\subject{Projektarbeit zur Kryptoanalyse der Enigma-Maschine durch eine\\ Software-Nachbildung der Turing-Welchman-Bombe\\
 	der Fakultät Elektrotechnik und Informatik}
 	\title{Turing-Welchman-Bombe}
 %	\titlehead{}
@@ -52,6 +63,7 @@
 	\publishers{RWU--University of Applied Sciences\\Prof. Dipl.-Math. Ekkehard Löhmann}
 %	\lowertitleback{Betreuer: Prof. Dipl.-Math. Ekkehard Löhmann}
 	\maketitle
+%	\small
 	
 	\cleardoublepage
 	\chapter*{Kolophon}

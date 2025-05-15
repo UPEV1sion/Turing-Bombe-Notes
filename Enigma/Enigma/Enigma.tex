@@ -13,7 +13,7 @@ Hier wird, wenn nicht ausdrücklich erwähnt, ausschließlich die Enigma M3 mit 
 \vspace*{-2pt}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.39\linewidth]{Enigma/Enigma-plakat}
+	\includegraphics[width=.43\linewidth]{Enigma/Enigma-plakat}
 	\caption{Die Enigma-Maschine (Foto Deutsches Museum München)}
 	\label{fig:enigma_complete}
 \end{figure}
@@ -133,7 +133,7 @@ Die Permutation der Buchstaben lässt sich durch folgende Formel beschrieben.
 
 Es sei:
 \begin{itemize}
-	\item $x \in \{0,1,\ldots,25\}:$ für den zu permutierenden Buchstaben.
+	\item $x \in \mathbb{Z}_{26}:$ für den zu permutierenden Buchstaben.
 	\item $\tau_i(n):$ Die Walzenstellung der Walze $i$ beim Tastendruck $n$.
 	\item $W_i:$ Die feste Permutation der Walze $i$, das heißt $W_i: \mathbb{Z}_{26} \longmapsto \mathbb{Z}_{26}$.
 	\item $W_i^{-1}:$ Die inverse Permutation der Walze $i$.
@@ -155,7 +155,6 @@ Das gilt auch für die Inverse:
 
 \fmbox{\textbf{Permutation der Buchstaben}
 	\begin{equation}
-		\small
 		\label{eq:letter_permut}
 		E_K(x) \coloneqq S\circ \left( W_1^{\mathrm{rot}}\right) ^{-1} \circ \left(W_2^{\mathrm{rot}}\right) ^{-1} \circ \left(W_3^{\mathrm{rot}}\right)^{-1} \circ U \circ W_3^{\mathrm{rot}} \circ W_2^{\mathrm{rot}} \circ W_1^{\mathrm{rot}} \circ S(x)
 	\end{equation}
