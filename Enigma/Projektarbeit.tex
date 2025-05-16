@@ -1,6 +1,8 @@
-\documentclass[ngerman, a4paper, footsepline, headsepline, 9pt]{scrreport}
+% !TeX program = pdflatex
+
+\documentclass[ngerman, a4paper, footsepline, headsepline]{scrreport}
 \usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{lmodern}
 \usepackage{mathtools}
@@ -29,13 +31,6 @@
 \pgfplotsset{compat=1.18}
 
 
-\usepackage{fontspec}
-\usepackage{microtype}
-\usepackage{unicode-math}
-
-\setmainfont{Lucida Bright OT}
-\setmathfont{Lucida Bright Math OT}
-
 %\geometry{bindingoffset=1cm}
 
 \usetikzlibrary{tikzlings}
@@ -55,21 +50,16 @@
 	\setcounter{page}{1}
 	
 	\subject{Projektarbeit zur Kryptoanalyse der Enigma-Maschine durch eine\\ Software-Nachbildung der Turing-Welchman-Bombe\\
-	der Fakultät Elektrotechnik und Informatik}
+		der Fakultät Elektrotechnik und Informatik}
 	\title{Turing-Welchman-Bombe}
-%	\titlehead{}
+	%	\titlehead{}
 	\author{Emanuel Schäffer}
-%	\date{2025}
+	%	\date{2025}
 	\publishers{RWU--University of Applied Sciences\\Prof. Dipl.-Math. Ekkehard Löhmann}
-%	\lowertitleback{Betreuer: Prof. Dipl.-Math. Ekkehard Löhmann}
+	%	\lowertitleback{Betreuer: Prof. Dipl.-Math. Ekkehard Löhmann}
 	\maketitle
-%	\small
+	%	\small
 	
-	\cleardoublepage
-	\chapter*{Kolophon}
-	Dieses Dokument wurde mit \LaTeX{} gesetzt und verwendet die \textsl{Lucida} Schriftart.
-	
-	\cleardoublepage
 	\tableofcontents
 	
 	\chapter*{Einleitung}\label{ch:einleitung}
@@ -91,7 +81,7 @@
 	
 	\include{Geschwindigkeit-Kontext/Geschwindigkeit-Kontext}
 	
-%	\include{Anhang/Anhang}
+	%	\include{Anhang/Anhang}
 	
 	\newpage
 	\chapter{Glossar}\label{sec:glossar}

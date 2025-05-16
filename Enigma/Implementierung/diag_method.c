@@ -1,6 +1,6 @@
-static void activate_contact(TuringBombe *restrict turing_bombe, 
-							 const uint8_t first_contact, 
-							 const uint8_t second_contact)
+static void activate_contact(TuringBombe *turing_bombe, 
+							 uint8_t first_contact, 
+							 uint8_t second_contact)
 {
 	Contact *primary_contact = turing_bombe->terminal->contacts[first_contact];
 	Contact *secondary_contact = turing_bombe->terminal->contacts[second_contact];
