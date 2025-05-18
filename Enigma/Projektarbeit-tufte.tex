@@ -1,0 +1,154 @@
+\documentclass[ngerman, a4paper, justified, nobib, notoc, sfsidenotes]{tufte-book}
+\usepackage[ngerman]{babel}
+\usepackage{mathtools}
+\usepackage{amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{varioref}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[babel]{csquotes}
+\usepackage{tikzsymbols}
+\usepackage{float}
+\usepackage{hhline}
+\usepackage{longtable}
+\usepackage{standalone}
+\usepackage{pgfplots}
+\usepackage[ngerman]{datetime2}
+\usepackage[backend=biber, style=ieee]{biblatex}
+\usepackage{tabularx}
+\usepackage{fontspec}
+\usepackage{caption}
+\usepackage{tabu}
+\usepackage{minted}
+\usepackage{newfloat}
+\usepackage{tocloft}
+\DeclareFloatingEnvironment[name=Quelltext]{mylisting}
+
+\setminted{
+	fontsize=\small
+}
+
+\pgfplotsset{compat=1.18}
+
+\usetikzlibrary{tikzlings}
+\usetikzlibrary{patterns, positioning, shapes.geometric, shapes.callouts, arrows.meta, graphs}
+
+\addbibresource{sources.bib}
+\addbibresource{pictures.bib}
+
+\makeatletter
+\@twosidefalse
+\@mparswitchfalse
+\makeatother
+
+\newfontfamily\garamondfont{EB Garamond}[Weight=200]
+\newfontfamily\marginfont{LucidaSansOT}
+
+\input{tufte-style.sty}
+
+\numberwithin{figure}{part}
+\numberwithin{table}{part}
+\numberwithin{equation}{part}
+\numberwithin{mylisting}{part}
+\renewcommand{\thepart}{\arabic{part}}
+
+\MakeOuterQuote{"}
+
+\setlength{\cftbeforesecskip}{5pt}
+\setlength{\cftbeforechapskip}{10pt}
+\renewcommand{\cftsecfont}{\normalfont}  
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cfttoctitlefont}{\LARGE\mdseries}
+
+\title{Turing-Welchman-Bombe}
+
+\begin{document}
+	
+	\begin{fullwidth}
+		\begin{center}
+			\garamondfont
+			\thispagestyle{empty}
+			\vspace*{3cm}
+			{\huge\scshape\textcolor{gray}{Turing-Welchman-Bombe\\}}
+			\vspace{5cm}
+			\large
+			Projektarbeit zur Kryptoanalyse der Enigma-Maschine durch eine\\ 
+			Software-Nachbildung der Turing-Welchman-Bombe\\
+			der Fakultät Elektrotechnik und Informatik\\
+			\vspace{2cm}
+			\textit{von} Emanuel Schäffer 
+			\hspace{0.4cm} \textcolor{gray}{\rule[-.2em]{0.6pt}{1.2em}} \hspace{0.4cm} 
+			\DTMtoday\\
+			\vspace{2cm}
+			%	\includegraphics[width=.7\linewidth]{Logos-Enigma}
+			\vfill
+			\textsl{RWU--University of Applied Sciences\\Prof. Dipl.-Math. Ekkehard Löhmann}
+			\normalsize
+		\end{center}
+	\end{fullwidth}
+	
+	\frontmatter
+	\fontsize{8.5}{11.7}\selectfont
+
+	\chapter*{\textit{Kolophon}}
+	Dieses Dokument wurde mit \LaTeX{} gesetzt\\ und verwendet die \textsl{Lucida} Schriftart.
+	
+	\chapter*{\textit{Dankesworte}}
+	Mein besonderer Dank gilt meinen Eltern, die mir durch Ihre Unterstützung und Ermutigung stets zur Seite standen.
+	
+	Ein großes Dankeschön an Lea Rutzer und Paul Köster, die sich die Zeit genommen haben, meine Arbeit gegenzulesen.
+	
+	\clearpage
+	\tableofcontents
+	
+	\chapter*{Einleitung}\label{ch:einleitung}
+
+	Diese Projektarbeit beschäftigt sich mit der Kryptoanalyse der Enigma-Maschine.
+	Im Speziellen wird hier auf die Kryptoanalyse mit der von Alan Turing und Gordon Welchman entwickelten \glqq Turing-Welchman-Bombe\grqq{} eingegangen.
+	Die Turing-Welchman-Bombe baut auf die Arbeit von Marian Rejewski und seiner \glqq Bomba\grqq{} auf, welche der Turing-Welchman-Bombe ihren Namen gab.
+	Dieses Verfahren zur Kryptoanalyse spielte eine wesentliche Rolle im Zweiten Weltkrieg und trug nach der Meinung vieler Historiker maßgeblich dazu bei, den Krieg zu verkürzen und rettete somit zahlreiche Menschenleben.
+	% 2 Jahre 14 Mio. Menschenleben
+	
+	\mainmatter
+	
+	\include{Enigma/Enigma-tufte}
+	
+	\include{Turing Bomb/Turing-Bomb-tufte}
+	
+	\include{Implementierung/Implementierung-tufte}
+	
+	\include{Geschwindigkeit-Kontext/Geschwindigkeit-Kontext-tufte}
+	
+	\backmatter
+	\chapter{Glossar}\label{sec:glossar}
+	\begin{itemize}
+		\item Bletchley Park: Zentrale militärische Dienststelle, die sich im Zweiten Weltkrieg erfolgreich mit der Entzifferung des deutschen Nachrichtenverkehrs befasste.
+		\item Crib: Klartextfragment, welches an einer bestimmten Stelle im Geheimtext vermutet wurde.
+		\item $D_K$: Die Dechiffrierfunktion.
+		\item $E_K$: Die Chiffrierfunktion.
+		\item Gardening: Das Provozieren von Funksprüchen, welche einen bestimmten Klartext enthalten.
+		\item Menü: Ein Graph aus Crib-Geheimtext Tupeln, der die Einstellungen der Bombe vorgibt.
+		\item Involution: Eine selbstinverse Abbildung.
+		\item Schlüssler: Person, die Nachrichten ver- oder entschlüsselt.
+		\item Spruchkopf: Unverschlüsselter, erster Teil einer Nachricht, welcher die Uhrzeit, die Buchstabenanzahl, die Grundstellung und den verschlüsselten Spruchschlüssel beinhaltete.
+		\item Spruchschlüssel:  Individueller Schlüssel für einen Funkspruch.
+	\end{itemize}
+	
+	\chapter{Quellen}\label{ch:sources}
+	\section{Einzelnachweise}\label{sec:einzelnachweise}
+	\printbibliography[keyword=sources, heading=none, title={}]
+	\section{Bildnachweise}\label{sec:bildnachweise}
+	\printbibliography[keyword=pictures, heading=none, title={}]
+	\nocite{*}
+	\thispagestyle{plain}
+	
+	\appendix
+	\part{Anhang}
+	\include{Anhang/Anhang-tufte}
+\end{document}

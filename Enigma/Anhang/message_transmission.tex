@@ -1,0 +1,194 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usetikzlibrary{calc, patterns, positioning, shapes.geometric, shapes.callouts, arrows.meta, graphs}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tikzsymbols}
+\usepackage{fontspec}
+
+\newcommand{\scalepic}{0.8}
+\definecolor{func-red}{rgb}{1, 0.7, 0.56}
+
+\setmainfont{Lucida Bright OT}
+
+\begin{document}
+\fontsize{8.5}{11.7}\selectfont	
+\begin{samepage}
+	\thispagestyle{empty}
+	\begin{figure}[htbp]
+		\centering
+		\scalebox{\scalepic}{
+			\begin{tikzpicture}
+				\tikzset{func/.style={
+						rectangle,
+						 draw, 
+						 fill=func-red, 
+						 rounded corners
+					 }}
+				\tikzset{arr/.style={
+						-{Stealth[scale=1]}, 
+						thick, 
+						shorten <=.1cm, 
+						shorten >=.1cm
+					}}
+				\tikzset{think/.style={
+						cloud callout, 
+						callout relative pointer={(0.2, -0.8)}, 
+						cloud puff arc=120, 
+						aspect=1.5, 
+						align=center, 
+						fill=white, 
+						draw
+					}}
+				
+				\node at +(0,.5cm) (alice){};
+				\node[think, above=1.8cm of alice] {$K_S$};
+				\Strichmaxerl[5] 
+				\node[below] at (-0.3, 0) {Alice};
+				\node[func, right=of alice] at +(0, .5cm) (enigma) {Enigma};
+				\draw[arr] (alice) -- node[above] {$K_S$} (enigma);
+				
+				\coordinate (KT-end) at ($(enigma.north)+(.5cm,0)$);
+				\coordinate (KT-start) at ($(enigma.north)+(0.5cm, .7cm)$);
+				\draw[arr] (KT-start) node[above] {$K_T$} -- (KT-end);
+				
+				\coordinate (KD-end) at ($(enigma.north)+(-.5cm,0)$);
+				\coordinate (KD-start) at ($(enigma.north)+(-.5cm, .7cm)$);
+				\draw[arr] (KD-start) node[above] {$K_D$} -- (KD-end);
+
+				\node[right=2cm of enigma] (dest) {};
+				\draw[arr] (enigma.east) -- node[above] {$K_S'$} (dest);
+				\draw[gray] 
+				(dest)++(0,-0.2cm)
+				-- ++(0,0.5cm) 
+				-- ++(2cm,0) 
+				-- ++(0,-0.5cm) 
+				-- ++(-0.5cm, 0.1cm) 
+				-- ++(-0.5cm, -0.1cm) 
+				node[above=.1cm, black] {\tiny Spruchkopf}
+				-- ++(-0.5cm, 0.2cm) 
+				-- ++(-0.5cm, -0.2cm)
+				-- cycle;
+				\node[right =0cm of KT-start] (path) {};
+ 				\draw[arr] (path) -| ($(dest)+(1cm, .3cm)$);
+			\end{tikzpicture}
+		}
+		\caption{Erzeugung Spruchkopf}
+		\label{fig:msg-head}
+	\end{figure}
+	\begin{figure}[htbp]
+		\centering
+		\scalebox{\scalepic}{
+			\begin{tikzpicture}
+				\tikzset{func/.style={rectangle, draw, fill=func-red, rounded corners}}
+				\tikzset{arr/.style={-{Stealth[scale=1]}, thick, shorten <=.1cm, shorten >=.1cm}}
+				\node at +(0,.5cm) (alice){};
+				\Strichmaxerl[5] 
+				\node[below] at (-0.3, 0) {Alice};
+				\node[func, right=of alice] (enigma) {Enigma};
+				\draw[arr] (alice) -- node[above] {$M$} (enigma);
+				\draw[arr] (enigma.north)+(0, .7cm) node[above] {$K_S$} -- (enigma);
+				\node[right=of enigma] (dest) {};
+				\draw[arr] (enigma.east) -- node[above] {$M^\prime$}(dest);
+				\draw[gray] 
+				(dest)++(0,0.2cm) 
+				-- ++(0,-1cm) 
+				-- ++(2cm,0)
+				-- ++(0,1cm)
+				-- ++(-0.5cm, 0.1cm) 
+				-- ++(-0.5cm, -0.1cm) 
+				-- ++(-0.5cm, 0.2cm) 
+				-- ++(-0.5cm, -0.2cm)
+				-- cycle; 
+			\end{tikzpicture}
+		}
+		\caption{Chiffrierung Nachricht}
+		\label{fig:enc-msg}
+	\end{figure}
+	\begin{figure}[htbp]
+		\centering
+		\scalebox{\scalepic}{
+			\begin{tikzpicture}
+				\tikzset{func/.style={rectangle, draw, fill=func-red, rounded corners}}
+				\tikzset{arr/.style={-{Stealth[scale=1]}, thick, shorten <=.1cm, shorten >=.1cm}}
+				
+				\node at +(-0.3,.5cm) (bob){};
+				\Strichmaxerl[5] 
+				\node[below] at (-0.3, 0) {Bob};
+				\node[func, left=of bob] (enigma) {Enigma};
+				\draw[arr] (enigma) -- node[above] {$K_S$}(bob);
+				\draw[arr] (enigma.north)+(.7cm, .7cm) node (top env) {} -- node[left, midway] {$K_T$} ($(enigma)+(.7cm,.2cm)$);
+				\coordinate (KD-end) at ($(enigma.north)+(-.6cm,0)$);
+%				\coordinate (KT-End) at ($(enigma.north)+(.5cm,0)$);
+				\coordinate (KD-start) at ($(enigma.north)+(-.6cm, .7cm)$);
+				\draw[arr] (KD-start) node[above] {$K_D$} -- (KD-end);
+				
+				
+				\draw[gray] 
+				(top env)++(-1cm,0)
+				-- ++(0,0.5cm) 
+				-- ++(2cm,0) 
+				-- ++(0,-0.5cm) 
+				-- ++(-0.5cm, 0.1cm) 
+				-- ++(-0.5cm, -0.1cm) 
+				node[above=.1cm, black] {\tiny Spruchkopf}
+				-- ++(-0.5cm, 0.2cm) 
+				-- ++(-0.5cm, -0.2cm)
+				-- cycle;
+				\coordinate (top env start) at (enigma.north)+(-1cm, .7cm);
+				\node[] at (top env start) (top env) {};
+				
+				\node[left=of enigma] (dest) {};
+				\draw[arr] (dest) -- node[above] {$K_S^\prime$} (enigma);
+				\node[left=1.7cm of dest] (bottom env) {};
+				\draw[gray] 
+				(bottom env)++(0,-0.2cm) 
+				-- ++(0,0.5cm) 
+				-- ++(2cm,0) 
+				-- ++(0,-0.5cm) 
+				-- ++(-0.5cm, 0.1cm) 
+				-- ++(-0.5cm, -0.1cm) 
+				node[above=.1cm, black] {\tiny Spruchkopf}
+				-- ++(-0.5cm, 0.2cm) 
+				-- ++(-0.5cm, -0.2cm)
+				-- cycle;
+			\end{tikzpicture}
+		}
+		\caption{Dechiffrierung Spruchschlüssel}
+		\label{fig:dec-head}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\scalebox{\scalepic}{
+			\begin{tikzpicture}
+				\tikzset{func/.style={rectangle, draw, fill=func-red, rounded corners}}
+				\tikzset{arr/.style={-{Stealth[scale=1]}, thick, shorten <=.1cm, shorten >=.1cm}}
+				\node at +(-0.3,.5cm) (bob){};
+				\Strichmaxerl[5] 
+				\node[below] at (-0.3, 0) {Bob};
+				\node[func, left=of bob] (enigma) {Enigma};
+				\draw[arr] (enigma.north)+(0, 1cm) -- node[right, midway] {$K_S$} (enigma);
+				\draw[arr] (enigma) --  node[above] {$M$} (bob);
+				\node[left=of enigma] (dest) {};
+				\draw[arr] (dest) -- node[above] {$M^\prime$} (enigma);
+				\node[left=1.7cm of dest] (bottom env) {};
+				\draw[gray] 
+				(bottom env)++(0,0.2cm) 
+				-- ++(0,-1cm) 
+				-- ++(2cm,0)
+				-- ++(0,1cm)
+				-- ++(-0.5cm, 0.1cm) 
+				-- ++(-0.5cm, -0.1cm) 
+				-- ++(-0.5cm, 0.2cm) 
+				-- ++(-0.5cm, -0.2cm)
+				-- cycle; 
+			\end{tikzpicture}
+		}
+		\caption{Dechiffrierung Nachricht}
+		\label{fig:dec-msg}
+	\end{figure}
+\end{samepage}
+\end{document}

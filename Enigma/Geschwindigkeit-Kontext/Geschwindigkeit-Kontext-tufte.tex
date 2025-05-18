@@ -1,0 +1,66 @@
+\part{Geschwindigkeit der Software-Nachbildung im Kontext}\label{ch:speed}
+
+\chapter{Koinzidenzindex}\label{sec:koinzidenzindex}
+Hatte die Bombe gestoppt, machten sich die Mitarbeiter in Bletchley Park daran, den Stopp zu "bewerten". 
+Genauer wird überprüft, ob die Enigma-Konfiguration, signalisiert durch den Stopp, zu einem sinnvollen Ergebnis führt.
+%In Bletchley-Park wurde diese Bewertung durch einen oder mehrere Linguistikexperten durchgeführt.
+Zunächst wird ein Maß benötigt, mit welchem sich teilweise/vollständig dechiffrierte Texte "bewerten" lässt.
+Ein geeignetes Maß für die Annäherung eines Textes an authentisches Deutsch ist der Koinzidenzindex:
+
+\begin{equation}
+	\label{eq:koinzidenindex}
+	IC = \frac{1}{N(N-1)}\sum_{i\in\mathcal{A}}f_i(f_i-1)
+\end{equation}
+	
+	
+Sei $f_i$ die Häufigkeit des Buchstabens in Abhängigkeit von $i$ und $N$ die Gesamtanzahl der Buchstaben.
+%Wir Summieren also die Anzahl der Buchstabenpaare auf, und teilen diese durch die Anzahl der allgemein möglichen Buchstabenpaare.
+Der Koinzidenzindex ist ein statistisches Maß zur Analyse der Häufigkeitsverteilung der Buchstaben.
+Für einen Text, bestehend aus zufälligen Buchstaben, beträgt der $IC \approx 0.038$, wobei er für Deutsch $\approx 0.078$ beträgt.
+Ermittelt die Nachbildung einen Stopp, so wird der gesamte Geheimtext dechiffriert und mit dem Koinzidenzindex bewertet.
+Gemessen wird der "Abstand" zum Referenzwert 0.078.
+Texte, bei denen der Abstand des Koninzidenzindexes am geringsten ausfällt, werden am höchsten bewertet.
+
+
+\chapter{Geschwindigkeit im Kontext der "echten" Bombe}\label{sec:speed}
+Um die Geschwindigkeit der Software-Implementierung in einen Kontext zu setzen, muss zuerst die Entschlüsselungsprozedur betrachtet werden.
+In Bletchley Park waren zu Kriegsende mehr als 210 Bomben im Einsatz.
+Der Bombe ist es möglich, eine Walzenlage innerhalb von etwa 20 Minuten abzuarbeiten.
+Da über 210 Bomben zu Verfügung standen, war es möglich alle 60 Walzenlagen in dieser Zeit abzuarbeiten.
+%Da das bewerten eine mühselige Handarbeit war, konnte die letztendliche Entschlüsselung des Tagesschlüssels 2-4 Stunden andauern.
+Die Bestimmung des Menüs, Konfiguration der Bombe und die Bewertung der Walzenlagen in Bletchley Park war Handarbeit.
+Deshalb variierte die Arbeitszeit bis zur Brechung des Schlüssels im Mittel zwischen 2-4 Stunden.
+Die Bestimmung des Cribs beruhte einzig und allein auf der Expertise der Linguistischen Experten. 
+Aus diesem Grund wurden manche Schlüssel gar nicht gebrochen.
+Leider sind mögliche Heuristiken bei der Überprüfung der Stopps nicht überliefert.
+
+\begin{table}
+	\centering
+	\caption{Geschätzte Anzahl der Stopps pro Walzenlage~\autocite{enwiki:bombe}}
+	\label{tab:num-stops}
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}
+		\hline
+		                                    &              \multicolumn{9}{c|}{Buchstaben im Menü}               \\ 
+		              Zyklen                &   8   &   9   &  10  &  11  &  12  &  13   &  14   &  15   &  16   \\
+		\hhline{|=||=|=|=|=|=|=|=|=|=|}
+						 3 					&  2.2  &  1.1  & 0.42 & 0.14 & 0.04 & $<0.01$ & $<0.01$ & $<0.01$ & $<0.01$ \\ \hline
+		                 2                  &  58   &  28   &  11  & 3.8  & 1.2  & 0.30  & 0.06  & $<0.01$ & $<0.01$ \\ \hline
+		                 1                  & 1500  &  720  & 280  & 100  &  31  &  7.7  &  1.6  & 0.28  & 0.04  \\ \hline
+		                 0                  & 40000 & 19000 & 7300 & 2700 & 820  &  200  &  43   &  7.3  &  1.0  \\ \hline
+	\end{tabular}
+	}
+\end{table}
+
+\smallskip
+Wie in~\cref{tab:num-stops} zu sehen, hängen die Anzahl der Stopps stark von der "Güte" des Menüs ab.
+Die Software-Implementation benötigt für Erstellen eines Menüs der Länge zwölf, die Abarbeitung aller Walzenlagen und das "bewerten" der Stopps im Mittel
+%TODO checking machine time
+$150\si{\ms}$.
+
+\[
+\frac{3\si{\hour} \cdot 60 \cdot 60 \cdot 1000}{150\si{\ms}} \approx 72000
+\]
+
+Ein moderner Computer\footnote{Systemspezifikationen im Anhang enthalten:~\cref{tab:sys-spec}.} ist somit um Faktor 72000 schneller, als der kombinierte Kriegsaufwand der knapp 9000 Bletchley Park Mitarbeiter.
+Es sei angemerkt, dass die Bewertung der Stopps durch Linguistische Experten hochwertiger ist, als der Koinzidenzindex.

@@ -1,0 +1,53 @@
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{unicode-math}
+
+\setmainfont{Lucida Bright OT}
+\setmathfont{Lucida Bright Math OT}
+
+\setlength{\parindent}{0pt}
+\setlength{\RaggedRightParindent}{0pt}
+\setlength{\JustifyingParindent}{0pt}
+\setlength{\parskip}{1em}
+
+\makeatletter
+\renewcommand{\@tufte@marginfont}{\marginfont\scriptsize}
+\renewcommand{\captionlabelfont}{\marginfont\color{gray}\scriptsize}
+\renewcommand{\captionfont}{\marginfont\scriptsize}
+\makeatother
+
+\usepackage{sectsty}
+\subsectionfont{\normalfont\large}
+\sectionfont{\normalfont\Large\upshape}
+\chaptertitlefont{\normalfont\LARGE}
+
+
+\usepackage{titlesec}
+
+\titleformat{\part}[display]
+{\normalfont\huge} 
+{\partname~\thepart} 
+{20pt}
+{\Huge}
+
+\linespread{1.15}
+
+\definecolor{gold}{rgb}{0.980, 0.706, 0.216}
+
+\hypersetup{
+	colorlinks=true,         
+	linkcolor=gold,          
+	urlcolor=blue,           
+	citecolor=gold,           
+	pdfborder={0 0 0},       
+}
+
+%lstlisting
+\definecolor{main-color}{rgb}{0.6627, 0.7176, 0.7764}
+\definecolor{back-color}{rgb}{0.94,0.94,0.94}
+\definecolor{string-color}{rgb}{0.3333, 0.5254, 0.345}
+\definecolor{key-color}{rgb}{0.13,0.13,1}
+\definecolor{typedef-color}{rgb}{0.8, 0.47, 0.196}
+\definecolor{func-red}{rgb}{1, 0.7, 0.56}
+
+\newcommand{\scalepic}{.8}
