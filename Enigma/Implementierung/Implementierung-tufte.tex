@@ -15,7 +15,7 @@ Hierfür werden die einzelnen Buchstaben als Knoten mithilfe einer Struktur darg
 Die Buchstaben-Tupel wurden ebenfalls als Struktur dargestellt, welche zwei Knoten, die Position im Crib und einen Booleschen Wert beinhaltet, welcher aussagt, ob dieses Tupel zum Zyklus beiträgt.
 
 \begin{mylisting}
-	\inputminted[autogobble]{C}{Implementierung/menu_structs.c}
+	\inputminted{C}{Implementierung/menu_structs.c}
 	\caption{Realisierung der Menü Strukturen}
 	\label{lst:code_impl_menu}
 \end{mylisting}
@@ -84,7 +84,7 @@ Da es in Bezug auf die Laufzeit medioker ist, alle 26 Stellen des Bitvektors tra
 Zuletzt wird der Buchstabe/die Nummer des jeweiligen Kontakts in der Struktur gespeichert.
 
 \begin{mylisting}
-	\inputminted[autogobble]{C}{Implementierung/terminal.c}
+	\inputminted{C}{Implementierung/terminal.c}
 	\caption{Realisierung der Terminals}
 	\label{lst:code_impl_terminal}
 \end{mylisting}
@@ -106,7 +106,7 @@ Die In- und Out-Kontakte werden mit dem dazugehörigen Scramblersätzen als Knot
 Sämtliche Verbindungen durch Kabel und Brücken-Konnektoren des analogen Originals werden hier durch Zeiger auf Kontakte ersetzt, so auch die In- und Out-Kontakte.
 
 \section{Commons}\label{subsec:impl_commons}
-Aufgrund der Einfachheit wurden die Commons in dieser Software-Implementation \glqq weg abstrahiert\grqq.
+Aufgrund der Einfachheit wurden die Commons in dieser Software-Imple\-men\-tation \glqq weg abstrahiert\grqq.
 Diese wurden durch Zeiger auf den gleichen Kontakt ersetzt.
 Die Anzahl der Kontakte pro Commons und die Gesamtzahl der verwendeten Commons wurde gezählt, sodass diese nicht die Anzahl des analogen Originals überschreiten.
 
@@ -122,7 +122,7 @@ Somit wäre es hier abermals notwendig, die Kontakte separat zu behandeln.
 Aus diesem Grund wurde die Funktion des Diagonalbrettes in einer Funktion gekapselt:
 
 \begin{mylisting}
-	\inputminted[autogobble, tabsize=4]{C}{Implementierung/diag_method.c}
+	\inputminted{C}{Implementierung/diag_method.c}
 	\caption{Realisierung des Diagonalbrettes}
 	\label{code_impl_diag_board}
 \end{mylisting}

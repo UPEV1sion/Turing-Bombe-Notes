@@ -50,4 +50,14 @@
 \definecolor{typedef-color}{rgb}{0.8, 0.47, 0.196}
 \definecolor{func-red}{rgb}{1, 0.7, 0.56}
 
-\newcommand{\scalepic}{.8}
+\setlength{\cftbeforesecskip}{5pt}
+\setlength{\cftbeforechapskip}{10pt}
+\renewcommand{\cftsecfont}{\normalfont}  
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cfttoctitlefont}{\LARGE\mdseries}
+
+\numberwithin{figure}{part}
+\numberwithin{table}{part}
+\numberwithin{equation}{part}
+\numberwithin{mylisting}{part}
+\renewcommand{\thepart}{\arabic{part}}
